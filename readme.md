@@ -1,8 +1,18 @@
 # Web Frontend Developer Diplomarbeit von Simon Urech
 
-## <strong>Basisdisposition</strong>
+## __Table of contents:__
+1. [Basisdispositon](#__Basisdisposition__)
+	1. Projekt
+	2. Technologiewahl
+	3. Zeitplan / Meilensteine
+	4. Eidesstattliche Erklärung
+2. [Dokumentation](#__Dokumentation__)
+	1. Setup
 
-### <strong>Projekt: FestivalLovers</strong>
+_____________________________________________________________
+## __Basisdisposition__
+
+### __Projekt: FestivalLovers__
 Die Eventagentur FestivalLovers bietet eine Webseite mit Informationen rund um Festivals vom Line up bis hin zum Ticketkauf. Es sind dort Festivals aus der ganzen Schweiz zu finden. Die Event Teaser mit den einzelnen Festivals können in einer Listenansicht nach Kategorie, Datum und Ort sortiert werden. Die Webseite ist in deutsch, da der Hauptmarkt der Eventagentur die deutschsprachige Schweiz ist.
 
 #### Umzusetzende Elemente generell
@@ -42,7 +52,7 @@ Die Eventagentur FestivalLovers bietet eine Webseite mit Informationen rund um F
 - Verwendbarkeit als Prototyp
 - Verwendbarkeit für Übernahme durch Application Developer
 
-### <strong>Technologiewahl</strong>
+### __Technologiewahl__
 #### Frontend
 Sämtliche Seiten werden mit folgenden Technologien erstellt:
 - HTML
@@ -55,13 +65,13 @@ Frameworks oder Libaries sind bis jetzt nicht geplant - es wird also alles manue
 Als Datenbank wird eine MySQL Datenbank verwendet. Darin sind sämtliche Informationen zu den Festivals vorhanden. Der Ticket-Kauf-Prozess wird nicht umgesetzt, könnte zu einem späteren Zeitpunkt jedoch in der selben Datenbank (noch zu erweitern) ergänzt werden. Falls während der Entwicklung unvorsehbare Verzögerungen eintreten sollten, wird stattdessen ein lokales JSON-File verwendet.
 
 #### Tools
-<strong>Editor</strong>: VS Code (Download: https://code.visualstudio.com/) inkl. den Extensions: Auto Close Tag, ESLint, GitLens, IntelliSende for CSS, Path Intellisense, Prettier
+__Editor__: VS Code (Download: https://code.visualstudio.com/) inkl. den Extensions: Auto Close Tag, ESLint, GitLens, IntelliSende for CSS, Path Intellisense, Prettier
 
-<strong>Sonstige Tools</strong>: NPM, Gulp, phpMyAdmin
+__Sonstige Tools__: NPM, Gulp, phpMyAdmin
 
 
 
-### <strong>Zeitplan / Meilensteine</strong>
+### __Zeitplan / Meilensteine__
 Datum | Inhalt
 -------- | --------
 03.07.2020 | Basisdisposition und GIT-Repository aufsetzen
@@ -80,10 +90,10 @@ Datum | Inhalt
 16.08.2020 | Testing / Kontrolle Layout gemäss Briefing
 29.08.2020 | Abgabe Diplomarbeit
 
-### <strong>Eidesstattliche Erklärung</strong>
+### __Eidesstattliche Erklärung__
 Hiermit erkläre ich, dass ich die Diplomarbeit selbständig verfasst / programmiert und keine anderen als die angegebenen Quellen und Hilfsmittel benutzt und die aus fremden Quellen direkt oder indirekt übernommenen Gedanken als solche kenntlich gemacht habe. Die Arbeit habe ich bisher keinem anderen Prüfungsgremium in gleicher oder vergleichbarer Form vorgelegt. Sie wurde bisher auch nicht veröffentlicht.
 _____________________________________________________________
 
-## <strong>Dokumentation</strong>
-### <strong>Setup</strong>
+## __Dokumentation__
+### __Setup__
 TBD

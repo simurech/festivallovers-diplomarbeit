@@ -1,3 +1,4 @@
+// Gulp Konstanten requiren
 const gulp = require("gulp");
 const del = require("del");
 const sass = require("gulp-sass");
@@ -12,8 +13,10 @@ const rollup = require("gulp-better-rollup");
 const babel = require("rollup-plugin-babel");
 const resolveNodeModules = require("rollup-plugin-node-resolve");
 
+// Projekt status variable
 let isProductionBuild = false;
 
+// scss files in css umwandeln, css minifizieren, autoprefix für browser-support
 function runSass() {
   return gulp
     .src("src/scss/**/*.scss")
@@ -34,11 +37,13 @@ function runSass() {
     .pipe(browserSync.stream());
 }
 
+// Browser reload
 function reloadBrowser(done) {
   browserSync.reload();
   done();
 }
 
+// JS bundeln, JS minifizieren
 function bundleJs() {
   return gulp
     .src("src/js/main.js")
@@ -67,6 +72,7 @@ function bundleJs() {
     );
 }
 
+// Watcher
 function runWatch() {
   startBrowserSync();
   gulp.watch("src/scss/**/*.scss", runSass);
@@ -77,6 +83,7 @@ function runWatch() {
   );
 }
 
+// Browsersync
 function startBrowserSync() {
   browserSync.init({
     server: {
@@ -85,10 +92,12 @@ function startBrowserSync() {
   });
 }
 
+// Bilder kopieren
 function copyImages() {
-  return gulp.src("src/images/*.(gif|jpg|png)").pipe(gulp.dest("dist/images/"));
+  return gulp.src("src/images/*.(gif|jpg|png|svg)").pipe(gulp.dest("dist/images/"));
 }
 
+// HTML kopieren
 function copyHtml() {
   return gulp
     .src("src/**/*.html")
@@ -101,22 +110,26 @@ function copyHtml() {
     .pipe(gulp.dest("dist/"));
 }
 
+// Dist Cleaner
 function runClean(done) {
   del.sync("dist");
   done();
 }
 
+// Builder Funktion
 function startProductionBuild(done) {
   isProductionBuild = true;
   done();
 }
 
+// Tasks
 gulp.task("sass", runSass);
 gulp.task("sass:build", gulp.series(startProductionBuild, runSass));
 gulp.task("bundle", bundleJs);
 gulp.task("bundle:build", gulp.series(startProductionBuild, bundleJs));
 gulp.task("watch", gulp.series(runSass, bundleJs, runWatch));
 
+//! Builder Task
 gulp.task(
   "build",
   gulp.series(

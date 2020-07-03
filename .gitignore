@@ -1,5 +1,8 @@
-dist
-node_modules
-src/assets
 .DS_Store
 .idea
+dist
+dist/images
+node_modules
+src/images
+src/css
+src/js/*-bundle.js
