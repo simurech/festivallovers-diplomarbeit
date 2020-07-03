@@ -1,8 +1,8 @@
 # Web Frontend Developer Diplomarbeit von Simon Urech
 
-## Basisdisposition
+## <strong>Basisdisposition</strong>
 
-### Projekt: FestivalLovers
+### <strong>Projekt: FestivalLovers</strong>
 Die Eventagentur FestivalLovers bietet eine Webseite mit Informationen rund um Festivals vom Line up bis hin zum Ticketkauf. Es sind dort Festivals aus der ganzen Schweiz zu finden. Die Event Teaser mit den einzelnen Festivals können in einer Listenansicht nach Kategorie, Datum und Ort sortiert werden. Die Webseite ist in deutsch, da der Hauptmarkt der Eventagentur die deutschsprachige Schweiz ist.
 
 #### Umzusetzende Elemente generell
@@ -42,11 +42,11 @@ Die Eventagentur FestivalLovers bietet eine Webseite mit Informationen rund um F
 - Verwendbarkeit als Prototyp
 - Verwendbarkeit für Übernahme durch Application Developer
 
-### Technologiewahl
+### <strong>Technologiewahl</strong>
 #### Frontend
 Sämtliche Seiten werden mit folgenden Technologien erstellt:
 - HTML
-- CSS
+- CSS (SCSS/SASS)
 - Javascript
 
 Frameworks oder Libaries sind bis jetzt nicht geplant - es wird also alles manuell gecoded. So entspricht der Code dem im Lehrgang gelernten und bleibt verstänndlich. Falls während der Entwicklung festgestellt werden sollte, dass ein Framework/Libary notwendig ist (z.B. Slider), wird dies in der Dokumentation entsprechend vermerkt.
@@ -61,32 +61,29 @@ Als Datenbank wird eine MySQL Datenbank verwendet. Darin sind sämtliche Informa
 
 
 
-### Zeitplan / Meilensteine
-1. 03.07.2020: Basisdisposition und GIT-Repository aufsetzen
-2. 05.07.2020: Gulpfile erstellen und Entwicklungs-Umgebung einrichten
-3. 05.07.2020: File-Struktur erstellen
-4. 12.07.2020: Datenbank erweitern
-5. 12.07.2020: REST-API erstellen
-6. 12.07.2020: Festival Filter Prototyp mit Javascript
-7. 19.07.2020: HTML Seiten erstellen (Layout erst grob umgesetzt)
-8. 19.07.2020: HTML Seiten abschliessen (Layout final gemäss Briefing)
-9. 26.07.2020: Festival-Filter Prototyp in Seiten einbauen
-10. 02.08.2020: Menü mit Javascript erstellen
-11. 02.08.2020: Login mit Javascript erstellen
-12. 09.08.2020: Ticket-Kaufen Prozess erstellen
-13. 16.08.2020: Testing Funktion
-14. 16.08.2020: Testing / Kontrolle Layout gemäss Briefing
-15. 29.08.2020: Abgabe Diplomarbeit
+### <strong>Zeitplan / Meilensteine</strong>
+Datum | Inhalt
+-------- | --------
+03.07.2020 | Basisdisposition und GIT-Repository aufsetzen
+05.07.2020 | Gulpfile erstellen und Entwicklungs-Umgebung einrichten
+05.07.2020 | File-Struktur erstellen
+12.07.2020 | Datenbank erweitern
+12.07.2020 | REST-API erstellen
+12.07.2020 | Festival Filter Prototyp mit Javascript
+19.07.2020 | HTML Seiten erstellen (Layout erst grob umgesetzt)
+19.07.2020 | HTML Seiten abschliessen (Layout final gemäss Briefing)
+26.07.2020 | Festival-Filter Prototyp in Seiten einbauen
+02.08.2020 | Menü mit Javascript erstellen
+02.08.2020 | Login mit Javascript erstellen
+09.08.2020 | Ticket-Kaufen Prozess erstellen
+16.08.2020 | Testing Funktion
+16.08.2020 | Testing / Kontrolle Layout gemäss Briefing
+29.08.2020 | Abgabe Diplomarbeit
 
-
+### <strong>Eidesstattliche Erklärung</strong>
+Hiermit erkläre ich, dass ich die Diplomarbeit selbständig verfasst / programmiert und keine anderen als die angegebenen Quellen und Hilfsmittel benutzt und die aus fremden Quellen direkt oder indirekt übernommenen Gedanken als solche kenntlich gemacht habe. Die Arbeit habe ich bisher keinem anderen Prüfungsgremium in gleicher oder vergleichbarer Form vorgelegt. Sie wurde bisher auch nicht veröffentlicht.
 _____________________________________________________________
 
-## Dokumentation
-### Notwendige Tools
+## <strong>Dokumentation</strong>
+### <strong>Setup</strong>
 TBD
-
-### Setup
-TBD
-
-### Liveserver
-Prototyp wird nach Fertigstellung auf Liveserver übertragen. URL inkl. Anleitung dazu folgt.
