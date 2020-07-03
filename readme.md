@@ -1,13 +1,13 @@
 # Web Frontend Developer Diplomarbeit von Simon Urech
 
 ## __Table of contents:__
-1. [Basisdispositon](#__Basisdisposition__)
-	1. Projekt
-	2. Technologiewahl
-	3. Zeitplan / Meilensteine
-	4. Eidesstattliche Erklärung
-2. [Dokumentation](#__Dokumentation__)
-	1. Setup
+1. [Basisdispositon](#basisdisposition)
+	1. [Projekt](#projekt-festivallovers)
+	2. [Technologiewahl](#technologiewahl)
+	3. [Zeitplan / Meilensteine](#zeitplan--meilensteine)
+	4. [Eidesstattliche Erklärung](#eidesstattliche-erkl%C3%A4rung)
+2. [Dokumentation](#dokumentation)
+	1. [Setup](#setup)
 
 _____________________________________________________________
 ## __Basisdisposition__
