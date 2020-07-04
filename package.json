@@ -1,19 +1,19 @@
 {
-  "name": "webpro-corona",
+  "name": "festivallovers-simonurech",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "Simon Urech",
   "license": "ISC",
   "browserslist": [
     "defaults",
-    "IE 10"
+    "not IE 11",
+    "not IE_Mob 11"
   ],
   "dependencies": {
-    "bootstrap": "^4.4.1",
     "whatwg-fetch": "^3.0.0"
   },
   "devDependencies": {

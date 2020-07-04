@@ -19,7 +19,7 @@ let isProductionBuild = false;
 // scss files in css umwandeln, css minifizieren, autoprefix für browser-support
 function runSass() {
   return gulp
-    .src("src/scss/**/*.scss")
+    .src("src/sass/**/*.sass")
     .pipe(sass())
     .pipe(autoprefixer())
     .pipe(gulpif(isProductionBuild, cssnano()))
@@ -75,7 +75,7 @@ function bundleJs() {
 // Watcher
 function runWatch() {
   startBrowserSync();
-  gulp.watch("src/scss/**/*.scss", runSass);
+  gulp.watch("src/sass/**/*.sass", runSass);
   gulp.watch("src/**/*.html", reloadBrowser);
   gulp.watch(
     ["src/js/**/*.js", "!src/js/**/*-bundle.js"],
@@ -94,7 +94,9 @@ function startBrowserSync() {
 
 // Bilder kopieren
 function copyImages() {
-  return gulp.src("src/images/*.(gif|jpg|png|svg)").pipe(gulp.dest("dist/images/"));
+  return gulp
+    .src("src/images/*.(gif|jpg|png|svg)")
+    .pipe(gulp.dest("dist/images/"));
 }
 
 // HTML kopieren
