@@ -1,15 +1,173 @@
-// Farben
-$color1: red
-$color2: orange
-$color3: blue
-$color4: black
-$color5: pink
+// Breakpoint Variablen
+$mobile: 768px
+$tablet: 1024px
+$desktop: 1240px
+	
+// Farben Variablen
+$weiss: rgba(255,255,255, 1)
+$schwarz100: rgba(0,0,0, 1)
+$schwarz75: rgba(0,0,0,0.75)
+$grau76: rgba(118,118,118, 1)
+$grauC2: rgba(194,194,194, 1)
+$grauE5: rgba(229,229,229, 1)
+$grauF0: rgba(240,240,240, 1)
+$hipHopPink: #d81b60
+$hipHopPinkHell: #e91e63
+$jazzGelb: #fdd835
+$jazzGelbHell: #ffeb3b
+$indieMint: #00d79f
+$indieMintHell: #1de9b6
+$popRockBlau: #3949ab
+$popRockBlauHell: #3f51b5
+$electronicViolett: #5e35b1
+$electronicViolettHell: #673ab7
 
+// Font Familys Variablen
+$fontFamilySerif: 'Roboto Slab', serif
+$fontFamilySansSerif: 'Montserrat', sans-serif
 
-// H-Titel
+// Font Grössen Mobile Variablen
+$fontSizeMobileH1: 32px
+$fontSizeMobileH2: 24px
+$fontSizeMobileH3: 20px
+$fontSizeMobileBig: 48px
+
+// Font Grössen Tablet Variablen
+$fontSizeTabletH1: 48px
+$fontSizeTabletH2: 32px
+$fontSizeTabletH3: 20px
+$fontSizeTabletBig: 96px
+
+// Font Grössen Desktop Variablen
+$fontSizeDesktopH1: 56px
+$fontSizeDesktopH2: 32px
+$fontSizeDesktopH3: 20px
+$fontSizeDesktopBig: 144px
+
+// Font Grössen General Variablen
+$fontSizeLead: 20px
+$fontSizeCopy: 17px
+$fontSizeLabels: 17px
+$fontSizeBtnTabs: 17px
+$fontSizeZusatzinfos: 13px
+
+// Global Styles: H-Titel
 h1, h2, h3, h4, h5, h6
-	font-family: 'Roboto Slab', serif
+	font-family: $fontFamilySerif
 
-// Text
+// Global Styles: p
 p 
-	font-family: 'Montserrat', sans-serif
+	font-family: $fontFamilySansSerif
+
+// Global Styles: Buttons
+button
+	background-color: $schwarz75
+	border-radius: 4px
+	border: 0px
+	padding: 10px 20px 10px 20px
+
+//_______________________________________________________________
+
+
+@media screen and ( min-width: $mobile )
+	h1
+		font-size: $fontSizeMobileH1
+	p
+		font-size: $fontSizeCopy
+
+@media screen and ( min-width: $tablet )
+	h1
+		font-size: $fontSizeTabletH1
+
+@media screen and ( min-width: $desktop )
+	h1
+		font-size: $fontSizeDesktopH1
+
+
+
+
+
+//_______________________________________________________________
+
+
+// Body
+body
+	padding: 24px
+
+// Header
+header
+	background-color: yellow
+
+// Main
+main
+	background-color: lightgrey
+
+// Footer
+footer
+	background-color: red
+
+// Home: Entry
+.wrapper__home-entry
+	background-color: green
+	h1
+		color: $schwarz75
+		text-align: center
+	
+	p
+		color: $schwarz100
+		text-align: center
+
+// Home: Genre Filters
+.wrapper__filter
+	background-color: red
+// 	.filter__toggle
+// 		button
+// 		ul
+// 			.filter_genres-list
+// 				li
+//         .filter__action">
+// 			button
+
+// Home: Image
+.wrapper__hero-img
+	background-color: green
+		// img
+
+// Home: Magazin			
+.wrapper__magazin
+		background-color: red
+// 		h2
+// 		ul
+// 			.magazin__masonry
+// 				li
+// 					.magazin__post
+// 						h3
+// 						p
+// 						button
+
+// Home: App Banner														
+.wrapper__app-bannner
+	background-color: green
+// 		  	.app__image
+// 			  img
+// 			.app__text
+// 				h2
+// 				button
+// 				img
+					
+// Home: Entdeckungen
+.wrapper__entdeckungen
+		background-color: red
+// 		h2
+// 		p
+
+// Home: News			
+.wrapper__news
+	background-color: green
+// 		h2
+// 		ul
+// 			.news__masonry
+// 				li
+// 					.news__post
+// 						img
+// 						p
