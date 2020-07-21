@@ -88,6 +88,7 @@ function startBrowserSync() {
   browserSync.init({
     server: {
       baseDir: "src",
+      browser: "firefox_dev"
     },
   });
 }
