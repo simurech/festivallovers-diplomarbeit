@@ -12,7 +12,6 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
     />
-    <script type="text/javascript" src="/src/js/main.js"></script>
   </head>
 
   <body>
@@ -35,12 +34,12 @@
 
         <div class="filter__genres-list">
           <ul>
-            <li>Jazz</li>
-            <li>Jazz</li>
-            <li>Jazz</li>
-            <li>Jazz</li>
-            <li>Jazz</li>
-            <li>Mehr Genres</li>
+            <li class="filter__genres-item"><img src="#" class="filter__genres-item-icon">Jazz <span class="filter__genres-item-zaehler">20</span></li>
+            <li class="filter__genres-item"><img src="#" class="filter__genres-item-icon">Hiphop <span class="filter__genres-item-zaehler">20</span></li>
+            <li class="filter__genres-item"><img src="#" class="filter__genres-item-icon">Indie <span class="filter__genres-item-zaehler">20</span></li>
+            <li class="filter__genres-item"><img src="#" class="filter__genres-item-icon">Pop & Rock <span class="filter__genres-item-zaehler">20</span></li>
+            <li class="filter__genres-item"><img src="#" class="filter__genres-item-icon">Electronic <span class="filter__genres-item-zaehler">20</span></li>
+            <li class="filter__genres-item filter__genres-more"><a href="#">Mehr Genres</a></li>
           </ul>
         </div>
 
@@ -56,46 +55,52 @@
 
       <div class="wrapper__magazin">
         <h2>Magazin</h2>
-        <ul class="magazin__masonry">
-          <li class="magazin__post">
+        <div class="magazin__masonry-container">
+          <div class="magazin__post">
             <h3>Einfach blos nichts vergessen 1</h3>
             <p>TextText TextTextTex tTextTextT extTe tTextText extTextT extTextTextT extTextText TextTextText TextTextTex tTextText TextTe tTextTe xtTextT extTe xtText</p> <a href="#">Lesen</a>
-          </li>
-          <li class="magazin__post">
+          </div>
+          <div class="magazin__post">
             <h3>Einfach blos nichts vergessen 2</h3>
             <p>TextText TextTextTex tTextTextT extTe tTextText extTextT extTextTextT extTextText TextTextText TextTextTex tTextText TextTe tTextTe xtTextT extTe xtText</p> <a href="#">Lesen</a>
-          </li>
-          <li class="magazin__post">
+          </div>
+          <div class="magazin__post">
             <h3>Einfach blos nichts vergessen 3</h3>
             <p>Text</p> <a href="#">Lesen</a>
-          </li>
-          <li class="magazin__post">
+          </div>
+          <div class="magazin__post">
             <h3>Einfach blos nichts vergessen 4</h3>
             <p>Text</p> <a href="#">Lesen</a>
-          </li>
-          <li class="magazin__post">
+          </div>
+          <div class="magazin__post">
             <h3>Einfach blos nichts vergessen 5</h3>
             <p>TextText TextTextTex tTextTextT extTe tTextText extTextT extTextTextT extTextText TextTextText TextTextTex tTextText TextTe tTextTe xtTextT extTe xtText</p> <a href="#">Lesen</a>
-          </li>
-          <li class="magazin__post">
+          </div>
+          <div class="magazin__post">
             <h3>Einfach blos nichts vergessen 6</h3>
             <p>Text</p> <a href="#">Lesen</a>
-          </li>
-        </ul>
+          </div>
+        </div>
         <div class="magazin__post-more">
           <button>Mehr anzeigen</button>
         </div>
       </div>
 
-      <div class="wrapper__app-bannner">
+      <div class="wrapper__app-banner">
         <div class="app__image">
-          <img src="#" />
+          <img src="#" alt="Smartphone"/>
         </div>
         <div class="app__text">
-          <h2>Mit der App unabhängig am festival feiern.</h2>
-          <button>App downloaden</button>
-          <img src="#" alt="Apple App Store" />
-          <img src="#" alt="Google Play Store" />
+          <div class="app__text-titel">
+            <h2>Mit der App unabhängig am Festival feiern.</h2>
+          </div>
+          <div class="app__text-button">
+            <button class="lightreversed">App downloaden</button>
+          </div>
+          <div class="app__text-stores">
+            <img src="#" alt="Apple App Store" />
+            <img src="#" alt="Google Play Store" />
+          </div>
         </div>
       </div>
 
@@ -105,31 +110,88 @@
           Sei offen für neues und geniesse unerwartete Musikerlebnisse. Höre dir
           die Samples an und entdecke deine Leidenschaften.
         </p>
+        <div class="entdeckungen__music-container">
+          <div class="entdeckungen__music-track-jazz">
+            <svg version="1.1" id="play" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" height="100px" width="100px"viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve">
+              <path class="icon" fill="black" d="M38,69c-1,0.5-1.8,0-1.8-1.1V32.1c0-1.1,0.8-1.6,1.8-1.1l34,18c1,0.5,1,1.4,0,1.9L38,69z"/>
+            </svg>
+          </div>
+          <div class="entdeckungen__music-track-rock">
+            <svg version="1.1" id="play" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" height="100px" width="100px"viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve">
+              <path class="icon" fill="black" d="M38,69c-1,0.5-1.8,0-1.8-1.1V32.1c0-1.1,0.8-1.6,1.8-1.1l34,18c1,0.5,1,1.4,0,1.9L38,69z"/>
+            </svg>
+          </div>
+          <div class="entdeckungen__music-track-pop">
+            <svg version="1.1" id="play" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" height="100px" width="100px"viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve">
+              <path class="icon" fill="black" d="M38,69c-1,0.5-1.8,0-1.8-1.1V32.1c0-1.1,0.8-1.6,1.8-1.1l34,18c1,0.5,1,1.4,0,1.9L38,69z"/>
+            </svg>
+          </div>
+          <div class="entdeckungen__music-track-blues">
+            <svg version="1.1" id="play" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" height="100px" width="100px"viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve">
+              <path class="icon" fill="black" d="M38,69c-1,0.5-1.8,0-1.8-1.1V32.1c0-1.1,0.8-1.6,1.8-1.1l34,18c1,0.5,1,1.4,0,1.9L38,69z"/>
+            </svg>
+          </div>
+          <div class="entdeckungen__music-track-hiphop">
+            <svg version="1.1" id="play" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" height="100px" width="100px"viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve">
+              <path class="icon" fill="black" d="M38,69c-1,0.5-1.8,0-1.8-1.1V32.1c0-1.1,0.8-1.6,1.8-1.1l34,18c1,0.5,1,1.4,0,1.9L38,69z"/>
+            </svg>
+          </div>
+          <div class="entdeckungen__music-track-more">
+            <button class="light">Mehr Samples</button>
+          </div>
+        </div>
       </div>
 
       <div class="wrapper__news">
         <h2>News</h2>
-        <ul class="news__masonry">
-          <li class="news__post">
+        <div class="news__masonry-container">
+          <div class="news__post">
+            <img src="#">
+            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et</p>
+          </div>
+          <div class="news__post">
+            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et</p>
+          </div>
+          <div class="news__post">
             <img src="#" />
-            <p>Text</p>
-          </li>
-          <li class="news__post"><p>Text</p></li>
-          <li class="news__post">
-            <img src="#" />
-            <p>Text</p>
-          </li>
-          <li class="news__post"><p>Text</p></li>
-          <li class="news__post">
-            <img src="#" />
-            <p>Text</p>
-          </li>
-          <li class="news__post"><p>Text</p></li>
-        </ul>
+            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et</p>
+          </div>
+          <div class="news__post">
+            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr,</p>
+          </div>
+          <div class="news__post">
+            <img src="#">
+            <p>Lorem ipsum dolor sit amet, consetetur mpor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et</p>
+          </div>
+          <div class="news__post">
+            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et</p>
+          </div>
+          <div class="news__post">
+            <img src="#">
+            <p>Lorem ipsum dolor sit amet, consetetur sadipscing umy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et</p>
+          </div>
+          <div class="news__post">
+            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et</p>
+          </div>
+          <div class="news__post">
+            <img src="#">
+            <p>Lorem ipsum doquyam erat, sed diam voluptua. At vero eos et accusam et</p>
+          </div>
+          <div class="news__post">
+            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eusam et</p>
+          </div>
+        </div>
+        <div class="news__post-more">
+          <button class="light">Mehr anzeigen</button>
+        </div>
       </div>
     </main>
     <footer>
       <p>FOOTER</p>
     </footer>
+
+    <!-- Hier Javascripte einfügen -->
+    <script type="text/javascript" src="/js/main.js"></script>
+
   </body>
 </html>
