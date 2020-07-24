@@ -1,0 +1,7 @@
+#Für HTML
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule !.*\.html$ %{REQUEST_FILENAME}.html [QSA,L]
+
+#Für PHP
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule !.*\.php$ %{REQUEST_FILENAME}.php [QSA,L]

@@ -62,7 +62,7 @@ h2
 h3
 	font-size: $fontSizeMobileH3
 	font-family: $fontFamilySerif
-p
+p, button, li, span
 	font-size: $fontSizeCopy
 	font-family: $fontFamilySansSerif
 .festival-titel
@@ -114,6 +114,12 @@ a
 a:hover
 	color: $grau76
 
+
+button:hover
+	cursor: pointer
+label:hover
+	cursor: pointer
+
 //* _________________________BUTTONS_________________________
 // Button ausgefüllt
 button
@@ -127,7 +133,7 @@ button
 	height: 48px
 	width: 100%
 	@media screen and ( min-width: $tablet ) // Tablet
-		width: 100%
+		width: 343px
 	@media screen and ( min-width: $desktop ) // Desktop
 		width: 343px
 button:hover
@@ -177,79 +183,135 @@ main
 footer
 	background-color: red
 
+//* _________________________VISIBLE / NOT VISIBLE_________________________
+.visible__flex
+	display: flex
+	visibility: visible
+.visible__grid
+	display: grid
+	visibility: visible
+.visible__block
+	display: block
+	visibility: visible
+.notvisible
+	display: none
+	visibility: hidden
+
 
 //* _________________________SITE-STYLES_________________________
-//! Home: Entry
+
+//! Home: Entry & Genre Filters
 .wrapper__home-entry
+	padding: 10px
+	@media screen and ( min-width: $tablet ) // Tablet
+		padding: 40px
+	@media screen and ( min-width: $desktop ) // Desktop
+		padding: 80px
 	h1
 		text-align: center
 	p
 		text-align: center
-
-//! Home: Genre Filters
-.wrapper__filter
-
-.filter__toggle
-	button
-	@media screen and ( min-width: $tablet ) // Tablet
+	.filter__toggle
 		button
-			display: none
-	@media screen and ( min-width: $desktop ) // Desktop
-		button
-			display: none
+		@media screen and ( min-width: $tablet ) // Tablet
+			button
+				display: none
+		@media screen and ( min-width: $desktop ) // Desktop
+			button
+				display: none
 
-.filter__genres-list
-	display: none
-	ul
-		list-style: none
-		margin: 0
-		padding: 0
-		display: flex
-		flex-wrap: wrap
-		flex-direction: column
-		align-items: center
-	.filter__genres-item
-		width: auto
-		height: 24px
-		padding-left: 12px
-		padding-right: 16px
-		padding-top: 12px
-		padding-bottom: 12px
-		margin: 12px
-		background-color: $grauC2
-		display: flex
-		align-items: center
-		.filter__genres-item-icon
+	.filter__genres-list
+		display: none
+		justify-content: center
+		ul
+			list-style: none
+			margin: 0
+			padding: 0
+			display: flex
+			flex-wrap: wrap
+			flex-direction: column
+			align-items: center
+		.filter__genres-item
+			width: auto
 			height: 24px
-			width: 24px
-			background-color: red
-			margin-right: 24px
-		.filter__genres-item-zaehler
-			align-self: flex-start
-			margin-top: 0px
-			font-size: 8px
-	.filter__genres-more
-		background-color: transparent
-		text-decoration: underline
-	@media screen and ( min-width: $tablet ) // Tablet
-		display: block
-		ul
-			flex-direction: row
-			justify-content: center
-	@media screen and ( min-width: $desktop ) // Desktop
-		display: block
-		ul
-			flex-direction: row
-			justify-content: center
+			padding-left: 12px
+			padding-right: 16px
+			padding-top: 12px
+			padding-bottom: 12px
+			margin: 12px
+			background-color: $grauC2
+			color: $weiss
+			display: flex
+			align-items: center
+			.filter__genres-item-icon
+				height: 24px
+				width: 24px
+				background-color: red
+				margin-right: 24px
+			.filter__genres-item-zaehler
+				align-self: flex-start
+				margin-top: 0px
+				font-size: 8px
+		.filter__genres-more
+			background-color: transparent
+			text-decoration: underline
+		@media screen and ( min-width: $tablet ) // Tablet
+			display: block
+			ul
+				flex-direction: row
+				justify-content: center
+		@media screen and ( min-width: $desktop ) // Desktop
+			display: block
+			ul
+				flex-direction: row
+				justify-content: center
 
-.filter__action
-	display: flex
-	justify-content: center
-	column-gap: 16px
-	@media screen and ( min-width: $tablet ) // Tablet
-		display: flex
-	@media screen and ( min-width: $desktop ) // Desktop
-		display: flex
+	// Checkboxen ausblenden
+	.filter__genres-item-checkbox
+		display: none
+		visibility: hidden
+
+	// Genre-Filter färben
+	.filter__genres-item-checkbox:checked + .filter__genres-item-label #label-li-jazz // Jazz
+		background-color: $jazzGelb
+	.filter__genres-item-checkbox:checked + .filter__genres-item-label #label-li-hiphop // Hiphop
+		background-color: $hipHopPink
+	.filter__genres-item-checkbox:checked + .filter__genres-item-label #label-li-indie // Indie
+		background-color: $indieMint
+	.filter__genres-item-checkbox:checked + .filter__genres-item-label #label-li-pop-und-rock // Pop & Rock
+		background-color: $popRockBlau
+	.filter__genres-item-checkbox:checked + .filter__genres-item-label #label-li-electronic // Electronic
+		background-color: $electronicViolett
+	.filter__genres-item-checkbox:checked + .filter__genres-item-label #label-li-musik1 // Musik 1
+		background-color: red
+	.filter__genres-item-checkbox:checked + .filter__genres-item-label #label-li-musik2 // Musik 2
+		background-color: red
+	.filter__genres-item-checkbox:checked + .filter__genres-item-label #label-li-musik3 // Musik 3
+		background-color: red
+	.filter__genres-item-checkbox:checked + .filter__genres-item-label #label-li-musik4 // Musik 4
+		background-color: red
+	.filter__genres-item-checkbox:checked + .filter__genres-item-label #label-li-musik5 // Musik 5
+		background-color: red
+
+
+
+	.filter__action
+		display: none
+		flex-direction: column-reverse
+		justify-content: center
+		width: 100%
+		button
+			margin-bottom: 12px
+		@media screen and ( min-width: $tablet ) // Tablet
+			display: flex
+			flex-direction: row
+			justify-content: center
+			column-gap: 16px
+		@media screen and ( min-width: $desktop ) // Desktop
+			display: flex
+			flex-direction: row
+			justify-content: center
+			column-gap: 16px
 
 
 //! Home: Image
@@ -261,6 +323,11 @@ footer
 
 //! Home: Magazin			
 .wrapper__magazin
+	padding: 10px
+	@media screen and ( min-width: $tablet ) // Tablet
+		padding: 40px
+	@media screen and ( min-width: $desktop ) // Desktop
+		padding: 80px
 	h2
 		text-align: center
 	.magazin__masonry-container
@@ -422,62 +489,67 @@ footer
 
 //! Home: Entdeckungen
 .wrapper__entdeckungen
-		h2
-			text-align: center
-		p
-			text-align: center
-		.entdeckungen__music-container
+	h2
+		text-align: center
+	p
+		text-align: center
+	.entdeckungen__music-container
+		display: flex
+		flex-direction: column
+		align-items: stretch
+		.entdeckungen__music-track-jazz
 			display: flex
-			flex-direction: column
-			align-items: stretch
-			.entdeckungen__music-track-jazz
-				display: flex
-				justify-content: center
-				background-image: url("https://cdn.pixabay.com/photo/2016/04/07/22/09/water-1314955_960_720.png")
-				background-position: center
-				background-size: contain
-				height: 150px
-				margin-bottom: 20px
-			.entdeckungen__music-track-rock
-				display: flex
-				justify-content: center
-				background-image: url("https://cdn.pixabay.com/photo/2016/04/07/22/09/water-1314955_960_720.png")
-				background-position: center
-				background-size: contain
-				height: 150px
-				margin-bottom: 20px
-			.entdeckungen__music-track-pop
-				display: flex
-				justify-content: center
-				background-image: url("https://cdn.pixabay.com/photo/2016/04/07/22/09/water-1314955_960_720.png")
-				background-position: center
-				background-size: contain
-				height: 150px
-				margin-bottom: 20px
-			.entdeckungen__music-track-blues
-				display: flex
-				justify-content: center
-				background-image: url("https://cdn.pixabay.com/photo/2016/04/07/22/09/water-1314955_960_720.png")
-				background-position: center
-				background-size: contain
-				height: 150px
-				margin-bottom: 20px
-			.entdeckungen__music-track-hiphop
-				display: flex
-				justify-content: center
-				background-image: url("https://cdn.pixabay.com/photo/2016/04/07/22/09/water-1314955_960_720.png")
-				background-position: center
-				background-size: contain
-				height: 150px
-				margin-bottom: 20px
-			.entdeckungen__music-track-more
-				display: flex
-				justify-content: center
+			justify-content: center
+			background-image: url("https://cdn.pixabay.com/photo/2016/04/07/22/09/water-1314955_960_720.png")
+			background-position: center
+			background-size: contain
+			height: 150px
+			margin-bottom: 20px
+		.entdeckungen__music-track-rock
+			display: flex
+			justify-content: center
+			background-image: url("https://cdn.pixabay.com/photo/2016/04/07/22/09/water-1314955_960_720.png")
+			background-position: center
+			background-size: contain
+			height: 150px
+			margin-bottom: 20px
+		.entdeckungen__music-track-pop
+			display: flex
+			justify-content: center
+			background-image: url("https://cdn.pixabay.com/photo/2016/04/07/22/09/water-1314955_960_720.png")
+			background-position: center
+			background-size: contain
+			height: 150px
+			margin-bottom: 20px
+		.entdeckungen__music-track-blues
+			display: flex
+			justify-content: center
+			background-image: url("https://cdn.pixabay.com/photo/2016/04/07/22/09/water-1314955_960_720.png")
+			background-position: center
+			background-size: contain
+			height: 150px
+			margin-bottom: 20px
+		.entdeckungen__music-track-hiphop
+			display: flex
+			justify-content: center
+			background-image: url("https://cdn.pixabay.com/photo/2016/04/07/22/09/water-1314955_960_720.png")
+			background-position: center
+			background-size: contain
+			height: 150px
+			margin-bottom: 20px
+		.entdeckungen__music-track-more
+			display: flex
+			justify-content: center
     
 
 
 //! Home: News			
 .wrapper__news
+	padding: 10px
+	@media screen and ( min-width: $tablet ) // Tablet
+		padding: 40px
+	@media screen and ( min-width: $desktop ) // Desktop
+		padding: 80px
 	h2
 		text-align: center
 	.news__masonry-container
