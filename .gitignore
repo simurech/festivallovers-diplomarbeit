@@ -4,10 +4,13 @@ dist
 rest
 rest/*
 dist/images
+dist/videos
 node_modules
 src/images
+src/videos
 src/css
 src/js/*-bundle.js
 *.jpg
 *.png
 *.svg
+*.mp4
