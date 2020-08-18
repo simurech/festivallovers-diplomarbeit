@@ -1,6 +1,8 @@
 .DS_Store
 .idea
 dist
+rest
+rest/*
 dist/images
 node_modules
 src/images
