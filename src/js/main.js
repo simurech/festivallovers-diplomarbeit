@@ -1,6 +1,6 @@
 // Test ob JS überhaupt geladen wird.
 function testFunktion() {
-	console.warn('JS wurde erfolgreich geladen');
+	console.error('JS wurde erfolgreich geladen');
 }
 testFunktion();
 
@@ -13,7 +13,7 @@ function linkOeffnen(link) {
 
 
 
-//! Home – Tablet & Desktop: Klick auf "Mehr Genres" bleindet weitere Genres ein.
+//! Home & Übersicht – Tablet & Desktop: Klick auf "Mehr Genres" bleindet weitere Genres ein.
 // Funktion
 function zeigMehrGenres() {
 	let genreLabels = document.querySelectorAll('.filter__genres-item-label');
@@ -60,6 +60,11 @@ document.querySelector('.zuruecksetzen').addEventListener('click', filterZurueck
 //! Home: Klick auf "Ergebnis anzeigen" leitet auf Übersichts-Seite mit allen Festivals 
 // Funktion
 function ergebnisseAnzeigen() {
+	const genresStorage = localStorage.getItem('genres');
+	if (genresStorage) {
+		console.log(genresStorage);
+		// Filter aktivieren Code hier einfügen
+	}
 	let genreCheckbox = document.querySelectorAll('.filter__genres-item-checkbox');
 	let genres = []
 	for (i = 0; i < genreCheckbox.length; i++ ){
@@ -67,20 +72,21 @@ function ergebnisseAnzeigen() {
 			let genre = genreCheckbox[i].id;
 			genres.push(genre);
 		};
+	localStorage.setItem('genres', genres.values);
 	};
 	console.log(genres);
-	let link = '/festival-uebersicht';
-	for (i = 0; i < genres.length; i++ ){
-		link = link + '?genre=' + genres[i];
-		};
-	linkOeffnen(link);
+	// let link = '/festivals';
+	// for (i = 0; i < genres.length; i++ ){
+	// 	link = link + '?genre=' + genres[i];
+	// 	};
+	//linkOeffnen(link);
 };
 // Event Listener
 //? document.querySelector('.ergebnis').addEventListener('click', ergebnisseAnzeigen);
 
 
 
-//! Übersicht: Lade alle Festivals
+//! Übersicht: Lade alle Festivals (nur ausführen auf Seite "/festivals/")
 const restUrl = 'http://192.168.1.10/rest' //! URL ZU SERVER
 // Event-Daten laden
 function eventsLaden() {
@@ -112,8 +118,15 @@ function eventsLaden() {
 					});
 				});
 		};
-// Funktion sofort ausführen
-eventsLaden();
+// Funktion sofort ausführen, wenn auf Festival-Übersicht-Seite
+function checkUrl (){
+	const pageUrl = window.location.pathname;
+	if (pageUrl == '/festivals/') {
+		eventsLaden();
+	}
+}
+// Aktuelle URL prüfen
+checkUrl();
 
 //! LocationID in Name umwandeln - DEFEKT
 // Funktion: Location mit spezifischer ID abfragen -> Namen zurückgeben
@@ -128,8 +141,6 @@ function getLocationNameById(id){
 		})
 		.then(console.log('Fertig?'+this.title));
 };
-
-
 // Location ID in Text umwandeln
 function rewriteLocationIdToText(id){
 	const requestId = id;
@@ -188,3 +199,26 @@ function rewriteLocationIdToText(id){
 }
 // Funktion sofort ausführen
 rewriteLocationIdToText()
+
+
+
+//! Home - Gewählte Genres in LocalStorage speichern
+
+
+var h1 = document.querySelector('h1');
+      var nameInput = document.querySelector('#name-input');
+      var nameBtn = document.querySelector('#name-btn');
+
+      function writeName (name) {
+        h1.innerText = 'Hallo ' + name + '!';
+      }
+
+      nameBtn.addEventListener('click', function (event) {
+        writeName(nameInput.value);
+        localStorage.setItem('name', nameInput.value);
+      })
+
+      var storedName = localStorage.getItem('name');
+      if (storedName) {
+        writeName(storedName);
+      }
