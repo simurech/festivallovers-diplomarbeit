@@ -23,4 +23,23 @@ function checkUrlStartFunktion (url, funktion){
 
 
 //! Header-Menü
-// 
+// Funktion: Overlay-Menü einblenden
+function openNavi() {
+	console.log('Navigation einblenden!');
+	let overlay = document.querySelector('#navigation');
+	overlay.style.height = '100%';
+};
+// Funktion: Overlay-Menü ausblenden
+function closeNavi() {
+	console.log('Navigation ausblenden!');
+	let overlay = document.querySelector('#navigation');
+	overlay.style.height = '0%';
+};
+// Event Listener auf Menü Button in Header zum einblenden
+document.querySelector('#showmenu').addEventListener('click', openNavi);
+// Event Listener auf Menü Button in Overlay zum ausblenden
+document.querySelector('#hidemenu').addEventListener('click', closeNavi);
+let closeBtns = document.querySelectorAll('.menulink');
+closeBtns.forEach(element => {
+	element.addEventListener('click', closeNavi);
+});

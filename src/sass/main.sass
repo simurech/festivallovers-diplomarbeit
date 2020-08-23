@@ -166,7 +166,7 @@ body
 
 // Header
 header
-	background-color: yellow
+	background-color: red
 
 // Main
 main
@@ -214,7 +214,94 @@ footer
 		left: 0
 		width: 100%
 		height: 100%
-		
+
+	
+//* ___________________________HEADER___________________________
+.wrapper__header
+	display: grid
+	width: 100%
+	align-items: center
+	color: $schwarz100
+	border-bottom: 5px solid green
+	text-transform: uppercase
+	grid-template-columns: 2fr 1fr 2fr
+	grid-template-rows: 1fr
+	.header__menu a
+		justify-self: flex-start
+		display: flex
+		flex-direction: row
+		img
+		p
+			font-size: $fontSizeCopy
+	.header__logo
+		justify-self: center
+		.logo__mobile
+			background-color: yellow
+			display: block
+			@media screen and ( min-width: $tablet ) // Tablet
+				display: none
+			@media screen and ( min-width: $desktop ) // Desktop
+				display: none
+		.logo__desktop
+			display: none
+			background-color: pink
+			@media screen and ( min-width: $tablet ) // Tablet
+				display: block
+			@media screen and ( min-width: $desktop ) // Desktop
+				display: block
+	.header__buttons
+		display: flex
+		flex-direction: row
+		justify-self: flex-end
+		.header__login a
+			display: flex
+			flex-direction: row
+			border-left: 5px solid green
+			padding-left: 16px
+			padding-right: 16px
+		.header__tickets a
+			display: flex
+			flex-direction: row
+			border-left: 5px solid green
+			padding-left: 16px
+			padding-right: 16px
+			a
+			img
+			p
+				
+
+	
+//* __________________________OVERLAY-MENÜ__________________________
+.overlay
+	height: 0
+	width: 100%
+	position: fixed
+	z-index: 1
+	left: 0
+	top: 0
+	background-color: #000000
+	background-color: rgba(0,0,0, 0.9)
+	overflow-x: hidden
+	transition: 0.5s
+	.overlay__inhalt
+		position: relative
+		width: 100%
+		top: 25%
+		text-align: center
+		margin-top: 30px
+		color: #ffffff
+	.menulink 
+        text-decoration: none
+        font-size: 36px
+        color: #ffffff
+        display: block
+        transition: 0.3s
+	.menulink:hover
+		color: #000000
+		background: #ffffff
+	.closebtn
+        color: #ffffff
+
 
 //* _________________________SITE-STYLES_________________________
 
