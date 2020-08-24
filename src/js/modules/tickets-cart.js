@@ -6,7 +6,7 @@
 
 // Test ob JS überhaupt geladen wird.
 function testFunktion() {
-	console.warn('JS checkout.js wurde erfolgreich geladen');
+	console.warn('JS tickets-cart.js wurde erfolgreich geladen');
 }
 testFunktion();
 
