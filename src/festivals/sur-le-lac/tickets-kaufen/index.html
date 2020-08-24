@@ -17,178 +17,308 @@
 
   <body>
     <header>
-      <p>HEADER</p>
-    </header>
-    <main>
-      Möglichkeit zur Bestellung von n Tickets, Speicherung der Tickets im Local Storage. Es muss nur für 1 Festival Tickets bestellt werden können.
-      <div class="wrapper__detail-entry">
-        <img src="#" alt="" width="100%" height="400px">
-        <h1 class="festival-titel">Sur le Lac ein kleines Fest der Musik</h1>
-        <div class="detail-entry__box">
-          <p class="detail-entry__box-title">Countdown</p>
-          <p class="detail-entry__box-value">7 Tage</p>
+      <div class="wrapper__header">
+        <div class="header__menu">
+          <a id="showmenu" href="#">
+            <img width="50px" height="50px" alt="Menü">
+            <p>Menu</p>
+          </a>
         </div>
-        <div class="detail-entry__box">
-          <p class="detail-entry__box-title">Übrige Tickets</p>
-          <p class="detail-entry__box-value">43</p>
+        <div class="header__logo">
+          <a href="/">
+            <img class="logo__desktop" src="#" alt="Festival Lovers">
+            <img class="logo__mobile" src="#" alt="Festival Lovers">
+          </a>
         </div>
-        <div class="detail-entry__box">
-          <p class="detail-entry__box-title">Besucher</p>
-          <p class="detail-entry__box-value">12'000</p>
-        </div>
-        <div class="detail-entry__box">
-          <p class="detail-entry__box-title">Wetter</p>
-          <p class="detail-entry__box-value">28°</p>
+        <div class="header__buttons">
+          <div class="header__buttons-item">
+            <a href="#">
+              <img width="50px" height="50px" alt="Login">
+              <p>Login</p>
+            </a>
+          </div>
+          <div class="header__buttons-item">
+            <a href="#">
+              <img width="50px" height="50px" alt="Tickets">
+              <p>Tickets kaufen</p>
+            </a>
+          </div>
         </div>
       </div>
 
+      <div class="overlay" id="navigation">    
+        <div class="overlay__inhalt">
+          <div class="overlay__header">
+            <!--Kopie von Header-->
+            <div class="wrapper__header">
+              <div class="header__menu">
+                <a id="hidemenu" class="closebtn" href="#">
+                  <img width="50px" height="50px" alt="Schliessen">
+                  <p>Schliessen</p>
+                </a>
+              </div>
+              <div class="header__logo">
+                <a href="/">
+                  <img class="logo__desktop" src="#" alt="Festival Lovers">
+                  <img class="logo__mobile" src="#" alt="Festival Lovers">
+                </a>
+              </div>
+              <div class="header__buttons">
+                <div class="header__buttons-item">
+                  <a href="#">
+                    <img width="50px" height="50px" alt="Login">
+                    <p>Login</p>
+                  </a>
+                </div>
+                <div class="header__buttons-item">
+                  <a href="#">
+                    <img width="50px" height="50px" alt="Tickets">
+                    <p>Tickets kaufen</p>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="overlay__menu">
+            <a class="menulink" href="/festivals">Festivals</a>
+            <a class="menulink" href="/#magazin-content">Magazin</a>
+            <a class="menulink" href="/#news-content">News</a>
+          </div>
+          <div class="overlay__footer">
+            SOCIAL MEDIA ICONS
+            Search-BAR
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="wrapper__entry-img-genre">
+        <img src="#" alt="BILD" alt="BILD">
+      </div>
       <div class="breadcrumbs">
         BREADCRUMBS
       </div>
-
-      <div class="wrapper__detail-content">
-        <h2>Spannende, innovative und progressive Musik</h2>
-        <div class="detail-content__location">
-          <img>
-          <p>Eggersriet SG</p>
-        </div>
-        <div class="detail-content__datum">
-          <img>
-          <p>Fr, 13. - So, 15. Aug 2016</p>
-        </div>
-        <p class="lead">
-          Das eintätige Festival präsentiert Künstler, welche sich im Spannungsfeld zwischen verschiedensten musikalischen Strömungen und Einflüssen bewegen. Wir bieten Musikern, die sich für spannende, innovative und progressive Musik einsetzen eine Plattform. Das Fest findet mit einem atemberaubenden Ausblick über den Bodensee auf der Eggersrieter Höhe statt.
-        </p>
+      <div class="wrapper__tickets-entry">
+        <h1>Tickets für Sur le Lac</h1>
         <p>
-          Wir bieten euch auf dem Gelände verschiedenste Freuden für Gaumen und Kehle. Ob orientalischer Falafel oder Käseplättli mit einem Glas Wein kredenzt, marokkanische Teespezialität oder klassischer Schüblig vom Grill. Es sollte für jeden Geschmack etwas dabei sein. Um die Angebote zu sehr fairen Preisen und auch den Eintritt in diesem Rahmen beibehalten zu können, bitten wir euch auf das Mitbringen von Getränken und Lunchpäcklis jeglicher Art zu verzichten. Vielen Dank für eure Unterstützung und mit unserem kulinarischen Genuss wird das Fest bestimmt unvergesslich.
+          Liebe FestivalLovers unsere Festivals sind begehrt, daher sind auch unsere Tickets immer schnell ausverkauft. Sichert euch die besten Angebote – verpasst eure Chance nicht!
         </p>
-        <p>
-          Der Verein "Sur le Lac", welcher non-profit agiert, organisiert seit 2008 das "Sur le Lac – Ein kleines Fest der Musik". Das eintägige Festival präsentiert Künstler, welche sich im Spannungsfeld zwischen verschiedensten musikalischen Strömungen und Einflüssen bewegen. An einem Festival herrscht ein ständig hoher Lärmpegel. Schützt euer Gehör mit den überall auf dem Festgelände gratis erhältlichen Oropax.
-        </p>
-        <p>ICON Merken anzeigen</p>
-        <button>Tickets kaufen</button>
-        <button>Festival Teilen</button>
-        <img>
       </div>
-
-      <div class="wrapper__detail-slider">
-        <div class="splide">
-          <div class="splide__track">
-            <ul class="splide__list">
-              <li class="splide__slide"><img src="#" width="100%" height="200px"></li>
-              <li class="splide__slide">Slide 02</li>
-              <li class="splide__slide">Slide 03</li>
-            </ul>
+      <div class="wrapper__tickets-content">
+        <div class="tickets-content__infos">
+          <div class="tickets-content__infos-item">
+            <img src="#" alt="BILD">
+            <p>Eggersriet SG</p>
+          </div>
+          <div class="tickets-content__infos-item">
+            <img src="#" alt="BILD">
+            <p>Fr, 13. - So, 15. Aug 2016</p>
           </div>
         </div>
-        <script>
-          document.addEventListener( 'DOMContentLoaded', function () {
-            new Splide( '.splide' ).mount();
-          } );
-        </script>
+        <h2>Festivaleintritt</h2>
+        <div class="tickets-content__section">
+          <!--Ticket 1 START-->
+          <div class="tickets-content__section-item">
+            <div class="tickets-content__section-item-infobox">
+              <img src="#" alt="BILD">
+              <h3>1 Tag Pass</h3>
+              <p>CHF 75.-</p>
+            </div>
+            <div class="tickets-content__section-item-verfuegbarkeit">
+              <div class="tickets-verfuegbar-text">
+                <p>Verfügbare Tickets</p>
+                <p><span id="tickets-verfuegbar-1">480</span> / 600</p>
+              </div>
+              <div class="tickets-verfuegbar-anzeige">
+                <div class="prozent-verfuegbar"></div>
+                <div class="prozent-verfuegbar"></div>
+                <div class="prozent-verfuegbar"></div>
+                <div class="prozent-verfuegbar"></div>
+                <div class="prozent-verfuegbar"></div>
+                <div class="prozent-verfuegbar"></div>
+                <div class="prozent-verfuegbar"></div>
+                <div class="prozent-verfuegbar"></div>
+                <div class="prozent-nicht-verfuegbar"></div>
+                <div class="prozent-nicht-verfuegbar"></div>
+              </div>
+            </div>
+            <div class="tickets-content__section-item-kaufen">
+              <button class="ticket-add-remove-btn" id="remove1">-</button>
+              <p><span class="ticket-counter" id="ticket-anzahl-1">0</span> Tickets</p>
+              <button class="ticket-add-remove-btn" id="add1">+</button>
+            </div>
+          </div>
+          <!--Ticket 1 ENDE-->
+          <!--Ticket 2 START-->
+          <div class="tickets-content__section-item">
+            <div class="tickets-content__section-item-infobox disabled-box">
+              <img src="#" alt="BILD">
+              <h3>3 Tag Pass</h3>
+              <p>CHF 375.-</p>
+            </div>
+            <div class="tickets-content__section-item-verfuegbarkeit disabled-text">
+              <div class="tickets-verfuegbar-text">
+                <p>Verfügbare Tickets</p>
+                <p><span id="tickets-verfuegbar-2" class="disabled-text">0</span> / 500</p>
+              </div>
+              <div class="tickets-verfuegbar-anzeige">
+                <div class="prozent-nicht-verfuegbar"></div>
+                <div class="prozent-nicht-verfuegbar"></div>
+                <div class="prozent-nicht-verfuegbar"></div>
+                <div class="prozent-nicht-verfuegbar"></div>
+                <div class="prozent-nicht-verfuegbar"></div>
+                <div class="prozent-nicht-verfuegbar"></div>
+                <div class="prozent-nicht-verfuegbar"></div>
+                <div class="prozent-nicht-verfuegbar"></div>
+                <div class="prozent-nicht-verfuegbar"></div>
+                <div class="prozent-nicht-verfuegbar"></div>
+              </div>
+            </div>
+            <div class="tickets-content__section-item-kaufen">
+              <button class="ticket-add-remove-btn-disabled">-</button>
+              <p class="tickets-verfuegbar-disabled">Ausverkauft</p>
+              <button class="ticket-add-remove-btn-disabled">+</button>
+            </div>
+          </div>
+          <!--Ticket 2 ENDE-->
+          <!--Ticket 3 START-->
+          <div class="tickets-content__section-item">
+            <div class="tickets-content__section-item-infobox">
+              <img src="#" alt="BILD">
+              <h3>VIP 1 Tag</h3>
+              <p>CHF 225.-</p>
+            </div>
+            <div class="tickets-content__section-item-verfuegbarkeit">
+              <div class="tickets-verfuegbar-text">
+                <p>Verfügbare Tickets</p>
+                <p><span id="tickets-verfuegbar-3">45</span> / 75</p>
+              </div>
+              <div class="tickets-verfuegbar-anzeige">
+                <div class="prozent-verfuegbar"></div>
+                <div class="prozent-verfuegbar"></div>
+                <div class="prozent-verfuegbar"></div>
+                <div class="prozent-verfuegbar"></div>
+                <div class="prozent-verfuegbar"></div>
+                <div class="prozent-verfuegbar"></div>
+                <div class="prozent-nicht-verfuegbar"></div>
+                <div class="prozent-nicht-verfuegbar"></div>
+                <div class="prozent-nicht-verfuegbar"></div>
+                <div class="prozent-nicht-verfuegbar"></div>
+              </div>
+            </div>
+            <div class="tickets-content__section-item-kaufen">
+              <button class="ticket-add-remove-btn">-</button>
+              <p><span class="ticket-counter" id="ticket-anzahl-3">0</span> Tickets</p>
+              <button class="ticket-add-remove-btn">+</button>
+            </div>
+          </div>
+          <!--Ticket 3 ENDE-->
+          <!--Ticket 4 START-->
+          <div class="tickets-content__section-item">
+            <div class="tickets-content__section-item-infobox">
+              <img src="#" alt="BILD">
+              <h3>VIP 3 Tage</h3>
+              <p>CHF 420.-</p>
+            </div>
+            <div class="tickets-content__section-item-verfuegbarkeit">
+              <div class="tickets-verfuegbar-text">
+                <p>Verfügbare Tickets</p>
+                <p><span id="tickets-verfuegbar-4">448</span> / 450</p>
+              </div>
+              <div class="tickets-verfuegbar-anzeige">
+                <div class="prozent-verfuegbar"></div>
+                <div class="prozent-verfuegbar"></div>
+                <div class="prozent-verfuegbar"></div>
+                <div class="prozent-verfuegbar"></div>
+                <div class="prozent-verfuegbar"></div>
+                <div class="prozent-verfuegbar"></div>
+                <div class="prozent-verfuegbar"></div>
+                <div class="prozent-verfuegbar"></div>
+                <div class="prozent-verfuegbar"></div>
+                <div class="prozent-verfuegbar"></div>
+              </div>
+            </div>
+            <div class="tickets-content__section-item-kaufen">
+              <button class="ticket-add-remove-btn">-</button>
+              <p><span class="ticket-counter" id="ticket-anzahl-4">0</span> Tickets</p>
+              <button class="ticket-add-remove-btn">+</button>
+            </div>
+          </div>
+          <!--Ticket 4 ENDE-->
+        </div>
+
+        <h2>Camping</h2>
+        <div class="tickets-content__section">
+          <!--Ticket 5 START-->
+          <div class="tickets-content__section-item">
+            <div class="tickets-content__section-item-infobox">
+              <img src="#" alt="BILD">
+              <h3>Standard Zelt</h3>
+              <p>CHF 25.-</p>
+            </div>
+            <div class="tickets-content__section-item-verfuegbarkeit">
+              <div class="tickets-verfuegbar-text">
+                <p>Verfügbare Tickets</p>
+                <p><span id="tickets-verfuegbar-1">640</span> / 1000</p>
+              </div>
+              <div class="tickets-verfuegbar-anzeige">
+                <div class="prozent-verfuegbar"></div>
+                <div class="prozent-verfuegbar"></div>
+                <div class="prozent-verfuegbar"></div>
+                <div class="prozent-verfuegbar"></div>
+                <div class="prozent-verfuegbar"></div>
+                <div class="prozent-verfuegbar"></div>
+                <div class="prozent-nicht-verfuegbar"></div>
+                <div class="prozent-nicht-verfuegbar"></div>
+                <div class="prozent-nicht-verfuegbar"></div>
+                <div class="prozent-nicht-verfuegbar"></div>
+              </div>
+            </div>
+            <div class="tickets-content__section-item-kaufen">
+              <button class="ticket-add-remove-btn">-</button>
+              <p><span class="ticket-counter" id="ticket-anzahl-5">0</span> Tickets</p>
+              <button class="ticket-add-remove-btn">+</button>
+            </div>
+          </div>
+          <!--Ticket 5 ENDE-->
+          <!--Ticket 6 START-->
+          <div class="tickets-content__section-item">
+            <div class="tickets-content__section-item-infobox">
+              <img src="#" alt="BILD">
+              <h3>3 Tag Pass</h3>
+              <p>CHF 375.-</p>
+            </div>
+            <div class="tickets-content__section-item-verfuegbarkeit">
+              <div class="tickets-verfuegbar-text">
+                <p>Verfügbare Tickets</p>
+                <p><span id="tickets-verfuegbar-6">49</span> / 50</p>
+              </div>
+              <div class="tickets-verfuegbar-anzeige">
+                <div class="prozent-verfuegbar"></div>
+                <div class="prozent-verfuegbar"></div>
+                <div class="prozent-verfuegbar"></div>
+                <div class="prozent-verfuegbar"></div>
+                <div class="prozent-verfuegbar"></div>
+                <div class="prozent-verfuegbar"></div>
+                <div class="prozent-verfuegbar"></div>
+                <div class="prozent-verfuegbar"></div>
+                <div class="prozent-verfuegbar"></div>
+                <div class="prozent-verfuegbar"></div>
+              </div>
+            </div>
+            <div class="tickets-content__section-item-kaufen">
+              <button class="ticket-add-remove-btn">-</button>
+              <p><span class="ticket-counter" id="ticket-anzahl-6">0</span> Tickets</p>
+              <button class="ticket-add-remove-btn">+</button>
+            </div>
+          </div>
+          <!--Ticket 6 ENDE-->
+        </div>
       </div>
 
-      <div class="wrapper__detail-lineup">
-        <h3>Line up</h3>
-        <p class="lead">
-          Wir freuen uns auch diese Jahr wieder ein spannendes und einzigartiges Line Up präsentieren zu dürfen. Auf der Hauptbühne wird definitiv viel los sein.
-        </p>
-        <div class="detail-lineup__tag-menu">
-          Freitag
-          ICON
-        </div>
-        <div class="detail-lineup__artists">
-          <div class="artists__time">17.00</div>
-          <div class="artists__box artists__jazz">Kero Kero Bonnito</div>
-          <div class="artists__box artists__hiphop">Girls Names</div>
-        </div>
-        <div class="detail-lineup__artists">
-          <div class="artists__time">18.00</div>
-          <div class="artists__box artists__jazz">Red Hot Chili Peppers</div>
-          <div class="artists__box artists__hiphop">Wo-Tang Clan</div>
-        </div>
-        <div class="detail-lineup__artists">
-          <div class="artists__time">19.00</div>
-          <div class="artists__box artists__jazz">Tompaul</div>
-          <div class="artists__box artists__hiphop">3 Doors Down</div>
-        </div>
-        <div class="detail-lineup__artists">
-          <div class="artists__time">20.00</div>
-          <div class="artists__box artists__jazz">Lauryn Hill</div>
-          <div class="artists__box artists__hiphop">Muse</div>
-        </div>
-        <div class="detail-lineup__artists">
-          <div class="artists__time">21.00</div>
-          <div class="artists__box artists__jazz">The Horrors</div>
-        </div>
-        <div class="detail-lineup__artists">
-          <div class="artists__time">22.00</div>
-          <div class="artists__box artists__jazz">Darkstar</div>
-        </div>
-        <div class="detail-lineup__artists">
-          <div class="artists__time">23.00</div>
-          <div class="artists__box artists__jazz">A=f/m</div>
-        </div>
-      </div>
-
-      <div class="wrapper__detail-video">
-        <div class="video-container">
-          <iframe src="https://www.youtube.com/embed/Oy3DZu6BCrE"  frameborder="0" allowfullscreen></iframe>
-        </div>
-        <video width="100%" >
-          <source src="/videos/sur-le-lac.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-        </video> 
-      </div>
-
-      <div class="wrapper__detail-wissenswertes">
-        <h2>Wissenswertes</h2>
-        <p class="lead">
-          Damit euer Festivalerlebnis glatt verläuft und ihr es in vollen Zügen geniesse könnt, gibt es hier nochmals eine Übersicht mit allem was ihr wissen und beachten müsst.
-        </p>
-        <div class="detail-wissenswertes__akkordeon">
-          <div class="detail-wissenswertes__akkordeon-item">
-            <h3>Anreise & Rückreise</h3>
-            <p>Weniger</p>
-            <hr>
-            <p>
-              Die Anreise ans Sur le Lac gestaltet sich wie folgt und ganz unkompliziert. Wir empfehlen die öffentlichen Verkehrsmittel zu benützen. Ab Eggersriet Post bringen euch Shuttlebusse direkt aufs Gelände. Naturverbundenen Besuchern legen wir den 15-minütigen Spaziergang vorbei an Blüten und Blatt gen Festgelände sehr ans Herz. In der Nacht bringen euch dann stündlich Spezialbusse sicher und behütet zurück nach St. Gallen. Die Spezialbusse sind im Eintrittspreis inbegriffen. Besuchern, welche mit Privatautos anreisen, stehen in begrenzter Anzahl Parkplätze unweit des Festgeländes zur Verfügung.
-            </p>
-            GOOGLE MAPS
-          </div>
-          <div class="detail-wissenswertes__akkordeon-item">
-            <h3>Einlassregeln</h3>
-            <p>Mehr</p>
-            <hr>
-          </div>
-          <div class="detail-wissenswertes__akkordeon-item">
-            <h3>Zelten & Naturschutz</h3>
-            <p>Mehr</p>
-            <hr>
-          </div>
-          <div class="detail-wissenswertes__akkordeon-item">
-            <h3>Fragen & Antworten</h3>
-            <p>Mehr</p>
-            <hr>
-          </div>
-        </div>
-      </div>
-
-      <div class="wrapper__detail-prefooter">
-        <div>
-          <h3>Seit ein Teil von Sur Le Lac</h3>
-          <button class="light">Tickets kaufen</button>
-        </div>
-        <div class="">
-          ICON
-          <p>Musikfestwochen</p>
-          <img>
-        </div>
-        <div class="">
-          <img>
-          <p>Openair Zürich</p>
-          ICON
-        </div>
+      <div class="tickets-content__warenkorb">
+        <hr>
+        <button><span id="warenkorb-zaehler">0</span> Tickets kaufen</button>
       </div>
     </main>
     <footer>
@@ -197,8 +327,6 @@
 
     <!-- Hier Javascripte einfügen -->
     <script type="text/javascript" src="/js/main.js"></script>
-    <script type="text/javascript" src="/js/splide.js"></script>
-
-
+    <script type="text/javascript" src="/js/modules/checkout.js"></script>
   </body>
 </html>

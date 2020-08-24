@@ -96,4 +96,18 @@ _____________________________________________________________
 
 ## __Dokumentation__
 ### __Setup__
+Setupguide noch zu erstellen!
+- Gulp-Task zum builden
+- Daten auf Server verschieben
+- REST-URL anpassen
+- .htacces anpassen?
+- Code kontrollieren
+
+### __Persönliche Anmerkungen__
 TBD
+- Fazit
+- Weitere Verwendung
+
+### __Quellenangaben__
+TBD
+- Slider

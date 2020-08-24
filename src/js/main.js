@@ -21,6 +21,15 @@ function checkUrlStartFunktion (url, funktion){
 };
 // Beispiel: checkUrlStartFunktion('/festivals/', eventsLaden);
 
+// Eventlistener auf Array legen
+function funktionBeiKlick (selektorklasse, funktion) {
+	let selektorarray = document.querySelectorAll('.'+selektorklasse);
+	for (i=0; i < selektorarray.length; i++) {
+		selektorarray[i].addEventListener('click', funktion);
+	};
+};
+// Beispiel: funktionBeiKlick(klassennname, auszufuehrendeFunktionn);
+
 
 //! Header-Menü
 // Funktion: Overlay-Menü einblenden

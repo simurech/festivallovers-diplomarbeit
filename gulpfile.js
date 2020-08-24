@@ -99,6 +99,12 @@ function copyImages() {
     .src("src/images/*.(gif|jpg|png|svg)")
     .pipe(gulp.dest("dist/images/"));
 }
+// Videos kopieren
+function copyVideos() {
+  return gulp
+    .src("src/videos/*.(mp4|avi)")
+    .pipe(gulp.dest("dist/videos/"));
+}
 
 // HTML kopieren
 function copyHtml() {
@@ -132,12 +138,13 @@ gulp.task("bundle", bundleJs);
 gulp.task("bundle:build", gulp.series(startProductionBuild, bundleJs));
 gulp.task("watch", gulp.series(runSass, bundleJs, runWatch));
 
-//! Builder Task
+
+// Builder Task
 gulp.task(
   "build",
   gulp.series(
     startProductionBuild,
     runClean,
-    gulp.parallel(copyHtml, runSass, bundleJs)
+    gulp.parallel(copyHtml, copyImages, copyVideos, runSass, bundleJs)
   )
 );
