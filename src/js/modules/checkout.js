@@ -1,12 +1,12 @@
-// In folgendem Code werden alle Funktionen für den Bestellprozess definiert.
-// Die Nutzerinteraktion manipuliert die Seite für den Nutzer und speichert Tickets im Local Storage.
-// Das Skript muss überall eingebunden sein, wo Ticket-Infos für die Bestellung gespeichert werden müssen.
-// Aktuell betrifft dies nnur die "Tickets kaufen"-Seite.
+// In folgendem Code werden alle Funktionen für den Checkout-Prozess definiert.
+// Die gewünschten Tickets werden aus dem Local Storage ausgelesen.
+// Das Skript muss überall eingebunden sein, wo Ticket-Infos für die Bestellung geladen werden.
+// Aktuell betrifft dies nur die Zahlung-Seite.
 
 
 // Test ob JS überhaupt geladen wird.
 function testFunktion() {
-	console.warn('JS tickets-cart.js wurde erfolgreich geladen');
+	console.warn('JS checkout.js wurde erfolgreich geladen');
 }
 testFunktion();
 

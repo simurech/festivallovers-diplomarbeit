@@ -5,3 +5,5 @@ RewriteRule !.*\.html$ %{REQUEST_FILENAME}.html [QSA,L]
 # URL mit Trailing Slash
 RewriteCond %{REQUEST_FILENAME} !-f 
 RewriteRule ^[^/]+$ %{REQUEST_URI}/ [L,R=301]
+# Unterverzeichnis "Checkout" auf Login-Seite weiterleiten
+Redirect 301 /checkout/ http://localhost:3000/checkout/login/

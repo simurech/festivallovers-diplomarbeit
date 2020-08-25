@@ -22,6 +22,7 @@ $popRockBlau: #3949ab
 $popRockBlauHell: #3f51b5
 $electronicViolett: #5e35b1
 $electronicViolettHell: #673ab7
+$transparent: rgba(255,255,255,0)
 
 // Variablen: Font Familys
 $fontFamilySerif: 'Roboto Slab', serif
@@ -62,7 +63,7 @@ h2
 h3
 	font-size: $fontSizeMobileH3
 	font-family: $fontFamilySerif
-p, button, li, span
+p, button, li, span, a
 	font-size: $fontSizeCopy
 	font-family: $fontFamilySansSerif
 .festival-titel
@@ -74,9 +75,11 @@ p, button, li, span
 .label
 	font-family: $fontFamilySansSerif
 	font-size: $fontSizeLabels
-.btn, .tabs
+button, .btn, .tabs
 	font-family: $fontFamilySansSerif
 	font-size: $fontSizeBtnTabs
+	text-transform: uppercase
+	font-weight: bold
 .zusatzinfo
 	font-family: $fontFamilySansSerif
 	font-size: $fontSizeZusatzinfos
@@ -84,26 +87,20 @@ p, button, li, span
 @media screen and ( min-width: $tablet ) // Tablet
 	h1
 		font-size: $fontSizeTabletH1
-		font-family: $fontFamilySerif
 	h2
 		font-size: $fontSizeTabletH2
-		font-family: $fontFamilySerif
 	h3
 		font-size: $fontSizeTabletH3
-		font-family: $fontFamilySerif
 	.festival-titel
 		font-size: $fontSizeTabletBig
 
 @media screen and ( min-width: $desktop ) // Desktop
 	h1
 		font-size: $fontSizeDesktopH1
-		font-family: $fontFamilySerif
 	h2
 		font-size: $fontSizeDesktopH2
-		font-family: $fontFamilySerif
 	h3
 		font-size: $fontSizeDesktopH3
-		font-family: $fontFamilySerif
 	.festival-titel
 		font-size: $fontSizeDesktopBig
 
@@ -114,11 +111,17 @@ a
 a:hover
 	color: $grau76
 
-
+//* _________________________POINTER_________________________
 button:hover
 	cursor: pointer
 label:hover
 	cursor: pointer
+
+//* _________________________ICONS_________________________
+.svg-schwarz
+	filter: opacity(1)
+.svg-grau
+	filter: opacity(.5)
 
 //* _________________________BUTTONS_________________________
 // Button ausgefüllt
@@ -127,15 +130,16 @@ button
 	border-radius: 0px
 	border: 2px solid $schwarz100
 	padding: 10px 32px 10px 32px
-	text-transform: uppercase
 	color: $weiss
-	font-weight: bold
 	height: 48px
 	width: 100%
+	margin: 4px
 	@media screen and ( min-width: $tablet ) // Tablet
-		width: 343px
+		width: auto
+		max-width: 343px
 	@media screen and ( min-width: $desktop ) // Desktop
-		width: 343px
+		width: auto
+		max-width: 343px
 button:hover
 	background-color: $grau76
 	border: 2px solid $grau76
@@ -149,9 +153,18 @@ button.light
 button.light:hover
 		background-color: $schwarz100
 		color: $weiss
+// Button - reversed
+button.reversed
+		background-color: $weiss
+		color: $schwarz100
+		border: 2px solid $weiss
+button.reversed:hover
+		background-color: $grau76
+		color: $weiss
+		border: 2px solid $grau76
 // Button gerahmt - reversed
 button.lightreversed
-		background-color: $schwarz100
+		background-color: $transparent
 		color: $weiss
 		border: 2px solid $weiss
 button.lightreversed:hover
@@ -160,30 +173,48 @@ button.lightreversed:hover
 		border: 2px solid $weiss
 
 //* _________________________CONTAINERS_________________________
-// Body
-body
+// Html & Body
+html, body
+	width: 100%
+	scroll-behavior: smooth
 	padding: 0px
 	margin: 0px
-
+// Body
+body
+	display: flex
+	flex-direction: column
 // Header
 header
-	background-color: white
+	background-color: $weiss
+	width: 100%
+	position: sticky
+	top: 0
+	// Weitere Styleeigenschaften finden sich unten im Bereich HEADER
 
 // Main
 main
+	flex: 1 0 auto
+	box-sizing: border-box
 	padding-left: 12px
 	padding-right: 12px
 	background-color: white
 	margin-left: auto
 	margin-right: auto
+	width: 100%
+	top: -100px
 	@media screen and ( min-width: $tablet ) // Tablet
 		max-width: 1600px
 	@media screen and ( min-width: $desktop ) // Desktop
 		max-width: 1600px
+.main__full
+	padding: 0px
+	flex-shrink: 0
 
 // Footer
 footer
-	background-color: red
+	flex-shrink: 0
+	background-color: $weiss
+	// Weitere Styleeigenschaften finden sich unten im Bereich FOOTER
 
 //* _________________________VISIBLE / NOT VISIBLE_________________________
 .visible__flex
@@ -229,63 +260,100 @@ footer
 	
 //* ___________________________HEADER___________________________
 .wrapper__header
-	display: grid
 	width: 100%
-	height: 100px
+	height: 64px
+	box-sizing: border-box
+	display: grid
 	align-items: center
 	color: $schwarz100
 	border-bottom: 2px solid $grauC2
 	text-transform: uppercase
 	grid-template-columns: 2fr 1fr 2fr
 	grid-template-rows: 1fr
-	flex-shrink: 1
-	.header__menu a
-		justify-self: flex-start
+	a, p
+		font-size: $fontSizeCopy
+		font-weight: bold
+		text-decoration: none
+	padding-left: 16px
+	padding-right: 16px
+	@media screen and ( min-width: $tablet ) // Tablet
+		padding-left: 24px
+		padding-right: 24px
+	@media screen and ( min-width: $desktop ) // Desktop
+		padding-left: 32px
+		padding-right: 32px
+.header__menu // nur der Button, das Overlay folgt unten
+	a
 		display: flex
-		flex-direction: row
-		img
-		p
-			font-size: $fontSizeCopy
-	.header__logo
-		justify-self: center
-		.logo__mobile
-			background-color: yellow
-			display: block
-			@media screen and ( min-width: $tablet ) // Tablet
-				display: none
-			@media screen and ( min-width: $desktop ) // Desktop
-				display: none
-		.logo__desktop
-			display: none
-			background-color: pink
-			@media screen and ( min-width: $tablet ) // Tablet
-				display: block
-			@media screen and ( min-width: $desktop ) // Desktop
-				display: block
-	.header__buttons
-		display: flex
-		flex-direction: row
-		justify-self: flex-end
 		height: 100%
-		.header__buttons-item
-			border-left: 2px solid $grauC2
-			height: 100%
+		flex-direction: row
+		align-items: center
+	a:hover
+		.svg-schwarz
+			filter: opacity(.5)
+	img
+		margin-right: 12px
+.header__logo
+	a
+		display: flex
+		height: 100%
+		flex-direction: column
+		align-items: center
+	.logo__mobile
+		@media screen and ( min-width: $tablet ) // Tablet
+			display: none
+		@media screen and ( min-width: $desktop ) // Desktop
+			display: none
+	.logo__desktop
+		display: none
+		@media screen and ( min-width: $tablet ) // Tablet
 			display: flex
-			a
-				display: flex
-				align-self: center
-				flex-direction: row
-				padding-left: 16px
-				padding-right: 16px
-				p
-					display: none
-					@media screen and ( min-width: $tablet ) // Tablet
-						display: block
-					@media screen and ( min-width: $desktop ) // Desktop
-						display: block
-				
+		@media screen and ( min-width: $desktop ) // Desktop
+			display: flex
+.header__buttons
+	display: flex
+	height: 100%
+	flex-direction: row
+	justify-self: flex-end
+	a
+		color: $grau76
+	a:hover
+		color: $schwarz100
+		background-color: $grauC2
+		.svg-grau
+			filter: opacity(1)
+.header__buttons-item
+	border-left: 2px solid $grauC2
+	display: flex
+	justify-content: center
+	width: 64px
+	@media screen and ( min-width: $tablet ) // Tablet
+		width: 64px
+	@media screen and ( min-width: $desktop ) // Desktop
+		width: auto
+	a
+		width: 100%
+		display: flex
+		flex-direction: row
+		align-items: center
+		justify-content: center
+		@media screen and ( min-width: $tablet ) // Tablet
+			width: auto
+			// padding-left: 16px
+			// padding-right: 16px
+		@media screen and ( min-width: $desktop ) // Desktop
+			width: auto
+			padding-left: 16px
+			padding-right: 16px
+		span
+			display: none
+			@media screen and ( min-width: $tablet ) // Tablet
+				display: none
+			@media screen and ( min-width: $desktop ) // Desktop
+				display: block
+				margin-left: 12px
 
-	
+
 //* __________________________OVERLAY-MENÜ__________________________
 // Styles für Overlay exkl. Header
 .overlay
@@ -295,37 +363,219 @@ footer
 	z-index: 1
 	left: 0
 	top: 0
-	background-color: $schwarz100
+	background-color: $schwarz100 // Falls Transparenz nicht dargestellt werden kann
 	background-color: rgba(0,0,0, 0.9)
 	overflow-x: hidden
 	transition: 0.5s
-	.overlay__inhalt
-		display: flex
-		flex-direction: column
-		justify-content: space-between
-		position: relative
+.overlay__inhalt
+	display: flex
+	flex-direction: column
+	justify-content: space-between
+	position: relative
+	width: 100%
+	height: 90%
+	top: 0
+	text-align: center
+	color: $weiss
+.overlay__menu
+	display: flex
+	flex-direction: column
+.menulink
+	color: $weiss
+	text-decoration: none
+	font-family: $fontFamilySerif
+	font-size: 32px
+	transition: 0.3s
+	height: 68px
+	display: flex
+	align-items: center
+	justify-content: center
+	@media screen and ( min-width: $tablet ) // Tablet
+		font-size: 48px
+		height: 102px
+	@media screen and ( min-width: $desktop ) // Desktop
+		font-size: 56px
+		height: 120px
+.menulink:hover
+	color: #000000
+	background: $weiss
+.closebtn
+	color: $weiss
+	span
+		text-transform: capitalize
+		font-weight: normal
+.overlay__footer
+	width: 100%
+	box-sizing: border-box
+	padding: 16px
+	display: grid
+	grid-template-columns: 1fr 1fr
+	grid-template-rows: 1fr 1fr
+	@media screen and ( min-width: $desktop ) // Desktop
+		grid-gap: 216px
+.overlay__footer-search
+	width: 100%
+	max-width: 392px
+	grid-column-start: 1
+	grid-column-end: 3
+	grid-row-start: 1
+	grid-row-end: 2
+	border-bottom: 2px solid $weiss
+	align-self: end
+	justify-self: center
+	input[type=text]
 		width: 100%
-		height: 90%
-		top: 0
-		text-align: center
+		height: 48px
+		padding: 12px
+		margin: 8px 0
+		display: inline-block
+		box-sizing: border-box
 		color: $weiss
-	.menulink 
-        text-decoration: none
-        font-size: 36px
-        color: $weiss
-        display: block
-        transition: 0.3s
-	.menulink:hover
-		color: #000000
-		background: $weiss
-	.closebtn
-        color: $weiss
+		background-color: $weiss
+		mask: url('/images/navigation_suche.svg') right center no-repeat
+		mask-size: 40px
+	@media screen and ( min-width: $tablet ) // Tablet
+		grid-column-start: 1
+		grid-column-end: 3
+		grid-row-start: 1
+		grid-row-end: 2
+		justify-self: center
+	@media screen and ( min-width: $desktop ) // Desktop
+		grid-column-start: 2
+		grid-column-end: 3
+		grid-row-start: 1
+		grid-row-end: 3
+		justify-self: left
+.overlay__footer-social
+	grid-column-start: 1
+	grid-column-end: 3
+	grid-row-start: 2
+	grid-row-end: 3
+	align-self: end
+	justify-self: center
+	@media screen and ( min-width: $tablet ) // Tablet
+		grid-column-start: 1
+		grid-column-end: 3
+		grid-row-start: 2
+		grid-row-end: 3
+		justify-self: center
+	@media screen and ( min-width: $desktop ) // Desktop
+		grid-column-start: 1
+		grid-column-end: 2
+		grid-row-start: 1
+		grid-row-end: 3
+		justify-self: right
 // Styles für Header im Overlay
 .overlay
 	.wrapper__header
 		color: $weiss
 		a
 			color: $weiss
+
+//* ___________________________FOOTER___________________________
+.wrapper__footer
+	display: grid
+	height: 112px
+	justify-content: center
+	color: $schwarz75
+	border-top: 2px solid $grauC2
+	text-transform: uppercase
+	grid-template-columns: 1fr 1fr 1fr
+	grid-template-rows: 1fr 1fr
+	a, p
+		color: $schwarz75
+		text-decoration: none
+		font-size: $fontSizeCopy
+	padding-left: 16px
+	padding-right: 16px
+	box-sizing: border-box
+	@media screen and ( min-width: $tablet ) // Tablet
+		height: 64px
+		padding-left: 24px
+		padding-right: 24px
+	@media screen and ( min-width: $desktop ) // Desktop
+		height: 64px
+		padding-left: 120px
+		padding-right: 120px
+.footer__menu 
+	display: flex
+	flex-direction: row
+	justify-content: space-around
+	align-items: center
+	grid-column-start: 1
+	grid-column-end: 4
+	grid-row-start: 1
+	grid-row-end: 2
+	@media screen and ( min-width: $tablet ) // Tablet
+		grid-column-start: 1
+		grid-column-end: 2
+		grid-row-start: 1
+		grid-row-end: 3
+		.backtotop__menuitem
+			display: none
+			visibility: hidden
+	@media screen and ( min-width: $desktop ) // Desktop
+		grid-column-start: 1
+		grid-column-end: 2
+		grid-row-start: 1
+		grid-row-end: 3
+		.backtotop__menuitem
+			display: none
+			visibility: hidden
+.footer__social
+	grid-column-start: 1
+	grid-column-end: 4
+	grid-row-start: 2
+	grid-row-end: 3
+	display: flex
+	flex-direction: row
+	justify-content: center
+	align-items: center
+	a
+		margin-left: 12px
+		margin-right: 12px
+	@media screen and ( min-width: $tablet ) // Tablet
+		grid-column-start: 2
+		grid-column-end: 3
+		grid-row-start: 1
+		grid-row-end: 3
+	@media screen and ( min-width: $desktop ) // Desktop
+		grid-column-start: 2
+		grid-column-end: 3
+		grid-row-start: 1
+		grid-row-end: 3
+.footer__backtotop
+	display: none
+	visibility: hidden
+	.backtotop__img
+		margin-left: 16px
+	@media screen and ( min-width: $tablet ) // Tablet
+		display: flex
+		visibility: visible
+		grid-column-start: 3
+		grid-column-end: 4
+		grid-row-start: 1
+		grid-row-end: 3
+		justify-content: flex-end
+		a
+			display: flex
+			flex-direction: row
+			justify-content: flex-end
+			align-items: center
+	@media screen and ( min-width: $desktop ) // Desktop
+		display: flex
+		visibility: visible
+		grid-column-start: 3
+		grid-column-end: 4
+		grid-row-start: 1
+		grid-row-end: 3
+		justify-content: flex-end
+		a
+			display: flex
+			flex-direction: row
+			justify-content: flex-end
+			align-items: center
+			
 
 
 //* _________________________SITE-STYLES_________________________
@@ -825,8 +1075,30 @@ footer
 		.tickets-verfuegbar-disabled
 			color: $grauC2
 .tickets-content__warenkorb
+	text-align: center
 	hr
 		border: 4px solid $schwarz100
 		margin-top: 48px
 		margin-bottom: 24px
+
+
+//! Bestellbestätigung
+.wrapper__bestellbestaetigung-content
+	color: $weiss
+	background-color: $indieMint
 	text-align: center
+	display: flex
+	flex-direction: column
+	align-items: center
+	height: 100%
+	justify-content: space-around
+.bestellbestaetigung-content__inner
+	padding: 24px
+	button
+		//margin-top: 24px
+	@media screen and ( min-width: $tablet ) // Tablet
+		width: 600px
+	@media screen and ( min-width: $desktop ) // Desktop
+		width: 600px
+.bold
+	font-weight: bold

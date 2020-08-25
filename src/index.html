@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <title>Startseite | Festival Lovers</title>
-    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="/css/main.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap"
       rel="stylesheet"
@@ -15,82 +15,101 @@
   </head>
 
   <body>
+    <div id="top"></div>
     <header>
       <div class="wrapper__header">
         <div class="header__menu">
           <a id="showmenu" href="#">
-            <img width="50px" height="50px" alt="Menü">
-            <p>Menu</p>
+            <img src="/images/icons/black/navigation_menu.svg" alt="Menu" class="svg-schwarz"/>
+            <span>Menu</span>
           </a>
         </div>
         <div class="header__logo">
           <a href="/">
-            <img class="logo__desktop" src="#" alt="Festival Lovers">
-            <img class="logo__mobile" src="#" alt="Festival Lovers">
+            <img class="logo__desktop" src="#" alt="Festival Lovers" />
+            <img class="logo__mobile" src="#" alt="Festival Lovers" />
           </a>
         </div>
         <div class="header__buttons">
           <div class="header__buttons-item">
             <a href="#">
-              <img width="50px" height="50px" alt="Login">
-              <p>Login</p>
+              <img src="/images/icons/black/navigation_login.svg" alt="Login" class="svg-grau"/>
+              <span>Login</span>
             </a>
           </div>
           <div class="header__buttons-item">
             <a href="/festivals/sur-le-lac/tickets-kaufen/">
-              <img width="50px" height="50px" alt="Tickets">
-              <p>Tickets kaufen</p>
+              <img src="/images/icons/black/navigation_ticketkauf.svg" alt="Tickets" class="svg-grau"/>
+              <span>Tickets kaufen</span>
             </a>
           </div>
         </div>
       </div>
 
-      <div class="overlay" id="navigation">    
+      <div class="overlay" id="navigation">
         <div class="overlay__inhalt">
           <div class="overlay__header">
-            <!--Kopie von Header-->
             <div class="wrapper__header">
               <div class="header__menu">
                 <a id="hidemenu" class="closebtn" href="#">
-                  <img width="50px" height="50px" alt="Schliessen">
-                  <p>Schliessen</p>
+                  <img width="24px" src="/images/icons/white/navigation_schliessen.svg" alt="Schliessen" class="svg-weiss">
+                  <span>Schliessen</span>
                 </a>
               </div>
               <div class="header__logo">
                 <a href="/">
-                  <img class="logo__desktop" src="#" alt="Festival Lovers">
-                  <img class="logo__mobile" src="#" alt="Festival Lovers">
+                  <img class="logo__desktop" src="#" alt="Festival Lovers" />
+                  <img class="logo__mobile" src="#" alt="Festival Lovers" />
                 </a>
               </div>
               <div class="header__buttons">
                 <div class="header__buttons-item">
-                  <a href="#">
-                    <img width="50px" height="50px" alt="Login">
-                    <p>Login</p>
+                  <a href="/checkout/login/">
+                    <img width="24px" src="/images/icons/white/navigation_login.svg" alt="Login" class="svg-weiss"/>
+                    <span>Login</span>
                   </a>
                 </div>
                 <div class="header__buttons-item">
-                  <a href="#">
-                    <img width="50px" height="50px" alt="Tickets">
-                    <p>Tickets kaufen</p>
+                  <a href="/festivals/sur-le-lac/tickets-kaufen/">
+                    <img width="24px" src="/images/icons/white/navigation_ticketkauf.svg" alt="Login" class="svg-weiss"/>
+                    <span>Tickets kaufen</span>
                   </a>
                 </div>
               </div>
             </div>
           </div>
           <div class="overlay__menu">
-            <a class="menulink" href="/festivals">Festivals</a>
+            <a class="menulink" href="/festivals/">Festivals</a>
             <a class="menulink" href="/#magazin-content">Magazin</a>
             <a class="menulink" href="/#news-content">News</a>
           </div>
           <div class="overlay__footer">
-            SOCIAL MEDIA ICONS
-            Search-BAR
+            <div class="overlay__footer-search">
+              <input type="text" id="searchfield" name="searchfield" class="useless">
+            </div>
+            <div class="overlay__footer-social">
+              <a href="#" class="useless">
+                <img class="social__icon" src="#" alt="Facebook"/>
+              </a>
+              <a href="#" class="useless">
+                <img class="social__icon" src="#" alt="Instagram"/>
+              </a>
+              <a href="#" class="useless">
+                <img class="social__icon" src="#" alt="Snapchat"/>
+              </a>
+              <a href="#" class="useless">
+                <img class="social__icon" src="#" alt="YouTube"/>
+              </a>
+              <a href="#" class="useless">
+                <img class="social__icon" src="#" alt="Twitter"/>
+              </a>
+            </div>
           </div>
         </div>
       </div>
+
     </header>
-    
+
     <main>
       <div class="wrapper__home-entry">
         <h1>Auf welche Musik stehst du?</h1>
@@ -103,94 +122,155 @@
         </div>
         <div class="filter__genres-list">
           <ul>
-            <input type="checkbox" class="filter__genres-item-checkbox" id="jazz" name="jazz" value="Jazz">
+            <input
+              type="checkbox"
+              class="filter__genres-item-checkbox"
+              id="jazz"
+              name="jazz"
+              value="Jazz"
+            />
             <label for="jazz" class="filter__genres-item-label visible">
               <li class="filter__genres-item" id="label-li-jazz">
-                <img src="#" class="filter__genres-item-icon">
+                <img src="#" class="filter__genres-item-icon" />
                 Jazz
                 <span class="filter__genres-item-zaehler">20</span>
               </li>
             </label>
-            <input type="checkbox" class="filter__genres-item-checkbox" id="hiphop" name="hiphop" value="Hiphop">
+            <input
+              type="checkbox"
+              class="filter__genres-item-checkbox"
+              id="hiphop"
+              name="hiphop"
+              value="Hiphop"
+            />
             <label for="hiphop" class="filter__genres-item-label visible">
               <li class="filter__genres-item" id="label-li-hiphop">
-                <img src="#" class="filter__genres-item-icon">
+                <img src="#" class="filter__genres-item-icon" />
                 Hiphop
                 <span class="filter__genres-item-zaehler">20</span>
               </li>
             </label>
-            <input type="checkbox" class="filter__genres-item-checkbox" id="indie" name="indie" value="Indie">
+            <input
+              type="checkbox"
+              class="filter__genres-item-checkbox"
+              id="indie"
+              name="indie"
+              value="Indie"
+            />
             <label for="indie" class="filter__genres-item-label visible">
               <li class="filter__genres-item" id="label-li-indie">
-                <img src="#" class="filter__genres-item-icon">
+                <img src="#" class="filter__genres-item-icon" />
                 Indie
                 <span class="filter__genres-item-zaehler">20</span>
               </li>
             </label>
-            <input type="checkbox" class="filter__genres-item-checkbox" id="pop-und-rock" name="pop-und-rock" value="Pop & Rock">
+            <input
+              type="checkbox"
+              class="filter__genres-item-checkbox"
+              id="pop-und-rock"
+              name="pop-und-rock"
+              value="Pop & Rock"
+            />
             <label for="pop-und-rock" class="filter__genres-item-label visible">
               <li class="filter__genres-item" id="label-li-pop-und-rock">
-                <img src="#" class="filter__genres-item-icon">
+                <img src="#" class="filter__genres-item-icon" />
                 Pop & Rock
                 <span class="filter__genres-item-zaehler">20</span>
               </li>
             </label>
-            <input type="checkbox" class="filter__genres-item-checkbox" id="electronic" name="electronic" value="Electronic">
+            <input
+              type="checkbox"
+              class="filter__genres-item-checkbox"
+              id="electronic"
+              name="electronic"
+              value="Electronic"
+            />
             <label for="electronic" class="filter__genres-item-label visible">
               <li class="filter__genres-item" id="label-li-electronic">
-                <img src="#" class="filter__genres-item-icon">
+                <img src="#" class="filter__genres-item-icon" />
                 Electronic
                 <span class="filter__genres-item-zaehler">20</span>
               </li>
             </label>
-            <input type="checkbox" class="filter__genres-item-checkbox" id="musik1" name="musik1" value="Musik1">
+            <input
+              type="checkbox"
+              class="filter__genres-item-checkbox"
+              id="musik1"
+              name="musik1"
+              value="Musik1"
+            />
             <label for="musik1" class="filter__genres-item-label notvisible">
               <li class="filter__genres-item" id="label-li-musik1">
-                <img src="#" class="filter__genres-item-icon">
+                <img src="#" class="filter__genres-item-icon" />
                 Musik 1
                 <span class="filter__genres-item-zaehler">20</span>
               </li>
             </label>
-            <input type="checkbox" class="filter__genres-item-checkbox" id="musik2" name="musik2" value="Musik2">
+            <input
+              type="checkbox"
+              class="filter__genres-item-checkbox"
+              id="musik2"
+              name="musik2"
+              value="Musik2"
+            />
             <label for="musik2" class="filter__genres-item-label notvisible">
               <li class="filter__genres-item" id="label-li-musik2">
-                <img src="#" class="filter__genres-item-icon">
+                <img src="#" class="filter__genres-item-icon" />
                 Musik 2
                 <span class="filter__genres-item-zaehler">20</span>
               </li>
             </label>
-            <input type="checkbox" class="filter__genres-item-checkbox" id="musik3" name="musik3" value="Musik3">
+            <input
+              type="checkbox"
+              class="filter__genres-item-checkbox"
+              id="musik3"
+              name="musik3"
+              value="Musik3"
+            />
             <label for="musik3" class="filter__genres-item-label notvisible">
               <li class="filter__genres-item" id="label-li-musik3">
-                <img src="#" class="filter__genres-item-icon">
+                <img src="#" class="filter__genres-item-icon" />
                 Musik 3
                 <span class="filter__genres-item-zaehler">20</span>
               </li>
             </label>
-            <input type="checkbox" class="filter__genres-item-checkbox" id="musik4" name="musik4" value="Musik4">
+            <input
+              type="checkbox"
+              class="filter__genres-item-checkbox"
+              id="musik4"
+              name="musik4"
+              value="Musik4"
+            />
             <label for="musik4" class="filter__genres-item-label notvisible">
               <li class="filter__genres-item" id="label-li-musik4">
-                <img src="#" class="filter__genres-item-icon">
+                <img src="#" class="filter__genres-item-icon" />
                 Musik 4
                 <span class="filter__genres-item-zaehler">20</span>
               </li>
             </label>
-            <input type="checkbox" class="filter__genres-item-checkbox" id="musik5" name="musik5" value="Musik5">
+            <input
+              type="checkbox"
+              class="filter__genres-item-checkbox"
+              id="musik5"
+              name="musik5"
+              value="Musik5"
+            />
             <label for="musik5" class="filter__genres-item-label notvisible">
               <li class="filter__genres-item" id="label-li-musik5">
-                <img src="#" class="filter__genres-item-icon">
+                <img src="#" class="filter__genres-item-icon" />
                 Musik 5
                 <span class="filter__genres-item-zaehler">20</span>
               </li>
             </label>
             <li class="filter__genres-item filter__genres-more">
-              <a href="#">Mehr Genres</a>
-            </li> 
+              <a href="#" class="useless">Mehr Genres</a>
+            </li>
           </ul>
         </div>
         <div class="filter__action">
           <button class="zuruecksetzen light">Filter zurücksetzen</button>
-          <a href="/festivals/"><button class="ergebnis">Ergebnis anzeigen</button></a>
+          <a href="/festivals/"
+            ><button class="ergebnis">Ergebnis anzeigen</button></a>
         </div>
       </div>
 
@@ -203,44 +283,62 @@
         <div class="magazin__masonry-container">
           <div class="magazin__post">
             <h3>Einfach blos nichts vergessen 1</h3>
-            <p>TextText TextTextTex tTextTextT extTe tTextText extTextT extTextTextT extTextText TextTextText TextTextTex tTextText TextTe tTextTe xtTextT extTe xtText</p> <a href="#">Lesen</a>
+            <p>
+              TextText TextTextTex tTextTextT extTe tTextText extTextT
+              extTextTextT extTextText TextTextText TextTextTex tTextText TextTe
+              tTextTe xtTextT extTe xtText
+            </p>
+            <a href="#" class="useless">Lesen</a>
           </div>
           <div class="magazin__post">
             <h3>Einfach blos nichts vergessen 2</h3>
-            <p>TextText TextTextTex tTextTextT extTe tTextText extTextT extTextTextT extTextText TextTextText TextTextTex tTextText TextTe tTextTe xtTextT extTe xtText</p> <a href="#">Lesen</a>
+            <p>
+              TextText TextTextTex tTextTextT extTe tTextText extTextT
+              extTextTextT extTextText TextTextText TextTextTex tTextText TextTe
+              tTextTe xtTextT extTe xtText
+            </p>
+            <a href="#" class="useless">Lesen</a>
           </div>
           <div class="magazin__post">
             <h3>Einfach blos nichts vergessen 3</h3>
-            <p>Text</p> <a href="#">Lesen</a>
+            <p>Text</p>
+            <a href="#" class="useless">Lesen</a>
           </div>
           <div class="magazin__post">
             <h3>Einfach blos nichts vergessen 4</h3>
-            <p>Text</p> <a href="#">Lesen</a>
+            <p>Text</p>
+            <a href="#" class="useless">Lesen</a>
           </div>
           <div class="magazin__post">
             <h3>Einfach blos nichts vergessen 5</h3>
-            <p>TextText TextTextTex tTextTextT extTe tTextText extTextT extTextTextT extTextText TextTextText TextTextTex tTextText TextTe tTextTe xtTextT extTe xtText</p> <a href="#">Lesen</a>
+            <p>
+              TextText TextTextTex tTextTextT extTe tTextText extTextT
+              extTextTextT extTextText TextTextText TextTextTex tTextText TextTe
+              tTextTe xtTextT extTe xtText
+            </p>
+            <a href="#" class="useless">Lesen</a>
           </div>
           <div class="magazin__post">
             <h3>Einfach blos nichts vergessen 6</h3>
-            <p>Text</p> <a href="#">Lesen</a>
+            <p>Text</p>
+            <a href="#" class="useless">Lesen</a>
           </div>
         </div>
         <div class="magazin__post-more">
-          <button>Mehr anzeigen</button>
+          <a href="#" class="useless"><button>Mehr anzeigen</button></a>
         </div>
       </div>
 
       <div class="wrapper__app-banner">
         <div class="app__image">
-          <img src="#" alt="Smartphone"/>
+          <img src="#" alt="Smartphone" />
         </div>
         <div class="app__text">
           <div class="app__text-titel">
             <h2>Mit der App unabhängig am Festival feiern.</h2>
           </div>
           <div class="app__text-button">
-            <button class="lightreversed">App downloaden</button>
+            <a href="#" class="useless"><button class="lightreversed">App downloaden</button></a>
           </div>
           <div class="app__text-stores">
             <img src="#" alt="Apple App Store" />
@@ -257,32 +355,112 @@
         </p>
         <div class="entdeckungen__music-container">
           <div class="entdeckungen__music-track-jazz">
-            <svg version="1.1" id="play" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" height="100px" width="100px"viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve">
-              <path class="icon" fill="black" d="M38,69c-1,0.5-1.8,0-1.8-1.1V32.1c0-1.1,0.8-1.6,1.8-1.1l34,18c1,0.5,1,1.4,0,1.9L38,69z"/>
+            <svg
+              version="1.1"
+              id="play"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              x="0px"
+              y="0px"
+              height="100px"
+              width="100px"
+              viewBox="0 0 100 100"
+              enable-background="new 0 0 100 100"
+              xml:space="preserve"
+            >
+              <path
+                class="icon"
+                fill="black"
+                d="M38,69c-1,0.5-1.8,0-1.8-1.1V32.1c0-1.1,0.8-1.6,1.8-1.1l34,18c1,0.5,1,1.4,0,1.9L38,69z"
+              />
             </svg>
           </div>
           <div class="entdeckungen__music-track-rock">
-            <svg version="1.1" id="play" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" height="100px" width="100px"viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve">
-              <path class="icon" fill="black" d="M38,69c-1,0.5-1.8,0-1.8-1.1V32.1c0-1.1,0.8-1.6,1.8-1.1l34,18c1,0.5,1,1.4,0,1.9L38,69z"/>
+            <svg
+              version="1.1"
+              id="play"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              x="0px"
+              y="0px"
+              height="100px"
+              width="100px"
+              viewBox="0 0 100 100"
+              enable-background="new 0 0 100 100"
+              xml:space="preserve"
+            >
+              <path
+                class="icon"
+                fill="black"
+                d="M38,69c-1,0.5-1.8,0-1.8-1.1V32.1c0-1.1,0.8-1.6,1.8-1.1l34,18c1,0.5,1,1.4,0,1.9L38,69z"
+              />
             </svg>
           </div>
           <div class="entdeckungen__music-track-pop">
-            <svg version="1.1" id="play" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" height="100px" width="100px"viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve">
-              <path class="icon" fill="black" d="M38,69c-1,0.5-1.8,0-1.8-1.1V32.1c0-1.1,0.8-1.6,1.8-1.1l34,18c1,0.5,1,1.4,0,1.9L38,69z"/>
+            <svg
+              version="1.1"
+              id="play"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              x="0px"
+              y="0px"
+              height="100px"
+              width="100px"
+              viewBox="0 0 100 100"
+              enable-background="new 0 0 100 100"
+              xml:space="preserve"
+            >
+              <path
+                class="icon"
+                fill="black"
+                d="M38,69c-1,0.5-1.8,0-1.8-1.1V32.1c0-1.1,0.8-1.6,1.8-1.1l34,18c1,0.5,1,1.4,0,1.9L38,69z"
+              />
             </svg>
           </div>
           <div class="entdeckungen__music-track-blues">
-            <svg version="1.1" id="play" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" height="100px" width="100px"viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve">
-              <path class="icon" fill="black" d="M38,69c-1,0.5-1.8,0-1.8-1.1V32.1c0-1.1,0.8-1.6,1.8-1.1l34,18c1,0.5,1,1.4,0,1.9L38,69z"/>
+            <svg
+              version="1.1"
+              id="play"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              x="0px"
+              y="0px"
+              height="100px"
+              width="100px"
+              viewBox="0 0 100 100"
+              enable-background="new 0 0 100 100"
+              xml:space="preserve"
+            >
+              <path
+                class="icon"
+                fill="black"
+                d="M38,69c-1,0.5-1.8,0-1.8-1.1V32.1c0-1.1,0.8-1.6,1.8-1.1l34,18c1,0.5,1,1.4,0,1.9L38,69z"
+              />
             </svg>
           </div>
           <div class="entdeckungen__music-track-hiphop">
-            <svg version="1.1" id="play" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" height="100px" width="100px"viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve">
-              <path class="icon" fill="black" d="M38,69c-1,0.5-1.8,0-1.8-1.1V32.1c0-1.1,0.8-1.6,1.8-1.1l34,18c1,0.5,1,1.4,0,1.9L38,69z"/>
+            <svg
+              version="1.1"
+              id="play"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              x="0px"
+              y="0px"
+              height="100px"
+              width="100px"
+              viewBox="0 0 100 100"
+              enable-background="new 0 0 100 100"
+              xml:space="preserve"
+            >
+              <path
+                class="icon"
+                fill="black"
+                d="M38,69c-1,0.5-1.8,0-1.8-1.1V32.1c0-1.1,0.8-1.6,1.8-1.1l34,18c1,0.5,1,1.4,0,1.9L38,69z"
+              />
             </svg>
           </div>
           <div class="entdeckungen__music-track-more">
-            <button class="light">Mehr Samples</button>
+            <a href="#" class="useless"><button class="light">Mehr Samples</button></a>
           </div>
         </div>
       </div>
@@ -291,53 +469,119 @@
         <h2>News</h2>
         <div class="news__masonry-container">
           <div class="news__post">
-            <img src="#">
-            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et</p>
+            <img src="#" />
+            <p>
+              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+              nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
+              erat, sed diam voluptua. At vero eos et accusam et
+            </p>
           </div>
           <div class="news__post">
-            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et</p>
+            <p>
+              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+              nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
+              erat, sed diam voluptua. At vero eos et accusam et
+            </p>
           </div>
           <div class="news__post">
             <img src="#" />
-            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et</p>
+            <p>
+              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+              nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
+              erat, sed diam voluptua. At vero eos et accusam et
+            </p>
           </div>
           <div class="news__post">
             <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr,</p>
           </div>
           <div class="news__post">
-            <img src="#">
-            <p>Lorem ipsum dolor sit amet, consetetur mpor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et</p>
+            <img src="#" />
+            <p>
+              Lorem ipsum dolor sit amet, consetetur mpor invidunt ut labore et
+              dolore magna aliquyam erat, sed diam voluptua. At vero eos et
+              accusam et
+            </p>
           </div>
           <div class="news__post">
-            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et</p>
+            <p>
+              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+              nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
+              erat, sed diam voluptua. At vero eos et accusam et
+            </p>
           </div>
           <div class="news__post">
-            <img src="#">
-            <p>Lorem ipsum dolor sit amet, consetetur sadipscing umy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et</p>
+            <img src="#" />
+            <p>
+              Lorem ipsum dolor sit amet, consetetur sadipscing umy eirmod
+              tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
+              voluptua. At vero eos et accusam et
+            </p>
           </div>
           <div class="news__post">
-            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et</p>
+            <p>
+              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+              nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
+              erat, sed diam voluptua. At vero eos et accusam et
+            </p>
           </div>
           <div class="news__post">
-            <img src="#">
-            <p>Lorem ipsum doquyam erat, sed diam voluptua. At vero eos et accusam et</p>
+            <img src="#" />
+            <p>
+              Lorem ipsum doquyam erat, sed diam voluptua. At vero eos et
+              accusam et
+            </p>
           </div>
           <div class="news__post">
-            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eusam et</p>
+            <p>
+              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+              nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
+              erat, sed diam voluptua. At vero eusam et
+            </p>
           </div>
         </div>
         <div class="news__post-more">
-          <button class="light">Mehr anzeigen</button>
+          <a href="#" class="useless"><button class="light">Mehr anzeigen</button></a>
         </div>
       </div>
     </main>
     <footer>
-      <p>FOOTER</p>
+      <div class="wrapper__footer">
+        <div class="footer__menu">
+          <a href="/festivals/"><p>Festivals</p></a>
+          <a href="/#magazin-content"><p>Magazin</p></a>
+          <a href="/#news-content"><p>News</p></a>
+          <a href="#top" class="backtotop__menuitem"><img src="#" alt="ICON"/></a>
+        </div>
+        <div class="footer__social">
+          <a href="#" class="useless">
+            <img class="social__icon" src="#" alt="Facebook"/>
+          </a>
+          <a href="#" class="useless">
+            <img class="social__icon" src="#" alt="Instagram"/>
+          </a>
+          <a href="#" class="useless">
+            <img class="social__icon" src="#" alt="Snapchat"/>
+          </a>
+          <a href="#" class="useless">
+            <img class="social__icon" src="#" alt="YouTube"/>
+          </a>
+          <a href="#" class="useless">
+            <img class="social__icon" src="#" alt="Twitter"/>
+          </a>
+        </div>
+        <div class="footer__backtotop">
+          <a href="#top">
+            <p class="backtotop__text">
+              Back to top
+            </p>
+            <img class="backtotop__img" src="/images/icons/black/navigation_backtotop.svg" alt="ICON" />
+          </a>
+        </div>
+      </div>
     </footer>
 
     <!-- Hier Javascripte einfügen -->
     <script type="text/javascript" src="/js/main.js"></script>
     <script type="text/javascript" src="/js/modules/genre-filter.js"></script>
-
   </body>
 </html>

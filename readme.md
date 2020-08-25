@@ -100,7 +100,7 @@ Setupguide noch zu erstellen!
 - Gulp-Task zum builden
 - Daten auf Server verschieben
 - REST-URL anpassen
-- .htacces anpassen?
+- .htacces anpassen mit finaler URL bei Weiterleitungen
 - Code kontrollieren
 
 ### __Persönliche Anmerkungen__

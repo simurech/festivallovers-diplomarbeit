@@ -52,3 +52,11 @@ let closeBtns = document.querySelectorAll('.menulink');
 closeBtns.forEach(element => {
 	element.addEventListener('click', closeNavi);
 });
+
+//! Erzeuge einen Alert bei noch nicht umgesetzten Elementen
+// Funktion
+function functionNotDefined() {
+	alert('Funktion in diesem Prototyp nicht umgesetzt');
+};
+// Funktion auf alle Elemente mit Klasse "useless" bei Klick ausführen
+funktionBeiKlick('useless', functionNotDefined);
