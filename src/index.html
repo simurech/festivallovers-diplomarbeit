@@ -15,63 +15,65 @@
   </head>
 
   <body>
+    <!-- Top of Site -->
     <div id="top"></div>
+
+    <!-- Header -->
     <header>
       <div class="wrapper__header">
         <div class="header__menu">
           <a id="showmenu" href="#">
-            <img src="/images/icons/black/navigation_menu.svg" alt="Menu" class="svg-schwarz"/>
+            <img width="24px" height="24px" src="/images/icons/black/navigation_menu.svg" alt="Menu" class="svg-schwarz"/>
             <span>Menu</span>
           </a>
         </div>
         <div class="header__logo">
           <a href="/">
-            <img class="logo__desktop" src="#" alt="Festival Lovers" />
-            <img class="logo__mobile" src="#" alt="Festival Lovers" />
+            <img class="logo__desktop" height="40px" src="/images/logo/festivallovers-logo.png" alt="Festival Lovers" />
+            <img class="logo__mobile" height="40px" src="/images/logo/festivallovers-icon.png" alt="Festival Lovers"  />
           </a>
         </div>
         <div class="header__buttons">
           <div class="header__buttons-item">
             <a href="#">
-              <img src="/images/icons/black/navigation_login.svg" alt="Login" class="svg-grau"/>
+              <img width="24px" height="24px" src="/images/icons/black/navigation_login.svg" alt="Login" class="svg-grau"/>
               <span>Login</span>
             </a>
           </div>
           <div class="header__buttons-item">
             <a href="/festivals/sur-le-lac/tickets-kaufen/">
-              <img src="/images/icons/black/navigation_ticketkauf.svg" alt="Tickets" class="svg-grau"/>
+              <img width="24px" height="24px" src="/images/icons/black/navigation_ticketkauf.svg" alt="Tickets" class="svg-grau"/>
               <span>Tickets kaufen</span>
             </a>
           </div>
         </div>
       </div>
-
       <div class="overlay" id="navigation">
         <div class="overlay__inhalt">
           <div class="overlay__header">
             <div class="wrapper__header">
               <div class="header__menu">
                 <a id="hidemenu" class="closebtn" href="#">
-                  <img width="24px" src="/images/icons/white/navigation_schliessen.svg" alt="Schliessen" class="svg-weiss">
+                  <img width="24px" height="24px" src="/images/icons/white/navigation_schliessen.svg" alt="Schliessen" class="svg-weiss">
                   <span>Schliessen</span>
                 </a>
               </div>
               <div class="header__logo">
                 <a href="/">
-                  <img class="logo__desktop" src="#" alt="Festival Lovers" />
-                  <img class="logo__mobile" src="#" alt="Festival Lovers" />
+                  <img class="logo__desktop" height="40px" src="/images/logo/festivallovers-logo-weiss.png" alt="Festival Lovers" />
+                  <img class="logo__mobile" height="40px" src="/images/logo/festivallovers-icon-weiss.png" alt="Festival Lovers"  />
                 </a>
               </div>
               <div class="header__buttons">
                 <div class="header__buttons-item">
                   <a href="/checkout/login/">
-                    <img width="24px" src="/images/icons/white/navigation_login.svg" alt="Login" class="svg-weiss"/>
+                    <img width="24px" height="24px" src="/images/icons/white/navigation_login.svg" alt="Login" class="svg-weiss"/>
                     <span>Login</span>
                   </a>
                 </div>
                 <div class="header__buttons-item">
                   <a href="/festivals/sur-le-lac/tickets-kaufen/">
-                    <img width="24px" src="/images/icons/white/navigation_ticketkauf.svg" alt="Login" class="svg-weiss"/>
+                    <img width="24px" height="24px" src="/images/icons/white/navigation_ticketkauf.svg" alt="Login" class="svg-weiss"/>
                     <span>Tickets kaufen</span>
                   </a>
                 </div>
@@ -89,27 +91,27 @@
             </div>
             <div class="overlay__footer-social">
               <a href="#" class="useless">
-                <img class="social__icon" src="#" alt="Facebook"/>
+                <img width="24px" height="24px" src="/images/icons/white/socialmedia_facebook.svg" alt="Facebook" class="svg-weiss"/>
               </a>
               <a href="#" class="useless">
-                <img class="social__icon" src="#" alt="Instagram"/>
+                <img width="24px" height="24px" src="/images/icons/white/socialmedia_instagram.svg" alt="Instagram" class="svg-weiss"/>
               </a>
               <a href="#" class="useless">
-                <img class="social__icon" src="#" alt="Snapchat"/>
+                <img width="24px" height="24px" src="/images/icons/white/socialmedia_snapchat.svg" alt="Snapchat" class="svg-weiss"/>
               </a>
               <a href="#" class="useless">
-                <img class="social__icon" src="#" alt="YouTube"/>
+                <img width="24px" height="24px" src="/images/icons/white/socialmedia_youtube.svg" alt="YouTube" class="svg-weiss"/>
               </a>
               <a href="#" class="useless">
-                <img class="social__icon" src="#" alt="Twitter"/>
+                <img width="24px" height="24px" src="/images/icons/white/socialmedia_twitter.svg" alt="Twitter" class="svg-weiss"/>
               </a>
             </div>
           </div>
         </div>
       </div>
-
     </header>
 
+    <!-- Main -->
     <main>
       <div class="wrapper__home-entry">
         <h1>Auf welche Musik stehst du?</h1>
@@ -263,7 +265,7 @@
               </li>
             </label>
             <li class="filter__genres-item filter__genres-more">
-              <a href="#" class="useless">Mehr Genres</a>
+              <a href="#">Mehr Genres</a>
             </li>
           </ul>
         </div>
@@ -278,7 +280,8 @@
         <img src="#" alt="Bild" width="100%" height="100%" />
       </div>
 
-      <div class="wrapper__magazin" id="magazin-content">
+      <div id="magazin-content"></div>
+      <div class="wrapper__magazin">
         <h2>Magazin</h2>
         <div class="magazin__masonry-container">
           <div class="magazin__post">
@@ -347,7 +350,8 @@
         </div>
       </div>
 
-      <div class="wrapper__entdeckungen" id="entdeckungen-content">
+      <div id="entdeckungen-content"></div>
+      <div class="wrapper__entdeckungen">
         <h2>Entdeckungen</h2>
         <p>
           Sei offen für neues und geniesse unerwartete Musikerlebnisse. Höre dir
@@ -465,7 +469,8 @@
         </div>
       </div>
 
-      <div class="wrapper__news" id="news-content">
+      <div id="news-content"></div>
+      <div class="wrapper__news">
         <h2>News</h2>
         <div class="news__masonry-container">
           <div class="news__post">
@@ -544,29 +549,31 @@
         </div>
       </div>
     </main>
+
+    <!-- Footer -->
     <footer>
       <div class="wrapper__footer">
         <div class="footer__menu">
           <a href="/festivals/"><p>Festivals</p></a>
           <a href="/#magazin-content"><p>Magazin</p></a>
           <a href="/#news-content"><p>News</p></a>
-          <a href="#top" class="backtotop__menuitem"><img src="#" alt="ICON"/></a>
+          <a href="#top" class="backtotop__menuitem"><img width="24px" height="24px" class="backtotop__img svg-grau" src="/images/icons/black/navigation_backtotop.svg" alt="Back to top" /></a>
         </div>
         <div class="footer__social">
           <a href="#" class="useless">
-            <img class="social__icon" src="#" alt="Facebook"/>
+            <img width="24px" height="24px" src="/images/icons/black/socialmedia_facebook.svg" alt="Facebook" class="svg-grau"/>
           </a>
           <a href="#" class="useless">
-            <img class="social__icon" src="#" alt="Instagram"/>
+            <img width="24px" height="24px" src="/images/icons/black/socialmedia_instagram.svg" alt="Instagram" class="svg-grau"/>
           </a>
           <a href="#" class="useless">
-            <img class="social__icon" src="#" alt="Snapchat"/>
+            <img width="24px" height="24px" src="/images/icons/black/socialmedia_snapchat.svg" alt="Snapchat" class="svg-grau"/>
           </a>
           <a href="#" class="useless">
-            <img class="social__icon" src="#" alt="YouTube"/>
+            <img width="24px" height="24px" src="/images/icons/black/socialmedia_youtube.svg" alt="YouTube" class="svg-grau"/>
           </a>
           <a href="#" class="useless">
-            <img class="social__icon" src="#" alt="Twitter"/>
+            <img width="24px" height="24px" src="/images/icons/black/socialmedia_twitter.svg" alt="Twitter" class="svg-grau"/>
           </a>
         </div>
         <div class="footer__backtotop">
@@ -574,13 +581,13 @@
             <p class="backtotop__text">
               Back to top
             </p>
-            <img class="backtotop__img" src="/images/icons/black/navigation_backtotop.svg" alt="ICON" />
+            <img width="24px" height="24px" class="backtotop__img svg-grau" src="/images/icons/black/navigation_backtotop.svg" alt="Back to top" />
           </a>
         </div>
       </div>
     </footer>
 
-    <!-- Hier Javascripte einfügen -->
+    <!-- Javascript einbinden -->
     <script type="text/javascript" src="/js/main.js"></script>
     <script type="text/javascript" src="/js/modules/genre-filter.js"></script>
   </body>

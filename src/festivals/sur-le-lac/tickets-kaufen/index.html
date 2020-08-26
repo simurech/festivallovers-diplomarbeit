@@ -16,81 +16,103 @@
   </head>
 
   <body>
+    <!-- Top of Site -->
+    <div id="top"></div>
+
+    <!-- Header -->
     <header>
       <div class="wrapper__header">
         <div class="header__menu">
           <a id="showmenu" href="#">
-            <img width="50px" height="50px" alt="Menü">
-            <p>Menu</p>
+            <img width="24px" height="24px" src="/images/icons/black/navigation_menu.svg" alt="Menu" class="svg-schwarz"/>
+            <span>Menu</span>
           </a>
         </div>
         <div class="header__logo">
           <a href="/">
-            <img class="logo__desktop" src="#" alt="Festival Lovers">
-            <img class="logo__mobile" src="#" alt="Festival Lovers">
+            <img class="logo__desktop" height="40px" src="/images/logo/festivallovers-logo.png" alt="Festival Lovers" />
+            <img class="logo__mobile" height="40px" src="/images/logo/festivallovers-icon.png" alt="Festival Lovers"  />
           </a>
         </div>
         <div class="header__buttons">
           <div class="header__buttons-item">
             <a href="#">
-              <img width="50px" height="50px" alt="Login">
-              <p>Login</p>
+              <img width="24px" height="24px" src="/images/icons/black/navigation_login.svg" alt="Login" class="svg-grau"/>
+              <span>Login</span>
             </a>
           </div>
           <div class="header__buttons-item">
-            <a href="#">
-              <img width="50px" height="50px" alt="Tickets">
-              <p>Tickets kaufen</p>
+            <a href="/festivals/sur-le-lac/tickets-kaufen/">
+              <img width="24px" height="24px" src="/images/icons/black/navigation_ticketkauf.svg" alt="Tickets" class="svg-grau"/>
+              <span>Tickets kaufen</span>
             </a>
           </div>
         </div>
       </div>
-
-      <div class="overlay" id="navigation">    
+      <div class="overlay" id="navigation">
         <div class="overlay__inhalt">
           <div class="overlay__header">
-            <!--Kopie von Header-->
             <div class="wrapper__header">
               <div class="header__menu">
                 <a id="hidemenu" class="closebtn" href="#">
-                  <img width="50px" height="50px" alt="Schliessen">
-                  <p>Schliessen</p>
+                  <img width="24px" height="24px" src="/images/icons/white/navigation_schliessen.svg" alt="Schliessen" class="svg-weiss">
+                  <span>Schliessen</span>
                 </a>
               </div>
               <div class="header__logo">
                 <a href="/">
-                  <img class="logo__desktop" src="#" alt="Festival Lovers">
-                  <img class="logo__mobile" src="#" alt="Festival Lovers">
+                  <img class="logo__desktop" height="40px" src="/images/logo/festivallovers-logo-weiss.png" alt="Festival Lovers" />
+                  <img class="logo__mobile" height="40px" src="/images/logo/festivallovers-icon-weiss.png" alt="Festival Lovers"  />
                 </a>
               </div>
               <div class="header__buttons">
                 <div class="header__buttons-item">
-                  <a href="#">
-                    <img width="50px" height="50px" alt="Login">
-                    <p>Login</p>
+                  <a href="/checkout/login/">
+                    <img width="24px" height="24px" src="/images/icons/white/navigation_login.svg" alt="Login" class="svg-weiss"/>
+                    <span>Login</span>
                   </a>
                 </div>
                 <div class="header__buttons-item">
-                  <a href="#">
-                    <img width="50px" height="50px" alt="Tickets">
-                    <p>Tickets kaufen</p>
+                  <a href="/festivals/sur-le-lac/tickets-kaufen/">
+                    <img width="24px" height="24px" src="/images/icons/white/navigation_ticketkauf.svg" alt="Login" class="svg-weiss"/>
+                    <span>Tickets kaufen</span>
                   </a>
                 </div>
               </div>
             </div>
           </div>
           <div class="overlay__menu">
-            <a class="menulink" href="/festivals">Festivals</a>
+            <a class="menulink" href="/festivals/">Festivals</a>
             <a class="menulink" href="/#magazin-content">Magazin</a>
             <a class="menulink" href="/#news-content">News</a>
           </div>
           <div class="overlay__footer">
-            SOCIAL MEDIA ICONS
-            Search-BAR
+            <div class="overlay__footer-search">
+              <input type="text" id="searchfield" name="searchfield" class="useless">
+            </div>
+            <div class="overlay__footer-social">
+              <a href="#" class="useless">
+                <img width="24px" height="24px" src="/images/icons/white/socialmedia_facebook.svg" alt="Facebook" class="svg-weiss"/>
+              </a>
+              <a href="#" class="useless">
+                <img width="24px" height="24px" src="/images/icons/white/socialmedia_instagram.svg" alt="Instagram" class="svg-weiss"/>
+              </a>
+              <a href="#" class="useless">
+                <img width="24px" height="24px" src="/images/icons/white/socialmedia_snapchat.svg" alt="Snapchat" class="svg-weiss"/>
+              </a>
+              <a href="#" class="useless">
+                <img width="24px" height="24px" src="/images/icons/white/socialmedia_youtube.svg" alt="YouTube" class="svg-weiss"/>
+              </a>
+              <a href="#" class="useless">
+                <img width="24px" height="24px" src="/images/icons/white/socialmedia_twitter.svg" alt="Twitter" class="svg-weiss"/>
+              </a>
+            </div>
           </div>
         </div>
       </div>
     </header>
+
+    <!-- Main -->
     <main>
       <div class="wrapper__entry-img-genre">
         <img src="#" alt="BILD" alt="BILD">
@@ -325,11 +347,45 @@
         </a>
       </div>
     </main>
+
+    <!-- Footer -->
     <footer>
-      <p>FOOTER</p>
+      <div class="wrapper__footer">
+        <div class="footer__menu">
+          <a href="/festivals/"><p>Festivals</p></a>
+          <a href="/#magazin-content"><p>Magazin</p></a>
+          <a href="/#news-content"><p>News</p></a>
+          <a href="#top" class="backtotop__menuitem"><img width="24px" height="24px" class="backtotop__img svg-grau" src="/images/icons/black/navigation_backtotop.svg" alt="Back to top" /></a>
+        </div>
+        <div class="footer__social">
+          <a href="#" class="useless">
+            <img width="24px" height="24px" src="/images/icons/black/socialmedia_facebook.svg" alt="Facebook" class="svg-grau"/>
+          </a>
+          <a href="#" class="useless">
+            <img width="24px" height="24px" src="/images/icons/black/socialmedia_instagram.svg" alt="Instagram" class="svg-grau"/>
+          </a>
+          <a href="#" class="useless">
+            <img width="24px" height="24px" src="/images/icons/black/socialmedia_snapchat.svg" alt="Snapchat" class="svg-grau"/>
+          </a>
+          <a href="#" class="useless">
+            <img width="24px" height="24px" src="/images/icons/black/socialmedia_youtube.svg" alt="YouTube" class="svg-grau"/>
+          </a>
+          <a href="#" class="useless">
+            <img width="24px" height="24px" src="/images/icons/black/socialmedia_twitter.svg" alt="Twitter" class="svg-grau"/>
+          </a>
+        </div>
+        <div class="footer__backtotop">
+          <a href="#top">
+            <p class="backtotop__text">
+              Back to top
+            </p>
+            <img width="24px" height="24px" class="backtotop__img svg-grau" src="/images/icons/black/navigation_backtotop.svg" alt="Back to top" />
+          </a>
+        </div>
+      </div>
     </footer>
 
-    <!-- Hier Javascripte einfügen -->
+    <!-- Javascript einbinden -->
     <script type="text/javascript" src="/js/main.js"></script>
     <script type="text/javascript" src="/js/modules/tickets-cart.js"></script>
   </body>

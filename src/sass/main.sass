@@ -3,6 +3,7 @@
 $mobile: 375px
 $tablet: 768px
 $desktop: 1240px
+
 	
 // Variablen: Farben
 $weiss: rgba(255,255,255, 1)
@@ -83,8 +84,10 @@ button, .btn, .tabs
 .zusatzinfo
 	font-family: $fontFamilySansSerif
 	font-size: $fontSizeZusatzinfos
+.bold
+	font-weight: bold
 	
-@media screen and ( min-width: $tablet ) // Tablet
+@media only screen and ( min-width: $tablet ) // Tablet
 	h1
 		font-size: $fontSizeTabletH1
 	h2
@@ -94,7 +97,7 @@ button, .btn, .tabs
 	.festival-titel
 		font-size: $fontSizeTabletBig
 
-@media screen and ( min-width: $desktop ) // Desktop
+@media only screen and ( min-width: $desktop ) // Desktop
 	h1
 		font-size: $fontSizeDesktopH1
 	h2
@@ -134,10 +137,10 @@ button
 	height: 48px
 	width: 100%
 	margin: 4px
-	@media screen and ( min-width: $tablet ) // Tablet
+	@media only screen and ( min-width: $tablet ) // Tablet
 		width: auto
 		max-width: 343px
-	@media screen and ( min-width: $desktop ) // Desktop
+	@media only screen and ( min-width: $desktop ) // Desktop
 		width: auto
 		max-width: 343px
 button:hover
@@ -183,6 +186,7 @@ html, body
 body
 	display: flex
 	flex-direction: column
+	height: 100%
 // Header
 header
 	background-color: $weiss
@@ -193,7 +197,9 @@ header
 
 // Main
 main
-	flex: 1 0 auto
+	flex-grow: 1
+	flex-shrink: 0
+	flex-basis: auto
 	box-sizing: border-box
 	padding-left: 12px
 	padding-right: 12px
@@ -202,13 +208,17 @@ main
 	margin-right: auto
 	width: 100%
 	top: -100px
-	@media screen and ( min-width: $tablet ) // Tablet
+	@media only screen and ( min-width: $tablet ) // Tablet
 		max-width: 1600px
-	@media screen and ( min-width: $desktop ) // Desktop
+	@media only screen and ( min-width: $desktop ) // Desktop
 		max-width: 1600px
 .main__full
 	padding: 0px
-	flex-shrink: 0
+	height: calc(100vh - 176px) // 100% VH minus Header minus Footer
+	@media only screen and ( min-width: $tablet ) // Tablet
+		height: calc(100vh - 128px) // 100% VH minus Header minus Footer
+	@media only screen and ( min-width: $desktop ) // Desktop
+		height: calc(100vh - 128px )// 100% VH minus Header minus Footer
 
 // Footer
 footer
@@ -276,10 +286,10 @@ footer
 		text-decoration: none
 	padding-left: 16px
 	padding-right: 16px
-	@media screen and ( min-width: $tablet ) // Tablet
+	@media only screen and ( min-width: $tablet ) // Tablet
 		padding-left: 24px
 		padding-right: 24px
-	@media screen and ( min-width: $desktop ) // Desktop
+	@media only screen and ( min-width: $desktop ) // Desktop
 		padding-left: 32px
 		padding-right: 32px
 .header__menu // nur der Button, das Overlay folgt unten
@@ -300,15 +310,15 @@ footer
 		flex-direction: column
 		align-items: center
 	.logo__mobile
-		@media screen and ( min-width: $tablet ) // Tablet
+		@media only screen and ( min-width: $tablet ) // Tablet
 			display: none
-		@media screen and ( min-width: $desktop ) // Desktop
+		@media only screen and ( min-width: $desktop ) // Desktop
 			display: none
 	.logo__desktop
 		display: none
-		@media screen and ( min-width: $tablet ) // Tablet
+		@media only screen and ( min-width: $tablet ) // Tablet
 			display: flex
-		@media screen and ( min-width: $desktop ) // Desktop
+		@media only screen and ( min-width: $desktop ) // Desktop
 			display: flex
 .header__buttons
 	display: flex
@@ -327,9 +337,9 @@ footer
 	display: flex
 	justify-content: center
 	width: 64px
-	@media screen and ( min-width: $tablet ) // Tablet
+	@media only screen and ( min-width: $tablet ) // Tablet
 		width: 64px
-	@media screen and ( min-width: $desktop ) // Desktop
+	@media only screen and ( min-width: $desktop ) // Desktop
 		width: auto
 	a
 		width: 100%
@@ -337,19 +347,19 @@ footer
 		flex-direction: row
 		align-items: center
 		justify-content: center
-		@media screen and ( min-width: $tablet ) // Tablet
+		@media only screen and ( min-width: $tablet ) // Tablet
 			width: auto
 			// padding-left: 16px
 			// padding-right: 16px
-		@media screen and ( min-width: $desktop ) // Desktop
+		@media only screen and ( min-width: $desktop ) // Desktop
 			width: auto
 			padding-left: 16px
 			padding-right: 16px
 		span
 			display: none
-			@media screen and ( min-width: $tablet ) // Tablet
+			@media only screen and ( min-width: $tablet ) // Tablet
 				display: none
-			@media screen and ( min-width: $desktop ) // Desktop
+			@media only screen and ( min-width: $desktop ) // Desktop
 				display: block
 				margin-left: 12px
 
@@ -390,10 +400,10 @@ footer
 	display: flex
 	align-items: center
 	justify-content: center
-	@media screen and ( min-width: $tablet ) // Tablet
+	@media only screen and ( min-width: $tablet ) // Tablet
 		font-size: 48px
 		height: 102px
-	@media screen and ( min-width: $desktop ) // Desktop
+	@media only screen and ( min-width: $desktop ) // Desktop
 		font-size: 56px
 		height: 120px
 .menulink:hover
@@ -411,7 +421,7 @@ footer
 	display: grid
 	grid-template-columns: 1fr 1fr
 	grid-template-rows: 1fr 1fr
-	@media screen and ( min-width: $desktop ) // Desktop
+	@media only screen and ( min-width: $desktop ) // Desktop
 		grid-gap: 216px
 .overlay__footer-search
 	width: 100%
@@ -432,15 +442,15 @@ footer
 		box-sizing: border-box
 		color: $weiss
 		background-color: $weiss
-		mask: url('/images/navigation_suche.svg') right center no-repeat
+		mask: url('/images/icons/white/navigation_suche.svg') right center no-repeat
 		mask-size: 40px
-	@media screen and ( min-width: $tablet ) // Tablet
+	@media only screen and ( min-width: $tablet ) // Tablet
 		grid-column-start: 1
 		grid-column-end: 3
 		grid-row-start: 1
 		grid-row-end: 2
 		justify-self: center
-	@media screen and ( min-width: $desktop ) // Desktop
+	@media only screen and ( min-width: $desktop ) // Desktop
 		grid-column-start: 2
 		grid-column-end: 3
 		grid-row-start: 1
@@ -453,13 +463,19 @@ footer
 	grid-row-end: 3
 	align-self: end
 	justify-self: center
-	@media screen and ( min-width: $tablet ) // Tablet
+	a
+		margin-left: 16px
+		margin-right: 16px
+	a:hover
+		text-decoration: none
+		margin-right: 16px
+	@media only screen and ( min-width: $tablet ) // Tablet
 		grid-column-start: 1
 		grid-column-end: 3
 		grid-row-start: 2
 		grid-row-end: 3
 		justify-self: center
-	@media screen and ( min-width: $desktop ) // Desktop
+	@media only screen and ( min-width: $desktop ) // Desktop
 		grid-column-start: 1
 		grid-column-end: 2
 		grid-row-start: 1
@@ -489,11 +505,11 @@ footer
 	padding-left: 16px
 	padding-right: 16px
 	box-sizing: border-box
-	@media screen and ( min-width: $tablet ) // Tablet
+	@media only screen and ( min-width: $tablet ) // Tablet
 		height: 64px
 		padding-left: 24px
 		padding-right: 24px
-	@media screen and ( min-width: $desktop ) // Desktop
+	@media only screen and ( min-width: $desktop ) // Desktop
 		height: 64px
 		padding-left: 120px
 		padding-right: 120px
@@ -506,7 +522,7 @@ footer
 	grid-column-end: 4
 	grid-row-start: 1
 	grid-row-end: 2
-	@media screen and ( min-width: $tablet ) // Tablet
+	@media only screen and ( min-width: $tablet ) // Tablet
 		grid-column-start: 1
 		grid-column-end: 2
 		grid-row-start: 1
@@ -514,7 +530,7 @@ footer
 		.backtotop__menuitem
 			display: none
 			visibility: hidden
-	@media screen and ( min-width: $desktop ) // Desktop
+	@media only screen and ( min-width: $desktop ) // Desktop
 		grid-column-start: 1
 		grid-column-end: 2
 		grid-row-start: 1
@@ -534,12 +550,12 @@ footer
 	a
 		margin-left: 12px
 		margin-right: 12px
-	@media screen and ( min-width: $tablet ) // Tablet
+	@media only screen and ( min-width: $tablet ) // Tablet
 		grid-column-start: 2
 		grid-column-end: 3
 		grid-row-start: 1
 		grid-row-end: 3
-	@media screen and ( min-width: $desktop ) // Desktop
+	@media only screen and ( min-width: $desktop ) // Desktop
 		grid-column-start: 2
 		grid-column-end: 3
 		grid-row-start: 1
@@ -549,7 +565,7 @@ footer
 	visibility: hidden
 	.backtotop__img
 		margin-left: 16px
-	@media screen and ( min-width: $tablet ) // Tablet
+	@media only screen and ( min-width: $tablet ) // Tablet
 		display: flex
 		visibility: visible
 		grid-column-start: 3
@@ -562,7 +578,7 @@ footer
 			flex-direction: row
 			justify-content: flex-end
 			align-items: center
-	@media screen and ( min-width: $desktop ) // Desktop
+	@media only screen and ( min-width: $desktop ) // Desktop
 		display: flex
 		visibility: visible
 		grid-column-start: 3
@@ -583,9 +599,9 @@ footer
 //! Home: Entry & Genre Filters
 .wrapper__home-entry
 	padding: 10px
-	@media screen and ( min-width: $tablet ) // Tablet
+	@media only screen and ( min-width: $tablet ) // Tablet
 		padding: 40px
-	@media screen and ( min-width: $desktop ) // Desktop
+	@media only screen and ( min-width: $desktop ) // Desktop
 		padding: 80px
 	h1
 		text-align: center
@@ -593,10 +609,10 @@ footer
 		text-align: center
 	.filter__toggle
 		button
-		@media screen and ( min-width: $tablet ) // Tablet
+		@media only screen and ( min-width: $tablet ) // Tablet
 			button
 				display: none
-		@media screen and ( min-width: $desktop ) // Desktop
+		@media only screen and ( min-width: $desktop ) // Desktop
 			button
 				display: none
 
@@ -635,12 +651,12 @@ footer
 		.filter__genres-more
 			background-color: transparent
 			text-decoration: underline
-		@media screen and ( min-width: $tablet ) // Tablet
+		@media only screen and ( min-width: $tablet ) // Tablet
 			display: block
 			ul
 				flex-direction: row
 				justify-content: center
-		@media screen and ( min-width: $desktop ) // Desktop
+		@media only screen and ( min-width: $desktop ) // Desktop
 			display: block
 			ul
 				flex-direction: row
@@ -682,12 +698,12 @@ footer
 		width: 100%
 		button
 			margin-bottom: 12px
-		@media screen and ( min-width: $tablet ) // Tablet
+		@media only screen and ( min-width: $tablet ) // Tablet
 			display: flex
 			flex-direction: row
 			justify-content: center
 			column-gap: 16px
-		@media screen and ( min-width: $desktop ) // Desktop
+		@media only screen and ( min-width: $desktop ) // Desktop
 			display: flex
 			flex-direction: row
 			justify-content: center
@@ -704,9 +720,9 @@ footer
 //! Home: Magazin			
 .wrapper__magazin
 	padding: 10px
-	@media screen and ( min-width: $tablet ) // Tablet
+	@media only screen and ( min-width: $tablet ) // Tablet
 		padding: 40px
-	@media screen and ( min-width: $desktop ) // Desktop
+	@media only screen and ( min-width: $desktop ) // Desktop
 		padding: 80px
 	h2
 		text-align: center
@@ -716,27 +732,27 @@ footer
 		grid-auto-rows: auto
 		justify-items: center
 		grid-gap: 1em
-		@media screen and ( min-width: $tablet ) // Tablet
+		@media only screen and ( min-width: $tablet ) // Tablet
 			grid-template-columns: repeat(2, 1fr)
-		@media screen and ( min-width: $desktop ) // Desktop
+		@media only screen and ( min-width: $desktop ) // Desktop
 			grid-template-columns: repeat(3, 1fr)
 	.magazin__post
 		width: 100%
 		a
 			text-transform: uppercase
 			text-decoration: underline
-		@media screen and ( min-width: $tablet ) // Tablet
+		@media only screen and ( min-width: $tablet ) // Tablet
 			a
 				display: none
-		@media screen and ( min-width: $desktop ) // Desktop
+		@media only screen and ( min-width: $desktop ) // Desktop
 			a
 				display: none
 		
 	.magazin__post:nth-child(1n+4)
 		display: none
-		@media screen and ( min-width: $tablet ) // Tablet
+		@media only screen and ( min-width: $tablet ) // Tablet
 			display: block
-		@media screen and ( min-width: $desktop ) // Desktop
+		@media only screen and ( min-width: $desktop ) // Desktop
 			display: block
 
 	.magazin__post-more
@@ -785,7 +801,7 @@ footer
 			align-items: center
 			img
 				background-color: yellow
-	@media screen and ( min-width: $tablet ) // Tablet
+	@media only screen and ( min-width: $tablet ) // Tablet
 		height: 440px
 		display: grid
 		grid-template-columns: 1fr 2fr
@@ -825,7 +841,7 @@ footer
 				align-items: center
 				img
 					background-color: yellow
-	@media screen and ( min-width: $desktop ) // Desktop
+	@media only screen and ( min-width: $desktop ) // Desktop
 		height: 376px
 		display: grid
 		grid-template-columns: 1fr 2fr
@@ -926,9 +942,9 @@ footer
 //! Home: News			
 .wrapper__news
 	padding: 10px
-	@media screen and ( min-width: $tablet ) // Tablet
+	@media only screen and ( min-width: $tablet ) // Tablet
 		padding: 40px
-	@media screen and ( min-width: $desktop ) // Desktop
+	@media only screen and ( min-width: $desktop ) // Desktop
 		padding: 80px
 	h2
 		text-align: center
@@ -938,9 +954,9 @@ footer
 		grid-auto-rows: auto
 		justify-items: center
 		grid-gap: 1em
-		@media screen and ( min-width: $tablet ) // Tablet
+		@media only screen and ( min-width: $tablet ) // Tablet
 			grid-template-columns: repeat(3, 1fr)
-		@media screen and ( min-width: $desktop ) // Desktop
+		@media only screen and ( min-width: $desktop ) // Desktop
 			grid-template-columns: repeat(5, 1fr)
 	.news__post
 		width: 100%
@@ -950,14 +966,14 @@ footer
 			background-color: yellow
 	.news__post:nth-child(1n+5) // Post >5 ausblenden auf Mobile
 		display: none
-		@media screen and ( min-width: $tablet ) // Tablet
+		@media only screen and ( min-width: $tablet ) // Tablet
 			display: block
-		@media screen and ( min-width: $desktop ) // Desktop
+		@media only screen and ( min-width: $desktop ) // Desktop
 			display: block
 	.news__post:nth-child(1n+10) // Post >9 ausblenden auf Desktop
-		@media screen and ( min-width: $tablet ) // Tablet
+		@media only screen and ( min-width: $tablet ) // Tablet
 			display: none
-		@media screen and ( min-width: $desktop ) // Desktop
+		@media only screen and ( min-width: $desktop ) // Desktop
 			display: block
 	.news__post-more
 		display: flex
@@ -978,9 +994,9 @@ footer
 	text-align: center
 	h1
 	p
-	@media screen and ( min-width: $tablet ) // Tablet
+	@media only screen and ( min-width: $tablet ) // Tablet
 		width: 50%
-	@media screen and ( min-width: $desktop ) // Desktop
+	@media only screen and ( min-width: $desktop ) // Desktop
 		width: 50%
 .wrapper__tickets-content
 	background-color: yellow
@@ -995,10 +1011,10 @@ footer
 	h2
 		font-size: $fontSizeMobileH2
 		text-align: center
-		@media screen and ( min-width: $tablet ) // Tablet
+		@media only screen and ( min-width: $tablet ) // Tablet
 			font-size: $fontSizeTabletH2
 			text-align: left
-		@media screen and ( min-width: $desktop ) // Desktop
+		@media only screen and ( min-width: $desktop ) // Desktop
 			font-size: $fontSizeDesktopH2
 			text-align: left
 	.tickets-content__section
@@ -1007,9 +1023,9 @@ footer
 		flex-wrap: wrap
 		.tickets-content__section-item
 			width: 100%
-			@media screen and ( min-width: $tablet ) // Tablet
+			@media only screen and ( min-width: $tablet ) // Tablet
 				width: 50%
-			@media screen and ( min-width: $desktop ) // Desktop
+			@media only screen and ( min-width: $desktop ) // Desktop
 				width: 25%
 			box-sizing: border-box
 			padding: 8px
@@ -1096,9 +1112,27 @@ footer
 	padding: 24px
 	button
 		//margin-top: 24px
-	@media screen and ( min-width: $tablet ) // Tablet
+	@media only screen and ( min-width: $tablet ) // Tablet
 		width: 600px
-	@media screen and ( min-width: $desktop ) // Desktop
+	@media only screen and ( min-width: $desktop ) // Desktop
 		width: 600px
-.bold
-	font-weight: bold
+
+
+//! Login
+.wrapper__login-content
+	color: $weiss
+	background-color: $indieMint
+	text-align: center
+	display: flex
+	flex-direction: column
+	align-items: center
+	height: 100%
+	justify-content: space-around
+.login-content__inner
+	padding: 24px
+	button
+		//margin-top: 24px
+	@media only screen and ( min-width: $tablet ) // Tablet
+		width: 600px
+	@media only screen and ( min-width: $desktop ) // Desktop
+		width: 600px
