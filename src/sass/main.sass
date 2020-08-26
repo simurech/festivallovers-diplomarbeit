@@ -208,6 +208,7 @@ main
 	margin-right: auto
 	width: 100%
 	top: -100px
+	z-index: -2
 	@media only screen and ( min-width: $tablet ) // Tablet
 		max-width: 1600px
 	@media only screen and ( min-width: $desktop ) // Desktop
@@ -348,7 +349,7 @@ footer
 		align-items: center
 		justify-content: center
 		@media only screen and ( min-width: $tablet ) // Tablet
-			width: auto
+			width: 100%
 			// padding-left: 16px
 			// padding-right: 16px
 		@media only screen and ( min-width: $desktop ) // Desktop
@@ -1123,16 +1124,130 @@ footer
 	color: $weiss
 	background-color: $indieMint
 	text-align: center
+	height: 100%
 	display: flex
 	flex-direction: column
 	align-items: center
-	height: 100%
 	justify-content: space-around
 .login-content__inner
-	padding: 24px
+	width: 310px
+	background-color: $weiss
+	padding: 0px
+	color: $schwarz75
+.login-content__inner-form
+	height: 297px
+	box-sizing: border-box
+	padding-top: 32px
+	padding-left: 24px
+	padding-right: 24px
+	padding-bottom: auto
+	input[type=text]
+		width: 262px
+		height: 48px
+		margin-bottom: 16px
+		display: inline-block
+		box-sizing: border-box
+		padding: 16px
+		font-size: $fontSizeCopy
+		color: $schwarz100
+		background-color: $grauF0
+		border: none
+		border-radius: 0px
+	input[type=text]::placeholder
+		color: $grauC2
 	button
-		//margin-top: 24px
+		margin-top: 8px
+		margin-left: 0px
+		width: 100%
+.login-content__inner-registration
+	border-top: 2px solid $grauC2
+	height: 128px
+	box-sizing: border-box
+	padding-top: auto
+	padding-left: 24px
+	padding-right: 24px
+	padding-bottom: auto
+	display: flex
+	justify-content: center
+	align-items: center
+
+
+//! Overlay Login
+.overlay-login
+	position: fixed
+	z-index: -1
+	top: 0
+	right: 48px
 	@media only screen and ( min-width: $tablet ) // Tablet
-		width: 600px
+		right: 88px
 	@media only screen and ( min-width: $desktop ) // Desktop
-		width: 600px
+		right: 162px
+	color: $weiss
+	height: 0
+	width: 310px
+	a
+		color: $weiss
+	text-align: center
+	display: flex
+	flex-direction: column
+	align-items: center
+	justify-content: space-around
+	overflow-x: hidden
+	transition: 0.3s
+.overlay-login__spikel
+	display: flex
+	justify-content: flex-end
+	margin-right: 56px
+	margin-bottom: -8px
+	@media only screen and ( min-width: $tablet ) // Tablet
+		margin-right: 24px
+	@media only screen and ( min-width: $desktop ) // Desktop
+		margin-right: 0px
+		justify-content: center
+.spikel
+	width: 16px
+	height: 16px
+	background-color: $schwarz100
+	transform: rotate(45deg)
+.overlay-login__inner-form
+	background-color: $schwarz100
+	height: 297px
+	box-sizing: border-box
+	padding-top: 32px
+	padding-left: 24px
+	padding-right: 24px
+	padding-bottom: auto
+	input[type=text]
+		width: 262px
+		height: 48px
+		margin-bottom: 16px
+		display: inline-block
+		box-sizing: border-box
+		padding: 16px
+		font-size: $fontSizeCopy
+		color: $schwarz100
+		background-color: $weiss
+		border: none
+		border-radius: 0px
+	input[type=text]::placeholder
+		color: $grauC2
+	button
+		margin-top: 8px
+		margin-left: 0px
+		width: 100%
+		@media only screen and ( min-width: $tablet ) // Tablet
+			width: auto
+		@media only screen and ( min-width: $desktop ) // Desktop
+			width: auto
+.overlay-login__inner-registration
+	background-color: $schwarz100
+	border-top: 2px solid $grauC2
+	height: 128px
+	box-sizing: border-box
+	padding-top: auto
+	padding-left: 24px
+	padding-right: 24px
+	padding-bottom: auto
+	display: flex
+	justify-content: center
+	align-items: center
