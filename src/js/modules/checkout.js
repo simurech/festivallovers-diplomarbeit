@@ -134,4 +134,4 @@ function waitAndShowFormLabels(){
 	}
 }
 // Event Listener auf Formular-Felder. Löst bei Eingabe eine Funktion aus.
-funktionBeiEingabe('transactionform', showFormLabels);
+funktionBeiEingabe('transactionforminput', showFormLabels);

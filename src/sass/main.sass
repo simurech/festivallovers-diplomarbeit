@@ -214,11 +214,11 @@ main
 		max-width: 1600px
 .main__full
 	padding: 0px
-	height: calc(100vh - 176px) // 100% VH minus Header minus Footer
+	min-height: calc(100vh - 176px) // 100% VH minus Header minus Footer
 	@media only screen and ( min-width: $tablet ) // Tablet
-		height: calc(100vh - 128px) // 100% VH minus Header minus Footer
+		min-height: calc(100vh - 128px) // 100% VH minus Header minus Footer
 	@media only screen and ( min-width: $desktop ) // Desktop
-		height: calc(100vh - 128px )// 100% VH minus Header minus Footer
+		min-height: calc(100vh - 128px )// 100% VH minus Header minus Footer
 
 // Footer
 footer
@@ -1106,7 +1106,11 @@ footer
 	display: flex
 	flex-direction: column
 	align-items: center
-	height: 100%
+	min-height: calc(100vh - 176px) // 100% VH minus Header minus Footer
+	@media only screen and ( min-width: $tablet ) // Tablet
+		min-height: calc(100vh - 128px) // 100% VH minus Header minus Footer
+	@media only screen and ( min-width: $desktop ) // Desktop
+		min-height: calc(100vh - 128px )// 100% VH minus Header minus Footer
 	justify-content: space-around
 .bestellbestaetigung-content__inner
 	padding: 24px
@@ -1123,7 +1127,11 @@ footer
 	color: $weiss
 	background-color: $indieMint
 	text-align: center
-	height: 100%
+	min-height: calc(100vh - 176px) // 100% VH minus Header minus Footer
+	@media only screen and ( min-width: $tablet ) // Tablet
+		min-height: calc(100vh - 128px) // 100% VH minus Header minus Footer
+	@media only screen and ( min-width: $desktop ) // Desktop
+		min-height: calc(100vh - 128px )// 100% VH minus Header minus Footer
 	display: flex
 	flex-direction: column
 	align-items: center
@@ -1256,7 +1264,11 @@ footer
 	color: $weiss
 	background-color: $indieMint
 	text-align: center
-	height: 100%
+	min-height: calc(100vh - 176px) // 100% VH minus Header minus Footer
+	@media only screen and ( min-width: $tablet ) // Tablet
+		min-height: calc(100vh - 128px) // 100% VH minus Header minus Footer
+	@media only screen and ( min-width: $desktop ) // Desktop
+		min-height: calc(100vh - 128px )// 100% VH minus Header minus Footer
 	display: flex
 	flex-direction: column
 	align-items: center
@@ -1290,13 +1302,12 @@ footer
 .form__infos
 	display: flex
 	flex-direction: column
-	grid-template-rows: 4
-	grid-template-columns: 2
+	::placeholder
+		color: $grauC2
 .transactionforminput
 	width: 100%
 	height: 48px
 	margin-bottom: 16px
-	//display: inline-block
 	box-sizing: border-box
 	padding-top: 12px
 	padding-left: 12px
@@ -1307,34 +1318,33 @@ footer
 	background-color: $grauF0
 	border: none
 	border-radius: 0px
-	grid-column-start: 1
-	grid-column-end: 3
 .form__infos-twocolumns
 	display: flex
 	width: 50%
 	input:nth-child(4)
 		border-left: 2px solid $grauC2
-
-label
+		margin-left: 4px
+	.zahlungs-form-label:nth-child(1)
+		margin-right: -54px
+.zahlungs-form-label
 	font-family: $fontFamilySansSerif
 	font-size: $fontSizeZusatzinfos
-input[type=text]::placeholder
 	color: $grauC2
-button
-	margin-top: 8px
-	margin-left: 0px
-	//width: 100%
-	img
-		margin-right: 16px
+	position: relative
+	margin-bottom: -20px
+	align-self: flex-start
+	margin-left: 12px
+.zahlungs-form-label:nth-child(3)
+	margin-right: -44px
 input[name=creditcard] // Bild der Zahlungsart wird später via JS eingefügt
 	background-position: 208px center
 	background-margin-right: 24px
 	background-size: 40px
 	background-repeat: no-repeat
-
-
-
-#creditcard-label, #validuntil-label, #cvc-label, #name-label
-	visibility: visible
-	position: absolute
-
+#bestellenBtn
+	margin-top: 8px
+	margin-left: 0px
+	img
+		margin-right: 16px
+#creditcard-label, #cvc-label, #name-label, #validuntil-label
+	visibility: hidden

@@ -2,8 +2,9 @@
 <html lang="de">
   <head>
     <meta charset="UTF-8" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
     <title>Zahlung | Festival Lovers</title>
-    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/main.css" id="stylesheet"/>
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap"
       rel="stylesheet"
@@ -152,25 +153,25 @@
               <input type="radio" name="paymentMethod" value="paypal" id="paypal" class="paymentradio transactionforminput">
               <label for="paypal">
                 <div class="paymentlabel paypal-label">
-                 <img width="40px" height="40px" src="/images/payment/paypal.svg" alt="PayPal">
+                <img width="40px" height="40px" src="/images/payment/paypal.svg" alt="PayPal">
                 </div>
               </label>
             </div>
             <div class="form__infos">
-              <label id="creditcard-label" for="creditcard" class="zahlungsFormLabel">Kartennummer</label>
+              <label id="creditcard-label" for="creditcard" class="zahlungs-form-label">Kartennummer</label>
               <input type="text" placeholder="1111 1111 1111 1111" name="creditcard" class="transactionforminput">
               <div class="form__infos-twocolumns">
-                <label id="validuntil-label" for="validuntil" class="zahlungsFormLabel">MM / JJ</label>
+                <label id="validuntil-label" for="validuntil" class="zahlungs-form-label">MM/JJ</label>
                 <input type="text" placeholder="MM / JJ" name="validuntil" class="transactionforminput">
-                <label id="cvc-label" for="cvc" class="zahlungsFormLabel">CVC</label>
+                <label id="cvc-label" for="cvc" class="zahlungs-form-label">CVC</label>
                 <input type="text" placeholder="CVC" name="cvc" class="transactionforminput">
               </div>
-              <label id="name-label" for="name" class="zahlungsFormLabel">Karteninhaber</label>
+              <label id="name-label" for="name" class="zahlungs-form-label">Karteninhaber</label>
               <input type="text" placeholder="Karteninhaber" name="name" class="transactionforminput">
 
               <button id="bestellenBtn" type="submit" form="zahlungForm"><img width="16px" height="16px" src="/images/icons/white/tickets_securtiy.svg" class="svg-weiss"><span id="gesamtkosten">000</span>.- bezahlen</button>
             </div>
-         </form> 
+          </form> 
         </div>
         <img src="/images/icons/white/music_indie.svg" width="48px" height="48px" alt="Indie Music" class="svg-weiss">
       </div>
