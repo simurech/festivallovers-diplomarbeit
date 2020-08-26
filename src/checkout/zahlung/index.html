@@ -132,15 +132,45 @@
 
     <!-- Main -->
     <main class="main__full">
-      <div class="wrapper__login-content">
+      <div class="wrapper__zahlung-content">
         <h1>Zahlung</h1>
-        <div class="login-content__inner">
-          <input type="text">
-          <input type="text">
-          <a href="/checkout/kasse/"><button class="lightreversed">Anmelden</button></a>
-          <hr>
-          <p>Neu bei FestivalLovers?<br>
-          Jetzt <a href="#" class="useless bold">registrieren</a>.</p>
+        <div class="zahlung-content__inner">
+          <form name="zahlungForm">
+            <div class="form__payment">
+              <input type="radio" name="paymentMethod" value="visa" id="visa" class="paymentradio transactionforminput">
+              <label for="visa">
+                <div class="paymentlabel visa-label">
+                  <img width="40px" height="40px" src="/images/payment/visa.svg" alt="Visa">
+                </div>
+              </label>
+              <input type="radio" name="paymentMethod" value="mastercard" id="mastercard" class="paymentradio transactionforminput">
+              <label for="mastercard">
+                <div class="paymentlabel mastercard-label">
+                  <img width="40px" height="40px" src="/images/payment/mastercard.svg" alt="MasterCard">
+                </div>
+              </label>
+              <input type="radio" name="paymentMethod" value="paypal" id="paypal" class="paymentradio transactionforminput">
+              <label for="paypal">
+                <div class="paymentlabel paypal-label">
+                 <img width="40px" height="40px" src="/images/payment/paypal.svg" alt="PayPal">
+                </div>
+              </label>
+            </div>
+            <div class="form__infos">
+              <label id="creditcard-label" for="creditcard" class="zahlungsFormLabel">Kartennummer</label>
+              <input type="text" placeholder="1111 1111 1111 1111" name="creditcard" class="transactionforminput">
+              <div class="form__infos-twocolumns">
+                <label id="validuntil-label" for="validuntil" class="zahlungsFormLabel">MM / JJ</label>
+                <input type="text" placeholder="MM / JJ" name="validuntil" class="transactionforminput">
+                <label id="cvc-label" for="cvc" class="zahlungsFormLabel">CVC</label>
+                <input type="text" placeholder="CVC" name="cvc" class="transactionforminput">
+              </div>
+              <label id="name-label" for="name" class="zahlungsFormLabel">Karteninhaber</label>
+              <input type="text" placeholder="Karteninhaber" name="name" class="transactionforminput">
+
+              <button id="bestellenBtn" type="submit" form="zahlungForm"><img width="16px" height="16px" src="/images/icons/white/tickets_securtiy.svg" class="svg-weiss"><span id="gesamtkosten">000</span>.- bezahlen</button>
+            </div>
+         </form> 
         </div>
         <img src="/images/icons/white/music_indie.svg" width="48px" height="48px" alt="Indie Music" class="svg-weiss">
       </div>
@@ -185,6 +215,7 @@
 
     <!-- Javascript einbinden -->
     <script type="text/javascript" src="/js/main.js"></script>
+    <script type="text/javascript" src="/js/modules/checkout.js"></script>
 
   </body>
 </html>

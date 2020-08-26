@@ -21,7 +21,7 @@ function checkUrlStartFunktion (url, funktion){
 };
 // Beispiel: checkUrlStartFunktion('/festivals/', eventsLaden);
 
-// Eventlistener auf Array legen
+// Eventlistener für KLICK auf Array legen
 function funktionBeiKlick (selektorklasse, funktion) {
 	let selektorarray = document.querySelectorAll('.'+selektorklasse);
 	for (i=0; i < selektorarray.length; i++) {
@@ -29,6 +29,14 @@ function funktionBeiKlick (selektorklasse, funktion) {
 	};
 };
 // Beispiel: funktionBeiKlick(klassennname, auszufuehrendeFunktionn);
+
+// Eventlistener für EINGABE auf Array legen
+function funktionBeiEingabe (selektorklasse, funktion) {
+	let selektorarray = document.querySelectorAll('.'+selektorklasse);
+	for (i=0; i < selektorarray.length; i++) {
+		selektorarray[i].onkeydown = funktion;
+	};
+};
 
 
 //! Erzeuge einen Alert bei noch nicht umgesetzten Elementen

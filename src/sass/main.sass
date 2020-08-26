@@ -208,7 +208,6 @@ main
 	margin-right: auto
 	width: 100%
 	top: -100px
-	z-index: -2
 	@media only screen and ( min-width: $tablet ) // Tablet
 		max-width: 1600px
 	@media only screen and ( min-width: $desktop ) // Desktop
@@ -1175,7 +1174,7 @@ footer
 //! Overlay Login
 .overlay-login
 	position: fixed
-	z-index: -1
+	z-index: 1
 	top: 0
 	right: 48px
 	@media only screen and ( min-width: $tablet ) // Tablet
@@ -1251,3 +1250,91 @@ footer
 	display: flex
 	justify-content: center
 	align-items: center
+
+//! Zahlung
+.wrapper__zahlung-content
+	color: $weiss
+	background-color: $indieMint
+	text-align: center
+	height: 100%
+	display: flex
+	flex-direction: column
+	align-items: center
+	justify-content: space-around
+.zahlung-content__inner
+	width: 310px
+	background-color: $weiss
+	padding: 0px
+	color: $schwarz75
+	box-sizing: border-box
+	padding-top: 32px
+	padding-left: 24px
+	padding-right: 24px
+	padding-bottom: 32px
+.form__payment
+	display: flex
+	flex-direction: row
+	justify-content: space-between
+	.paymentlabel
+		display: flex
+		align-items: center
+		justify-content: center
+		width: 72px
+		height: 48px
+		margin-bottom: 16px
+		background-color: $grauF0
+		border: 2px solid $transparent
+		border-radius: 4px
+.paymentradio
+	display: none
+.form__infos
+	display: flex
+	flex-direction: column
+	grid-template-rows: 4
+	grid-template-columns: 2
+.transactionforminput
+	width: 100%
+	height: 48px
+	margin-bottom: 16px
+	//display: inline-block
+	box-sizing: border-box
+	padding-top: 12px
+	padding-left: 12px
+	padding-right: 12px
+	padding-bottom: 4px
+	font-size: $fontSizeCopy
+	color: $schwarz100
+	background-color: $grauF0
+	border: none
+	border-radius: 0px
+	grid-column-start: 1
+	grid-column-end: 3
+.form__infos-twocolumns
+	display: flex
+	width: 50%
+	input:nth-child(4)
+		border-left: 2px solid $grauC2
+
+label
+	font-family: $fontFamilySansSerif
+	font-size: $fontSizeZusatzinfos
+input[type=text]::placeholder
+	color: $grauC2
+button
+	margin-top: 8px
+	margin-left: 0px
+	//width: 100%
+	img
+		margin-right: 16px
+input[name=creditcard] // Bild der Zahlungsart wird später via JS eingefügt
+	background-position: 208px center
+	background-margin-right: 24px
+	background-size: 40px
+	background-repeat: no-repeat
+
+
+
+#creditcard-label, #validuntil-label, #cvc-label, #name-label
+	visibility: visible
+	position: absolute
+
