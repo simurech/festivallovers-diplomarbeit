@@ -108,7 +108,7 @@ function clearLabels(){
 
 // Funktion verzögert ausführen
 function showFormLabels(){
-	setTimeout(waitAndShowFormLabels, 1);
+	setTimeout(waitAndShowFormLabels, 100);
 };
 // Prüft in welchem Feld eine EIngabe getätigt wird und blendet dann Label ein
 function waitAndShowFormLabels(){
