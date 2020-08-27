@@ -1,8 +1,5 @@
-// Test ob JS überhaupt geladen wird.
-function testFunktion() {
-	console.warn('JS main.js wurde erfolgreich geladen');
-}
-testFunktion();
+// In folgendem Code werden diverse Grundlegende Funktionen definiert.
+// Dieses JS muss auf allen Seiten geladen werden!
 
 
 //! Standardfunktionen
@@ -51,8 +48,13 @@ funktionBeiKlick('useless', functionNotDefined);
 //! Overlay Header-Menü
 // Funktion: Overlay-Menü einblenden
 function openNavi() {
-	let overlay = document.querySelector('#navigation');
-	overlay.style.height = '100%';
+	let canvas = document.querySelector('#filter-canvas');
+	if (canvas.style.width == '100%') { // Wenn Filter sichtbar
+		return
+	} else { // Wenn Filter nicht sichtbar
+		let overlay = document.querySelector('#navigation');
+		overlay.style.height = '100%';
+	};
 };
 // Funktion: Overlay-Menü ausblenden
 function closeNavi() {
@@ -80,7 +82,6 @@ function openLogin() {
 };
 // Funktion: Overlay-Menü ausblenden
 function closeLogin() {
-	console.log('Login ausblenden!');
 	let overlay = document.querySelector('#overlay-login');
 	overlay.style.height = '0';
 	overlay.style.top = '0';
@@ -89,7 +90,6 @@ function closeLogin() {
 document.querySelector('#showlogin').addEventListener('click', openLogin);
 // Event Listener auf Dokument starten, wenn Login-Maske eingeblendet wird. Overlay ausblenden, wenn Klick ausserhalb
 function startEventListenerLoginOverlay (){
-	console.log('startEventListenerLoginOverlay gestartet');
 	document.addEventListener('click', (event) => {
 		const overlayLogin = document.querySelector('#overlay-login');
 		const headerButton = document.querySelector('#showlogin');

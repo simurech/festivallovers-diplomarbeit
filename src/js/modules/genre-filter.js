@@ -1,12 +1,5 @@
-// In folgendem Code werden sämtliche Funktionen der Genre-Filter bereitgestellt.
-// Das Skript muss überall eingebunden sein, wo die Genre-Filter ersichtlich sind.
-// Aktuell betrifft dies die Startseite und die Festival-Übersichtseite.
-
-// Test ob JS überhaupt geladen wird.
-function testFunktion() {
-	console.warn('genre-filter.js wurde erfolgreich geladen');
-}
-testFunktion();
+// In folgendem Code werden sämtliche grundlegenden Funktionen definiert.
+// Das Skript muss deshalb auf allen Seiten eingebunden werden!
 
 
 //! Tablet & Desktop: Klick auf "Mehr Genres" bleindet weitere Genres ein.
@@ -27,36 +20,33 @@ document.querySelector('#filter__genres-more').addEventListener('click', zeigMeh
 // Funktion zum öffnen des Canvas
 function openGenresCanvas() {
 	// Selektiere Canvas
-	let filterCanvasBtn = document.querySelector('#filter-canvas');
+	let filterCanvas = document.querySelector('#filter-canvas');
 	// Setzte Breite auf 100%
-	filterCanvasBtn.style.width = '100%';
+	filterCanvas.style.width = '100%';
 	// Selektiere Link in Header
 	let menuLink = document.querySelector('#showmenu'); // enthält Bild + Span
-	// Ändere ID
-	menuLink.id = 'filterback';
 	// Ändere Icon
 	menuLink.childNodes[1].src = '/images/icons/black/navigation_zurueck.svg';
 	// Ändere Text
 	menuLink.childNodes[3].innerHTML = 'zurück';
 	addEventListenerToBackBtn();
 };
-// Event Listener
+// Event Listener für Mobile auf Button "Filter anzeigen"
 document.querySelector('.filter__toggle').addEventListener('click', openGenresCanvas);
-// Hilfsfunktion legt EventListener auf den Zurück-Buttonn
-function addEventListenerToBackBtn() {
-	document.querySelector('#filterback').addEventListener('click', closeGenresCanvas);
-};
+// Hilfsfunktion um eventListener auf Btn zu legen
+function addEventListenerToBackBtn () {
+	let menuLink = document.querySelector('#showmenu');
+	menuLink.addEventListener('click', closeGenresCanvas);
+}
+
 // Funktion zum schliessen des Canvas
 function closeGenresCanvas() {
-	closeNavi();
 	// Selektiere Canvas
-	let filterCanvasBtn = document.querySelector('#filter-canvas');
+	let filterCanvas = document.querySelector('#filter-canvas');
 	// Setzte Breite auf 0%
-	filterCanvasBtn.style.width = '0';
-  	// Selektiere Link in Header
-	let menuLink = document.querySelector('#filterback'); // enthält Bild + Span
-	// Ändere ID
-	menuLink.id = 'showmenu';
+	filterCanvas.style.width = '0';
+	// Selektiere Link in Header
+	let menuLink = document.querySelector('#showmenu'); // enthält Bild + Span
 	// Ändere Icon
 	menuLink.childNodes[1].src = '/images/icons/black/navigation_menu.svg';
 	// Ändere Text
@@ -122,6 +112,7 @@ function getLocalStorage(){
 	if (localStorage.genres && localStorage.genres !== [""]) {
 		setGenresFilter();
 	};
+	checkIfNoFestivals();
 };
 //Funktion sofort ausführen
 getLocalStorage();
@@ -150,18 +141,19 @@ function eventsFiltern(){
 		genreCheckbox.forEach(element => {
 			eventsClassHandler(element);
 		});
-		checkIfNoFestivals();
 	} else { // Wenn Localstorage leer ist, folgenden Code ausführen:
 		for (i = 0; i < events.length; i++){
 			// alle Events einblenden, da nichts gespeichert
 			events[i].classList.remove('notvisible');
 		};
-		checkIfNoFestivals();
 	};
+	checkIfNoFestivals();
 };
+
 
 // Prüfe ob keine Festivals gelistet und Seite deshalb leer. Wenn ja -> zeige Hinweis
 function checkIfNoFestivals () {
+	console.log('check Funktion ausgeführt');
 	// Selektiere Liste mit allen Events
 	let eventList = document.querySelector('#events');
 	let eventListArray = [];

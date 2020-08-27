@@ -4,12 +4,6 @@
 // Aktuell betrifft dies nnur die "Tickets kaufen"-Seite.
 
 
-// Test ob JS überhaupt geladen wird.
-function testFunktion() {
-	console.warn('JS tickets-cart.js wurde erfolgreich geladen');
-}
-testFunktion();
-
 //! Anzahl Tickets anhand Auswahl anpassen
 // Funktion
 function ticketVerfuegbarkeitText (event) {

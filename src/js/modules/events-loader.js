@@ -2,11 +2,6 @@
 // Das Skript muss überall eingebunden sein, wo Festival-Inhalte geladen werden.
 // Aktuell betrifft dies nur die Festival-Übersichtseite.
 
-// Test ob JS überhaupt geladen wird.
-function testFunktion() {
-	console.warn('JS events-loader.js wurde erfolgreich geladen');
-}
-testFunktion();
 
 //! Übersicht: Lade alle Festivals
 const restUrl = 'http://localhost/rest' //! URL ZU SERVER

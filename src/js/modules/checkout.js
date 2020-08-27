@@ -4,12 +4,6 @@
 // Aktuell betrifft dies nur die Zahlung-Seite.
 
 
-// Test ob JS überhaupt geladen wird.
-function testFunktion() {
-	console.warn('JS checkout.js wurde erfolgreich geladen');
-}
-testFunktion();
-
 //! Anzahl Tickets aus LocalStorage lesen, Kosten berechnen und in Kaufen-Button abfüllen
 // Funktion
 function getTicketValue () {
@@ -32,7 +26,6 @@ function getTicketValue () {
 	let ticket5Kosten = ticket5Anzahl * ticket5Preis;
 	let ticket6Kosten = ticket6Anzahl * ticket6Preis;
 	let summe = ticket1Kosten + ticket2Kosten + ticket3Kosten + ticket4Kosten + ticket5Kosten + ticket6Kosten;
-	console.log('Summe = ', summe)
 	let gesamtkostenSpan = document.querySelector('#gesamtkosten');
 	gesamtkostenSpan.innerHTML = summe;
 	localStorage.setItem('gesamtkosten', summe);
