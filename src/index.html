@@ -135,7 +135,7 @@
     <main id="main">
       <div class="wrapper__home-entry">
         <h1>Auf welche Musik stehst du?</h1>
-        <p>
+        <p class="home-entry__subtitle">
           Egal auf was du stehst wir haben alles für deinen Musikgeschmack und
           garantieren dir eine erlebnisreiche Festivalzeit.
         </p>
@@ -566,55 +566,43 @@
       </div>
 
       <div class="wrapper__hero-img">
-        <img src="#" alt="Bild" width="100%" height="100%" />
+        <img src="/images/photos/BigTeaser.png" alt="Festival" width="100%" height="100%" />
       </div>
 
       <div id="magazin-content"></div>
       <div class="wrapper__magazin">
         <h2>Magazin</h2>
-        <div class="magazin__masonry-container">
-          <div class="magazin__post">
-            <h3>Einfach blos nichts vergessen 1</h3>
-            <p>
-              TextText TextTextTex tTextTextT extTe tTextText extTextT
-              extTextTextT extTextText TextTextText TextTextTex tTextText TextTe
-              tTextTe xtTextT extTe xtText
-            </p>
-            <a href="#" class="useless">Lesen</a>
-          </div>
-          <div class="magazin__post">
-            <h3>Einfach blos nichts vergessen 2</h3>
-            <p>
-              TextText TextTextTex tTextTextT extTe tTextText extTextT
-              extTextTextT extTextText TextTextText TextTextTex tTextText TextTe
-              tTextTe xtTextT extTe xtText
-            </p>
-            <a href="#" class="useless">Lesen</a>
-          </div>
-          <div class="magazin__post">
-            <h3>Einfach blos nichts vergessen 3</h3>
-            <p>Text</p>
-            <a href="#" class="useless">Lesen</a>
-          </div>
-          <div class="magazin__post">
-            <h3>Einfach blos nichts vergessen 4</h3>
-            <p>Text</p>
-            <a href="#" class="useless">Lesen</a>
-          </div>
-          <div class="magazin__post">
-            <h3>Einfach blos nichts vergessen 5</h3>
-            <p>
-              TextText TextTextTex tTextTextT extTe tTextText extTextT
-              extTextTextT extTextText TextTextText TextTextTex tTextText TextTe
-              tTextTe xtTextT extTe xtText
-            </p>
-            <a href="#" class="useless">Lesen</a>
-          </div>
-          <div class="magazin__post">
-            <h3>Einfach blos nichts vergessen 6</h3>
-            <p>Text</p>
-            <a href="#" class="useless">Lesen</a>
-          </div>
+        <div class="magazin__masonry-container masonry-container">
+            <div class="magazin__post masonry-item" id="order1">
+              <h3>Einfach blos nichts vergessen</h3>
+              <p>Zelt, Schlafsack, Isomatte vergessen: 3 Tage wach! Regenjacke, Mütze, Handtuch: 3 Tage nass! Zahnbürste, Deo, Socken: 3 Tage baah! Es geht auch anders. Der Festivalguide Check gegen Alzheimer und Co.</p>
+              <a href="#" class="useless">Lesen</a>
+            </div>
+            <div class="magazin__post masonry-item" id="order2">
+              <h3>Erste Hilfe und die Reiseapotheke</h3>
+              <p>Was der Arzt rät: Sonnenstich, Kater, Fuss umgeknickt … Festivals stecken voller versteckten Gefahren. Wir haben unseren Hausarzt angerufen und gefragt, was man unbedingt bedenken und beachten sollte damit man wieder gesund und munter vom Festival nach Hause kommt.</p>
+              <a href="#" class="useless">Lesen</a>
+            </div>
+            <div class="magazin__post masonry-item" id="order3">
+              <h3>Wie soll ich mich bei Gewitter verhalten?</h3>
+              <p>Die Sturm- und Gewitterwarnungen auf Festivals nehmen zu. Blitzeinschläge führen immer wieder zu zahlreichen Verletzten. Da wir nicht davon ausgehen können, dass sich diese Entwicklung wieder umkehrt, müssen wir damit rechnen, dass Festivals immer wieder davon betroffen sein werden. Was sollte man also beachten?</p>
+              <a href="#" class="useless">Lesen</a>
+            </div>
+            <div class="magazin__post masonry-item" id="order4">
+              <h3>Tipps zum Bier kaltstellen</h3>
+              <p>Mit diesen Ratschlägen habt ihr auch auf dem Festival immer kühles Bier. Was will man noch mehr.</p>
+              <a href="#" class="useless">Lesen</a>
+            </div>
+            <div class="magazin__post masonry-item" id="order5">
+              <h3>7 Life Hacks für den Festivalbesuch</h3>
+              <p>Mit diesen Tricks macht ihr euch das Campen auf dem Festival noch leichter. Es gibt viele kreative Lösungen mit Einmalseife, Klopapierspender, Grillanzünder, Kaffebeutel und Strohhalmen.</p>
+              <a href="#" class="useless">Lesen</a>
+            </div>
+            <div class="magazin__post masonry-item" id="order6">
+              <h3>Wo stelle ich mein Zelt auf?</h3>
+              <p>Der prefekt Platz auf dem Campingplatz muss zuerst gefunden werden. Ältere Festivalbesucher können bestätigen: Die Auswahl des Zeltplatzes ist ein Lernen durch Schmerzen. Wir möchten euch daher gut vorbereiten um euch ein paar Qualen ersparen zu können.</p>
+              <a href="#" class="useless">Lesen</a>
+            </div>
         </div>
         <div class="magazin__post-more">
           <a href="#" class="useless"><button>Mehr anzeigen</button></a>
@@ -623,18 +611,24 @@
 
       <div class="wrapper__app-banner">
         <div class="app__image">
-          <img src="#" alt="Smartphone" />
+          <img src="/images/other/iphone.png" alt="Smartphone"/>
         </div>
         <div class="app__text">
           <div class="app__text-titel">
             <h2>Mit der App unabhängig am Festival feiern.</h2>
           </div>
           <div class="app__text-button">
-            <a href="#" class="useless"><button class="lightreversed">App downloaden</button></a>
+            <a href="#" class="useless">
+              <button class="lightreversed">App downloaden</button>
+            </a>
           </div>
           <div class="app__text-stores">
-            <img src="#" alt="Apple App Store" />
-            <img src="#" alt="Google Play Store" />
+            <a href="#" class="useless">
+              <img src="/images/other/app-store.png" alt="Apple App Store" class="appstores"/>
+            </a>
+            <a href="#" class="useless">
+              <img src="/images/other/play-store.png" alt="Google Play Store" class="appstores"/>
+            </a>
           </div>
         </div>
       </div>
@@ -647,110 +641,50 @@
           die Samples an und entdecke deine Leidenschaften.
         </p>
         <div class="entdeckungen__music-container">
-          <div class="entdeckungen__music-track-jazz">
-            <svg
-              version="1.1"
-              id="play"
-              xmlns="http://www.w3.org/2000/svg"
-              xmlns:xlink="http://www.w3.org/1999/xlink"
-              x="0px"
-              y="0px"
-              height="100px"
-              width="100px"
-              viewBox="0 0 100 100"
-              enable-background="new 0 0 100 100"
-              xml:space="preserve"
-            >
-              <path
-                class="icon"
-                fill="black"
-                d="M38,69c-1,0.5-1.8,0-1.8-1.1V32.1c0-1.1,0.8-1.6,1.8-1.1l34,18c1,0.5,1,1.4,0,1.9L38,69z"
-              />
-            </svg>
+          <div class="entdeckungen__music-track">
+            <div id="wave__jazz" class="wave__background">
+              <div class="music-track__wave">
+                <a href="#" class="useless">
+                  <img src="/images/icons/black/detail_video_play.svg" alt="Play" class="wave__play">
+                </a>
+              </div>
+            </div>
           </div>
-          <div class="entdeckungen__music-track-rock">
-            <svg
-              version="1.1"
-              id="play"
-              xmlns="http://www.w3.org/2000/svg"
-              xmlns:xlink="http://www.w3.org/1999/xlink"
-              x="0px"
-              y="0px"
-              height="100px"
-              width="100px"
-              viewBox="0 0 100 100"
-              enable-background="new 0 0 100 100"
-              xml:space="preserve"
-            >
-              <path
-                class="icon"
-                fill="black"
-                d="M38,69c-1,0.5-1.8,0-1.8-1.1V32.1c0-1.1,0.8-1.6,1.8-1.1l34,18c1,0.5,1,1.4,0,1.9L38,69z"
-              />
-            </svg>
+          <div class="entdeckungen__music-track">
+            <div id="wave__hiphop" class="wave__background">
+              <div class="music-track__wave">
+                <a href="#" class="useless">
+                  <img src="/images/icons/black/detail_video_play.svg" alt="Play" class="wave__play">
+                </a>
+              </div>
+            </div>
           </div>
-          <div class="entdeckungen__music-track-pop">
-            <svg
-              version="1.1"
-              id="play"
-              xmlns="http://www.w3.org/2000/svg"
-              xmlns:xlink="http://www.w3.org/1999/xlink"
-              x="0px"
-              y="0px"
-              height="100px"
-              width="100px"
-              viewBox="0 0 100 100"
-              enable-background="new 0 0 100 100"
-              xml:space="preserve"
-            >
-              <path
-                class="icon"
-                fill="black"
-                d="M38,69c-1,0.5-1.8,0-1.8-1.1V32.1c0-1.1,0.8-1.6,1.8-1.1l34,18c1,0.5,1,1.4,0,1.9L38,69z"
-              />
-            </svg>
+          <div class="entdeckungen__music-track">
+            <div id="wave__indie" class="wave__background">
+              <div class="music-track__wave">
+                <a href="#" class="useless">
+                  <img src="/images/icons/black/detail_video_play.svg" alt="Play" class="wave__play">
+                </a>
+              </div>
+            </div>
           </div>
-          <div class="entdeckungen__music-track-blues">
-            <svg
-              version="1.1"
-              id="play"
-              xmlns="http://www.w3.org/2000/svg"
-              xmlns:xlink="http://www.w3.org/1999/xlink"
-              x="0px"
-              y="0px"
-              height="100px"
-              width="100px"
-              viewBox="0 0 100 100"
-              enable-background="new 0 0 100 100"
-              xml:space="preserve"
-            >
-              <path
-                class="icon"
-                fill="black"
-                d="M38,69c-1,0.5-1.8,0-1.8-1.1V32.1c0-1.1,0.8-1.6,1.8-1.1l34,18c1,0.5,1,1.4,0,1.9L38,69z"
-              />
-            </svg>
+          <div class="entdeckungen__music-track">
+            <div id="wave__poprock" class="wave__background">
+              <div class="music-track__wave">
+                <a href="#" class="useless">
+                  <img src="/images/icons/black/detail_video_play.svg" alt="Play" class="wave__play">
+                </a>
+              </div>
+            </div>
           </div>
-          <div class="entdeckungen__music-track-hiphop">
-            <svg
-              version="1.1"
-              id="play"
-              xmlns="http://www.w3.org/2000/svg"
-              xmlns:xlink="http://www.w3.org/1999/xlink"
-              x="0px"
-              y="0px"
-              height="100px"
-              width="100px"
-              viewBox="0 0 100 100"
-              enable-background="new 0 0 100 100"
-              xml:space="preserve"
-            >
-              <path
-                class="icon"
-                fill="black"
-                d="M38,69c-1,0.5-1.8,0-1.8-1.1V32.1c0-1.1,0.8-1.6,1.8-1.1l34,18c1,0.5,1,1.4,0,1.9L38,69z"
-              />
-            </svg>
+          <div class="entdeckungen__music-track">
+            <div id="wave__electronic" class="wave__background">
+              <div class="music-track__wave">
+                <a href="#" class="useless">
+                  <img src="/images/icons/black/detail_video_play.svg" alt="Play" class="wave__play">
+                </a>
+              </div>
+            </div>
           </div>
           <div class="entdeckungen__music-track-more">
             <a href="#" class="useless"><button class="light">Mehr Samples</button></a>
@@ -763,75 +697,102 @@
         <h2>News</h2>
         <div class="news__masonry-container">
           <div class="news__post">
-            <img src="#" />
-            <p>
-              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-              nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
-              erat, sed diam voluptua. At vero eos et accusam et
+            <img src="/images/photos/103343561-won0.600x400.jpg" alt="News-Post Bild" class="news__bild"/>
+            <p class="news__date">3. Jun 2016</p>
+            <p class="news__text">
+              1 #festivallovers are you ready for a #competition #follow @envirofoneshop and we’ll announce next week #festival
             </p>
+            <hr>
+            <div class="news__like">
+              <img src="/images/icons/black/detail_like_filled.svg" class="news__like"><span>13</span>
+            </div>          </div>
+          <div class="news__post">
+            <p class="news__date">3. Jun 2016</p>
+            <p class="news__text">
+              2 Will crowdfunding festivals be a new trend? #festivallovers
+            </p>
+            <hr>
+            <div class="news__like">
+              <img src="/images/icons/black/detail_like.svg" class="news__like"><span>39</span>
+            </div>          </div>
+          <div class="news__post">
+            <p class="news__date">3. Jun 2016</p>
+            <p class="news__text">
+              3 #festivallovers are you ready for a #competition #follow @envirofoneshop and we’ll announce next week #festival
+            </p>
+            <hr>
+            <div class="news__like">
+              <img src="/images/icons/black/detail_like.svg" class="news__like"><span>54</span>
+            </div>          </div>
+          <div class="news__post">
+            <img src="/images/photos/103343561-won0.600x400.jpg" alt="News-Post Bild" class="news__bild"/>
+            <p class="news__date">3. Jun 2016</p>
+            <p class="news__text">
+              4 Geniesse den Sommer mit … #festival #musik #electro #chill #crazy #summer #ferien #farben #freunde
+            </p>
+            <hr>
+            <div class="news__like">
+              <img src="/images/icons/black/detail_like_filled.svg" class="news__like"><span>77</span>
+            </div>          </div>
+          <div class="news__post">
+            <img src="/images/photos/103343561-won0.600x400.jpg" alt="News-Post Bild" class="news__bild"/>
+            <p class="news__date">3. Jun 2016</p>
+            <p class="news__text">
+              5 #jazzfest #festival #homeland #weekend
+            </p>
+            <hr>
+            <div class="news__like">
+              <img src="/images/icons/black/detail_like_filled.svg" class="news__like"><span>5</span>
+            </div>          </div>
+          <div class="news__post">
+            <p class="news__date">3. Jun 2016</p>
+            <p class="news__text">
+              6 @festivallovers are the best, I’m so much #inlove with your #beautiful website
+            </p>
+            <hr>
+            <div class="news__like">
+              <img src="/images/icons/black/detail_like.svg" class="news__like"><span>6</span>
+            </div>          </div>
+          <div class="news__post">
+            <p class="news__date">3. Jun 2016</p>
+            <p class="news__text">
+              7 #festivallovers are you ready for a #competition #follow @envirofoneshop and we’ll announce next week #festival
+            </p>
+            <hr>
+            <div class="news__like">
+              <img src="/images/icons/black/detail_like.svg" class="news__like"><span>26</span>
+            </div>
           </div>
           <div class="news__post">
-            <p>
-              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-              nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
-              erat, sed diam voluptua. At vero eos et accusam et
+            <img src="/images/photos/103343561-won0.600x400.jpg" alt="News-Post Bild" class="news__bild"/>
+            <p class="news__date">3. Jun 2016</p>
+            <p class="news__text">
+              8 Thunder clouds … #pyramid #summer #clouds #thunder #sky #skyporn #sunset #festival #music
             </p>
-          </div>
+            <hr>
+            <div class="news__like">
+              <img src="/images/icons/black/detail_like.svg" class="news__like"><span>124</span>
+            </div>          </div>
           <div class="news__post">
-            <img src="#" />
-            <p>
-              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-              nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
-              erat, sed diam voluptua. At vero eos et accusam et
+            <img src="/images/photos/103343561-won0.600x400.jpg" alt="News-Post Bild" class="news__bild"/>
+            <p class="news__date">4h</p>
+            <p class="news__text">
+              9 Italiaaa #boots #italy #germany #euro2016 #camping #festival #sexylegs
             </p>
-          </div>
+            <hr>
+            <div class="news__like">
+              <img src="/images/icons/black/detail_like.svg" class="news__like"><span>47</span>
+            </div>          </div>
           <div class="news__post">
-            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr,</p>
-          </div>
-          <div class="news__post">
-            <img src="#" />
-            <p>
-              Lorem ipsum dolor sit amet, consetetur mpor invidunt ut labore et
-              dolore magna aliquyam erat, sed diam voluptua. At vero eos et
-              accusam et
+            <img src="/images/photos/103343561-won0.600x400.jpg" alt="News-Post Bild" class="news__bild"/>
+            <p class="news__date">TWITTER 4h</p>
+            <p class="news__text">
+              10 Attention #festivallovers see here some outfit #inspiration #style
             </p>
-          </div>
-          <div class="news__post">
-            <p>
-              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-              nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
-              erat, sed diam voluptua. At vero eos et accusam et
-            </p>
-          </div>
-          <div class="news__post">
-            <img src="#" />
-            <p>
-              Lorem ipsum dolor sit amet, consetetur sadipscing umy eirmod
-              tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
-              voluptua. At vero eos et accusam et
-            </p>
-          </div>
-          <div class="news__post">
-            <p>
-              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-              nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
-              erat, sed diam voluptua. At vero eos et accusam et
-            </p>
-          </div>
-          <div class="news__post">
-            <img src="#" />
-            <p>
-              Lorem ipsum doquyam erat, sed diam voluptua. At vero eos et
-              accusam et
-            </p>
-          </div>
-          <div class="news__post">
-            <p>
-              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-              nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
-              erat, sed diam voluptua. At vero eusam et
-            </p>
-          </div>
+            <hr>
+            <div class="news__like">
+              <img src="/images/icons/black/detail_like.svg" class="news__like"><span>98</span>
+            </div>          </div>
         </div>
         <div class="news__post-more">
           <a href="#" class="useless"><button class="light">Mehr anzeigen</button></a>
