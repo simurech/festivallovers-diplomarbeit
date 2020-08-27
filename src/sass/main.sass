@@ -594,15 +594,27 @@ footer
 			
 
 
+//* _________________________BROWSER-BUG-FIXES_________________________
+// Disable +/- Element in Number-Feldern in Formular
+// Chrome, Safari
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button
+	-webkit-appearance: none
+	margin: 0
+// Firefox
+input[type=number]
+	-moz-appearance: textfield
+
+
 //* _________________________SITE-STYLES_________________________
 
 //! Home: Entry & Genre Filters
 .wrapper__home-entry
-	padding: 10px
+	padding: 16px
 	@media only screen and ( min-width: $tablet ) // Tablet
-		padding: 40px
+		padding: 32px
 	@media only screen and ( min-width: $desktop ) // Desktop
-		padding: 80px
+		padding: 120px
 	h1
 		text-align: center
 	p
@@ -719,11 +731,11 @@ footer
 
 //! Home: Magazin			
 .wrapper__magazin
-	padding: 10px
+	padding: 16px
 	@media only screen and ( min-width: $tablet ) // Tablet
-		padding: 40px
+		padding: 32px
 	@media only screen and ( min-width: $desktop ) // Desktop
-		padding: 80px
+		padding: 120px
 	h2
 		text-align: center
 	.magazin__masonry-container
@@ -885,6 +897,11 @@ footer
 
 //! Home: Entdeckungen
 .wrapper__entdeckungen
+	padding: 16px
+	@media only screen and ( min-width: $tablet ) // Tablet
+		padding: 32px
+	@media only screen and ( min-width: $desktop ) // Desktop
+		padding: 120px
 	h2
 		text-align: center
 	p
@@ -941,11 +958,11 @@ footer
 
 //! Home: News			
 .wrapper__news
-	padding: 10px
+	padding: 16px
 	@media only screen and ( min-width: $tablet ) // Tablet
-		padding: 40px
+		padding: 32px
 	@media only screen and ( min-width: $desktop ) // Desktop
-		padding: 80px
+		padding: 120px
 	h2
 		text-align: center
 	.news__masonry-container
@@ -983,119 +1000,131 @@ footer
 //! Tickets kaufen: 
 .wrapper__entry-img-genre
 	background-color: $indieMint
-	height: 100px
+	height: 104px
 	display: grid
 	align-items: center
 	justify-content: center
 	img
 .wrapper__tickets-entry
+	padding: 16px
+	@media only screen and ( min-width: $tablet ) // Tablet
+		padding: 32px
+	@media only screen and ( min-width: $desktop ) // Desktop
+		padding: 120px
 	margin-left: auto
 	margin-right: auto
 	text-align: center
-	h1
-	p
 	@media only screen and ( min-width: $tablet ) // Tablet
 		width: 50%
 	@media only screen and ( min-width: $desktop ) // Desktop
 		width: 50%
 .wrapper__tickets-content
-	background-color: yellow
-	.tickets-content__infos
-		display: flex
-		justify-content: center
-		.tickets-content__infos-item
-			text-align: center
-			display: flex
-			img
-			p
+	background-color: $grauF0
+	padding: 16px
+	@media only screen and ( min-width: $tablet ) // Tablet
+		padding: 32px
+	@media only screen and ( min-width: $desktop ) // Desktop
+		padding: 120px
 	h2
-		font-size: $fontSizeMobileH2
 		text-align: center
+		padding: 8px
 		@media only screen and ( min-width: $tablet ) // Tablet
-			font-size: $fontSizeTabletH2
 			text-align: left
 		@media only screen and ( min-width: $desktop ) // Desktop
-			font-size: $fontSizeDesktopH2
 			text-align: left
-	.tickets-content__section
-		display: flex
-		flex-direction: row
-		flex-wrap: wrap
-		.tickets-content__section-item
-			width: 100%
-			@media only screen and ( min-width: $tablet ) // Tablet
-				width: 50%
-			@media only screen and ( min-width: $desktop ) // Desktop
-				width: 25%
-			box-sizing: border-box
-			padding: 8px
-	.tickets-content__section-item-infobox
-		display: flex
-		flex-direction: column
-		align-items: center
+	h2:nth-child(4)
+		margin-top: 120px
+.tickets-content__infos
+	display: flex
+	flex-wrap: wrap
+	justify-content: center
+	column-gap: 48px
+	padding-top: 24px
+.tickets-content__infos-item
+	text-align: center
+	display: flex
+	img
+		margin-right: 16px
+.tickets-content__section
+	display: flex
+	flex-direction: row
+	flex-wrap: wrap
+.tickets-content__section-item
+	width: 100%
+	@media only screen and ( min-width: $tablet ) // Tablet
+		width: 50%
+	@media only screen and ( min-width: $desktop ) // Desktop
+		width: 25%
+	box-sizing: border-box
+	padding: 8px
+.tickets-content__section-item-infobox
+	display: flex
+	flex-direction: column
+	align-items: center
+	justify-content: center
+	background-color: $indieMint
+	color: $weiss
+	height: 224px
+	box-sizing: border-box
+.tickets-content__section-item-verfuegbarkeit
+	background-color: $weiss
+	padding: 12px
+	height: 88px
+.tickets-verfuegbar-text
+	display: flex
+	flex-direction: row
+	justify-content: space-between
+	align-items: center
+	span
+		font-weight: bold
+		color: $indieMint
+.tickets-verfuegbar-anzeige
+	display: flex
+	flex-direction: row
+	justify-content: space-between
+	.prozent-verfuegbar
 		background-color: $indieMint
-		padding: 16px
-		color: $weiss
-		img
-		h3
-		p
-	.tickets-content__section-item-verfuegbarkeit
-		background-color: $weiss
-		padding: 16px
-		height: 100px
-		.tickets-verfuegbar-text
-			display: flex
-			flex-direction: row
-			justify-content: space-between
-			align-items: center
-		span
-			font-weight: bold
-			color: $indieMint
-		.tickets-verfuegbar-anzeige
-			display: flex
-			flex-direction: row
-			justify-content: space-evenly
-			.prozent-verfuegbar
-				background-color: $indieMint
-				width: 20px
-				height: 20px
-			.prozent-nicht-verfuegbar
-				background-color: $grauC2
-				width: 20px
-				height: 20px
-	.tickets-content__section-item-kaufen
-		display: flex
-		flex-direction: row
-		justify-content: space-between
-		align-items: center
-		padding: 16px
-		.ticket-add-remove-btn
-			background-color: $weiss
-			color: $schwarz100
-			border: 2px solid $schwarz100
-			box-sizing: border-box
-			width: 72px
-			height: 72px
-		.ticket-add-remove-btn:hover
-			background-color: $schwarz100
-			color: $weiss
-			border: 2px solid $schwarz100
-		.ticket-add-remove-btn-disabled
-			background-color: $weiss
-			color: $grauC2
-			border: 2px solid $grauC2
-			box-sizing: border-box
-			width: 72px
-			height: 72px
-			pointer-events: none
-		.tickets-verfuegbar-disabled
-			color: $grauC2
+		width: 16px
+		height: 16px
+	.prozent-nicht-verfuegbar
+		background-color: $grauC2
+		width: 16px
+		height: 16px
+.tickets-content__section-item-kaufen
+	display: flex
+	flex-direction: row
+	justify-content: space-between
+	align-items: center
+	padding: 16px
+.ticket-add-remove-btn
+	background-color: $weiss
+	color: $schwarz100
+	border: 2px solid $schwarz100
+	box-sizing: border-box
+	width: 48px
+	height: 48px
+	padding: 0px
+.ticket-add-remove-btn:hover
+	background-color: $schwarz100
+	color: $weiss
+	border: 2px solid $schwarz100
+.ticket-add-remove-btn-disabled
+	background-color: $weiss
+	color: $grauC2
+	border: 2px solid $grauC2
+	box-sizing: border-box
+	width: 48px
+	height: 48px
+	padding: 0px
+	pointer-events: none
+.tickets-verfuegbar-disabled
+	color: $grauC2
 .tickets-content__warenkorb
 	text-align: center
+	padding-top: 120px
 	hr
-		border: 4px solid $schwarz100
-		margin-top: 48px
-		margin-bottom: 24px
+		border: 2px solid $schwarz100
+		margin-bottom: 48px
 
 
 //! Bestellbestätigung
