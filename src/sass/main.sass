@@ -135,10 +135,10 @@ button
 	border-radius: 0px
 	border: 2px solid $schwarz100
 	padding: 10px 32px 10px 32px
+	box-sizing: border-box
 	color: $weiss
 	height: 48px
 	width: 100%
-	margin: 4px
 	@media only screen and ( min-width: $tablet ) // Tablet
 		width: auto
 		max-width: 343px
@@ -621,7 +621,7 @@ input[type=number]
 
 //! Home: Entry & Genre Filters
 .wrapper__home-entry
-	padding: 64px
+	padding: 64px 16px 64px	16px
 	@media only screen and ( min-width: $tablet ) // Tablet
 		padding: 96px
 	@media only screen and ( min-width: $desktop ) // Desktop
@@ -833,7 +833,7 @@ input[type=number]
 
 //! Home: Magazin			
 .wrapper__magazin
-	padding: 64px
+	padding: 64px 16px 64px	16px
 	@media only screen and ( min-width: $tablet ) // Tablet
 		padding: 96px
 	@media only screen and ( min-width: $desktop ) // Desktop
@@ -1076,12 +1076,17 @@ input[type=number]
 	display: flex
 	justify-content: center
 	padding: 80px
+	padding: 64px 16px 64px	16px
+	@media only screen and ( min-width: $tablet ) // Tablet
+		padding: 80px
+	@media only screen and ( min-width: $desktop ) // Desktop
+		padding: 80px
 
 
 //! Home: News		
 .wrapper__news
 	background-color: $grauF0
-	padding: 64px
+	padding: 64px 16px 64px	16px
 	@media only screen and ( min-width: $tablet ) // Tablet
 		padding: 96px
 	@media only screen and ( min-width: $desktop ) // Desktop
@@ -1146,7 +1151,7 @@ input[type=number]
 	justify-content: center
 	img
 .wrapper__tickets-entry
-	padding: 64px
+	padding: 64px 16px 64px	16px
 	@media only screen and ( min-width: $tablet ) // Tablet
 		padding: 96px
 	@media only screen and ( min-width: $desktop ) // Desktop
@@ -1160,7 +1165,7 @@ input[type=number]
 		width: 50%
 .wrapper__tickets-content
 	background-color: $grauF0
-	padding: 64px
+	padding: 64px 16px 64px	16px
 	@media only screen and ( min-width: $tablet ) // Tablet
 		padding: 96px
 	@media only screen and ( min-width: $desktop ) // Desktop
