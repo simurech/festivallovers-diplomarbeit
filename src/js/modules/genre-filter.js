@@ -9,33 +9,59 @@ function testFunktion() {
 testFunktion();
 
 
-//! Klick auf "Mehr Genres" bleindet weitere Genres ein.
+//! Tablet & Desktop: Klick auf "Mehr Genres" bleindet weitere Genres ein.
 // Funktion
 function zeigMehrGenres() {
 	let genreLabels = document.querySelectorAll('.filter__genres-item-label');
 	for (i = 0; i < genreLabels.length; i++ ){
-		genreLabels[i].classList.remove('notvisible');
-		genreLabels[i].classList.add('visible');
+		genreLabels[i].classList.remove('notvisible-bigscreen');
 	}
-	let showMoreBtn = document.querySelector('.filter__genres-more');
+	let showMoreBtn = document.querySelector('#filter__genres-more');
 	showMoreBtn.style.display = 'none';
 };
 // Event Listener
-document.querySelector('.filter__genres-more').addEventListener('click', zeigMehrGenres);
+document.querySelector('#filter__genres-more').addEventListener('click', zeigMehrGenres);
 
 
 //!  Mobile: Klick auf "Filter anzeigen" blendet Genres-Filter ein.
-// Funktion
-function zeigGenres() {
-	let genreList = document.querySelectorAll('.filter__genres-list');
-	genreList[0].style.display = 'flex';
-	let genreAction = document.querySelectorAll('.filter__action');
-	genreAction[0].style.display = 'flex';
-	let showFilterBtn = document.querySelector('.filter__toggle');
-	showFilterBtn.style.display = 'none';
+// Funktion zum öffnen des Canvas
+function openGenresCanvas() {
+	// Selektiere Canvas
+	let filterCanvasBtn = document.querySelector('#filter-canvas');
+	// Setzte Breite auf 100%
+	filterCanvasBtn.style.width = '100%';
+	// Selektiere Link in Header
+	let menuLink = document.querySelector('#showmenu'); // enthält Bild + Span
+	// Ändere ID
+	menuLink.id = 'filterback';
+	// Ändere Icon
+	menuLink.childNodes[1].src = '/images/icons/black/navigation_zurueck.svg';
+	// Ändere Text
+	menuLink.childNodes[3].innerHTML = 'zurück';
+	addEventListenerToBackBtn();
 };
 // Event Listener
-document.querySelector('.filter__toggle').addEventListener('click', zeigGenres);
+document.querySelector('.filter__toggle').addEventListener('click', openGenresCanvas);
+// Hilfsfunktion legt EventListener auf den Zurück-Buttonn
+function addEventListenerToBackBtn() {
+	document.querySelector('#filterback').addEventListener('click', closeGenresCanvas);
+};
+// Funktion zum schliessen des Canvas
+function closeGenresCanvas() {
+	closeNavi();
+	// Selektiere Canvas
+	let filterCanvasBtn = document.querySelector('#filter-canvas');
+	// Setzte Breite auf 0%
+	filterCanvasBtn.style.width = '0';
+  	// Selektiere Link in Header
+	let menuLink = document.querySelector('#filterback'); // enthält Bild + Span
+	// Ändere ID
+	menuLink.id = 'showmenu';
+	// Ändere Icon
+	menuLink.childNodes[1].src = '/images/icons/black/navigation_menu.svg';
+	// Ändere Text
+	menuLink.childNodes[3].innerHTML = 'Menu';
+};
 
 
 //! Gewählte Filter aus Storage anwenden
@@ -46,7 +72,7 @@ function setGenresFilter(){
 		let activGenreCheckbox = document.querySelector('#'+genresStorage[i]);
 		activGenreCheckbox.checked = true;
 	};
-	setTimeout(eventsFiltern, 500);
+	setTimeout(eventsFiltern, 1000);
 };
 
 
@@ -124,10 +150,33 @@ function eventsFiltern(){
 		genreCheckbox.forEach(element => {
 			eventsClassHandler(element);
 		});
+		checkIfNoFestivals();
 	} else { // Wenn Localstorage leer ist, folgenden Code ausführen:
 		for (i = 0; i < events.length; i++){
 			// alle Events einblenden, da nichts gespeichert
 			events[i].classList.remove('notvisible');
 		};
+		checkIfNoFestivals();
+	};
+};
+
+// Prüfe ob keine Festivals gelistet und Seite deshalb leer. Wenn ja -> zeige Hinweis
+function checkIfNoFestivals () {
+	// Selektiere Liste mit allen Events
+	let eventList = document.querySelector('#events');
+	let eventListArray = [];
+	for (i=0; i < eventList.childNodes.length; i++) {
+		let item = eventList.childNodes[i];
+		if (item.classList[2] == 'notvisible'){
+			eventListArray.push(item);
+		};
+	};
+	if (eventListArray.length >= 20){
+		let keineFestivalsHinweis = document.querySelector('#nofestivals');
+		keineFestivalsHinweis.style.display = 'block';
+	};
+	if (eventListArray.length < 20){
+		let keineFestivalsHinweis = document.querySelector('#nofestivals');
+		keineFestivalsHinweis.style.display = 'none';
 	};
 };

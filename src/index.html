@@ -130,8 +130,9 @@
       </div>
     </header>
 
+
     <!-- Main -->
-    <main>
+    <main id="main">
       <div class="wrapper__home-entry">
         <h1>Auf welche Musik stehst du?</h1>
         <p>
@@ -141,157 +142,426 @@
         <div class="filter__toggle">
           <button>Filter anzeigen</button>
         </div>
-        <div class="filter__genres-list">
-          <ul>
-            <input
-              type="checkbox"
-              class="filter__genres-item-checkbox"
-              id="jazz"
-              name="jazz"
-              value="Jazz"
-            />
-            <label for="jazz" class="filter__genres-item-label visible">
-              <li class="filter__genres-item" id="label-li-jazz">
-                <img src="#" class="filter__genres-item-icon" />
-                Jazz
-                <span class="filter__genres-item-zaehler">20</span>
+        <!-- Mobile-Filter Canvas -->
+        <div id="filter-canvas" class="wrapper__mobile-canvas">
+          <div class="filter__genres-list">
+            <ul>
+              <!-- JAZZ -->
+              <input
+                type="checkbox"
+                class="filter__genres-item-checkbox"
+                id="jazz"
+                name="jazz"
+                value="Jazz"
+              />
+              <label for="jazz" class="filter__genres-item-label">
+                <li class="filter__genres-item" id="label-li-jazz">
+                  <img src="/images/icons/white/music_jazz.svg" als="Jazz" class="filter__genres-item-icon" />
+                  Jazz
+                  <span class="filter__genres-item-zaehler">4</span>
+                </li>
+              </label>
+              <!-- HIPHOP -->
+              <input
+                type="checkbox"
+                class="filter__genres-item-checkbox"
+                id="hiphop"
+                name="hiphop"
+                value="Hiphop"
+              />
+              <label for="hiphop" class="filter__genres-item-label">
+                <li class="filter__genres-item" id="label-li-hiphop">
+                  <img src="/images/icons/white/music_jazz.svg" als="Jazz" class="filter__genres-item-icon" />
+                  Hiphop
+                  <span class="filter__genres-item-zaehler">4</span>
+                </li>
+              </label>
+              <!-- INDIE -->
+              <input
+                type="checkbox"
+                class="filter__genres-item-checkbox"
+                id="indie"
+                name="indie"
+                value="Indie"
+              />
+              <label for="indie" class="filter__genres-item-label">
+                <li class="filter__genres-item" id="label-li-indie">
+                  <img src="/images/icons/white/music_jazz.svg" als="Jazz" class="filter__genres-item-icon" />
+                  Indie
+                  <span class="filter__genres-item-zaehler">4</span>
+                </li>
+              </label>
+              <!-- POP & ROCK -->
+              <input
+                type="checkbox"
+                class="filter__genres-item-checkbox"
+                id="pop-und-rock"
+                name="pop-und-rock"
+                value="Pop & Rock"
+              />
+              <label for="pop-und-rock" class="filter__genres-item-label">
+                <li class="filter__genres-item" id="label-li-pop-und-rock">
+                  <img src="/images/icons/white/music_jazz.svg" als="Jazz" class="filter__genres-item-icon" />
+                  Pop & Rock
+                  <span class="filter__genres-item-zaehler">4</span>
+                </li>
+              </label>
+              <!-- ELECTRONIC -->
+              <input
+                type="checkbox"
+                class="filter__genres-item-checkbox"
+                id="electronic"
+                name="electronic"
+                value="Electronic"
+              />
+              <label for="electronic" class="filter__genres-item-label">
+                <li class="filter__genres-item" id="label-li-electronic">
+                  <img src="/images/icons/white/music_jazz.svg" als="Jazz" class="filter__genres-item-icon" />
+                  Electronic
+                  <span class="filter__genres-item-zaehler">4</span>
+                </li>
+              </label>
+              <!-- GENRE ID 6 -->
+              <input
+                type="checkbox"
+                class="filter__genres-item-checkbox"
+                id="baroque-pop"
+                name="baroque-pop"
+                value="baroque-pop"
+              />
+              <label for="baroque-pop" class="filter__genres-item-label notvisible-bigscreen">
+                <li class="filter__genres-item" id="label-li-baroque-pop">
+                  <img src="/images/icons/white/music_jazz.svg" als="Music-Genre-Icon" class="filter__genres-item-icon" />
+                  baroque-pop
+                  <span class="filter__genres-item-zaehler">0</span>
+                </li>
+              </label>
+              <!-- GENRE ID 7 -->
+              <input
+                type="checkbox"
+                class="filter__genres-item-checkbox"
+                id="bebop"
+                name="bebop"
+                value="bebop"
+              />
+              <label for="bebop" class="filter__genres-item-label notvisible-bigscreen">
+                <li class="filter__genres-item" id="label-li-bebop">
+                  <img src="/images/icons/white/music_jazz.svg" als="Music-Genre-Icon" class="filter__genres-item-icon" />
+                  bebop
+                  <span class="filter__genres-item-zaehler">0</span>
+                </li>
+              </label>
+              <!-- GENRE ID 8 -->
+              <input
+                type="checkbox"
+                class="filter__genres-item-checkbox"
+                id="bhangra"
+                name="bhangra"
+                value="bhangra"
+              />
+              <label for="bhangra" class="filter__genres-item-label notvisible-bigscreen">
+                <li class="filter__genres-item" id="label-li-bhangra">
+                  <img src="/images/icons/white/music_jazz.svg" als="Music-Genre-Icon" class="filter__genres-item-icon" />
+                  bhangra
+                  <span class="filter__genres-item-zaehler">0</span>
+                </li>
+              </label>
+              <!-- GENRE ID 9 -->
+              <input
+                type="checkbox"
+                class="filter__genres-item-checkbox"
+                id="big-band"
+                name="big-band"
+                value="big-band"
+              />
+              <label for="big-band" class="filter__genres-item-label notvisible-bigscreen">
+                <li class="filter__genres-item" id="label-li-big-band">
+                  <img src="/images/icons/white/music_jazz.svg" als="Music-Genre-Icon" class="filter__genres-item-icon" />
+                  big-band
+                  <span class="filter__genres-item-zaehler">0</span>
+                </li>
+              </label>
+              <!-- GENRE ID 10 -->
+              <input
+                type="checkbox"
+                class="filter__genres-item-checkbox"
+                id="black-metal"
+                name="black-metal"
+                value="black-metal"
+              />
+              <label for="black-metal" class="filter__genres-item-label notvisible-bigscreen">
+                <li class="filter__genres-item" id="label-li-black-metal">
+                  <img src="/images/icons/white/music_jazz.svg" als="Music-Genre-Icon" class="filter__genres-item-icon" />
+                  black-metal
+                  <span class="filter__genres-item-zaehler">0</span>
+                </li>
+              </label>
+              <!-- GENRE ID 11 -->
+              <input
+                type="checkbox"
+                class="filter__genres-item-checkbox"
+                id="blue-eyed-soul"
+                name="blue-eyed-soul"
+                value="blue-eyed-soul"
+              />
+              <label for="blue-eyed-soul" class="filter__genres-item-label notvisible-bigscreen">
+                <li class="filter__genres-item" id="label-li-blue-eyed-soul">
+                  <img src="/images/icons/white/music_jazz.svg" als="Music-Genre-Icon" class="filter__genres-item-icon" />
+                  blue-eyed-soul
+                  <span class="filter__genres-item-zaehler">0</span>
+                </li>
+              </label>
+              <!-- GENRE ID 12 -->
+              <input
+                type="checkbox"
+                class="filter__genres-item-checkbox"
+                id="bluegrass"
+                name="bluegrass"
+                value="bluegrass"
+              />
+              <label for="bluegrass" class="filter__genres-item-label notvisible-bigscreen">
+                <li class="filter__genres-item" id="label-li-bluegrass">
+                  <img src="/images/icons/white/music_jazz.svg" als="Music-Genre-Icon" class="filter__genres-item-icon" />
+                  bluegrass
+                  <span class="filter__genres-item-zaehler">0</span>
+                </li>
+              </label>
+              <!-- GENRE ID 13 -->
+              <input
+                type="checkbox"
+                class="filter__genres-item-checkbox"
+                id="c-pop"
+                name="c-pop"
+                value="c-pop"
+              />
+              <label for="c-pop" class="filter__genres-item-label notvisible-bigscreen">
+                <li class="filter__genres-item" id="label-li-c-pop">
+                  <img src="/images/icons/white/music_jazz.svg" als="Music-Genre-Icon" class="filter__genres-item-icon" />
+                  c-pop
+                  <span class="filter__genres-item-zaehler">0</span>
+                </li>
+              </label>
+              <!-- GENRE ID 14 -->
+              <input
+                type="checkbox"
+                class="filter__genres-item-checkbox"
+                id="cajun"
+                name="cajun"
+                value="cajun"
+              />
+              <label for="cajun" class="filter__genres-item-label notvisible-bigscreen">
+                <li class="filter__genres-item" id="label-li-cajun">
+                  <img src="/images/icons/white/music_jazz.svg" als="Music-Genre-Icon" class="filter__genres-item-icon" />
+                  cajun
+                  <span class="filter__genres-item-zaehler">0</span>
+                </li>
+              </label>
+              <!-- GENRE ID 15 -->
+              <input
+                type="checkbox"
+                class="filter__genres-item-checkbox"
+                id="calypso"
+                name="calypso"
+                value="calypso"
+              />
+              <label for="calypso" class="filter__genres-item-label notvisible-bigscreen">
+                <li class="filter__genres-item" id="label-li-calypso">
+                  <img src="/images/icons/white/music_jazz.svg" als="Music-Genre-Icon" class="filter__genres-item-icon" />
+                  calypso
+                  <span class="filter__genres-item-zaehler">0</span>
+                </li>
+              </label>
+              <!-- GENRE ID 16 -->
+              <input
+                type="checkbox"
+                class="filter__genres-item-checkbox"
+                id="celtic"
+                name="celtic"
+                value="celtic"
+              />
+              <label for="celtic" class="filter__genres-item-label notvisible-bigscreen">
+                <li class="filter__genres-item" id="label-li-celtic">
+                  <img src="/images/icons/white/music_jazz.svg" als="Music-Genre-Icon" class="filter__genres-item-icon" />
+                  celtic
+                  <span class="filter__genres-item-zaehler">0</span>
+                </li>
+              </label>
+              <!-- GENRE ID 17 -->
+              <input
+                type="checkbox"
+                class="filter__genres-item-checkbox"
+                id="alternative-rock"
+                name="alternative-rock"
+                value="alternative-rock"
+              />
+              <label for="alternative-rock" class="filter__genres-item-label notvisible-bigscreen">
+                <li class="filter__genres-item" id="label-li-alternative-rock">
+                  <img src="/images/icons/white/music_jazz.svg" als="Music-Genre-Icon" class="filter__genres-item-icon" />
+                  alternative-rock
+                  <span class="filter__genres-item-zaehler">0</span>
+                </li>
+              </label>
+              <!-- GENRE ID 18 -->
+              <input
+                type="checkbox"
+                class="filter__genres-item-checkbox"
+                id="anarcho-punk"
+                name="anarcho-punk"
+                value="anarcho-punk"
+              />
+              <label for="anarcho-punk" class="filter__genres-item-label notvisible-bigscreen">
+                <li class="filter__genres-item" id="label-li-anarcho-punk">
+                  <img src="/images/icons/white/music_jazz.svg" als="Music-Genre-Icon" class="filter__genres-item-icon" />
+                  anarcho-punk
+                  <span class="filter__genres-item-zaehler">0</span>
+                </li>
+              </label>
+              <!-- GENRE ID 19 -->
+              <input
+                type="checkbox"
+                class="filter__genres-item-checkbox"
+                id="arabic-pop"
+                name="arabic-pop"
+                value="arabic-pop"
+              />
+              <label for="arabic-pop" class="filter__genres-item-label notvisible-bigscreen">
+                <li class="filter__genres-item" id="label-li-arabic-pop">
+                  <img src="/images/icons/white/music_jazz.svg" als="Music-Genre-Icon" class="filter__genres-item-icon" />
+                  arabic-pop
+                  <span class="filter__genres-item-zaehler">0</span>
+                </li>
+              </label>
+              <!-- GENRE ID 20 -->
+              <input
+                type="checkbox"
+                class="filter__genres-item-checkbox"
+                id="blues"
+                name="blues"
+                value="blues"
+              />
+              <label for="blues" class="filter__genres-item-label notvisible-bigscreen">
+                <li class="filter__genres-item" id="label-li-blues">
+                  <img src="/images/icons/white/music_jazz.svg" als="Music-Genre-Icon" class="filter__genres-item-icon" />
+                  blues
+                  <span class="filter__genres-item-zaehler">0</span>
+                </li>
+              </label>
+              <!-- GENRE ID 21 -->
+              <input
+                type="checkbox"
+                class="filter__genres-item-checkbox"
+                id="blues-rock"
+                name="blues-rock"
+                value="blues-rock"
+              />
+              <label for="blues-rock" class="filter__genres-item-label notvisible-bigscreen">
+                <li class="filter__genres-item" id="label-li-blues-rock">
+                  <img src="/images/icons/white/music_jazz.svg" als="Music-Genre-Icon" class="filter__genres-item-icon" />
+                  blues-rock
+                  <span class="filter__genres-item-zaehler">0</span>
+                </li>
+              </label>
+              <!-- GENRE ID 22 -->
+              <input
+                type="checkbox"
+                class="filter__genres-item-checkbox"
+                id="boogie-woogie"
+                name="boogie-woogie"
+                value="boogie-woogie"
+              />
+              <label for="boogie-woogie" class="filter__genres-item-label notvisible-bigscreen">
+                <li class="filter__genres-item" id="label-li-boogie-woogie">
+                  <img src="/images/icons/white/music_jazz.svg" als="Music-Genre-Icon" class="filter__genres-item-icon" />
+                  boogie-woogie
+                  <span class="filter__genres-item-zaehler">0</span>
+                </li>
+              </label>
+              <!-- GENRE ID 23 -->
+              <input
+                type="checkbox"
+                class="filter__genres-item-checkbox"
+                id="british-blues"
+                name="british-blues"
+                value="british-blues"
+              />
+              <label for="british-blues" class="filter__genres-item-label notvisible-bigscreen">
+                <li class="filter__genres-item" id="label-li-british-blues">
+                  <img src="/images/icons/white/music_jazz.svg" als="Music-Genre-Icon" class="filter__genres-item-icon" />
+                  british-blues
+                  <span class="filter__genres-item-zaehler">0</span>
+                </li>
+              </label>
+              <!-- GENRE ID 24 -->
+              <input
+                type="checkbox"
+                class="filter__genres-item-checkbox"
+                id="britpop"
+                name="britpop"
+                value="britpop"
+              />
+              <label for="britpop" class="filter__genres-item-label notvisible-bigscreen">
+                <li class="filter__genres-item" id="label-li-britpop">
+                  <img src="/images/icons/white/music_jazz.svg" als="Music-Genre-Icon" class="filter__genres-item-icon" />
+                  britpop
+                  <span class="filter__genres-item-zaehler">0</span>
+                </li>
+              </label>
+              <!-- GENRE ID 25 -->
+              <input
+                type="checkbox"
+                class="filter__genres-item-checkbox"
+                id="country-blues"
+                name="country-blues"
+                value="country-blues"
+              />
+              <label for="country-blues" class="filter__genres-item-label notvisible-bigscreen">
+                <li class="filter__genres-item" id="label-li-country-blues">
+                  <img src="/images/icons/white/music_jazz.svg" als="Music-Genre-Icon" class="filter__genres-item-icon" />
+                  country-blues
+                  <span class="filter__genres-item-zaehler">0</span>
+                </li>
+              </label>
+              <!-- GENRE ID 26 -->
+              <input
+                type="checkbox"
+                class="filter__genres-item-checkbox"
+                id="country"
+                name="country"
+                value="country"
+              />
+              <label for="country" class="filter__genres-item-label notvisible-bigscreen">
+                <li class="filter__genres-item" id="label-li-country">
+                  <img src="/images/icons/white/music_jazz.svg" als="Music-Genre-Icon" class="filter__genres-item-icon" />
+                  country
+                  <span class="filter__genres-item-zaehler">0</span>
+                </li>
+              </label>
+              <!-- GENRE ID 27 -->
+              <input
+                type="checkbox"
+                class="filter__genres-item-checkbox"
+                id="country-rock"
+                name="country-rock"
+                value="country-rock"
+              />
+              <label for="country-rock" class="filter__genres-item-label notvisible-bigscreen">
+                <li class="filter__genres-item" id="label-li-country-rock">
+                  <img src="/images/icons/white/music_jazz.svg" als="Music-Genre-Icon" class="filter__genres-item-icon" />
+                  country-rock
+                  <span class="filter__genres-item-zaehler">0</span>
+                </li>
+              </label>
+              <!-- Show More Button -->
+              <li class="filter__genres-item" id="filter__genres-more">
+                <a href="#" class="bold capitalize">Mehr Genres</a>
               </li>
-            </label>
-            <input
-              type="checkbox"
-              class="filter__genres-item-checkbox"
-              id="hiphop"
-              name="hiphop"
-              value="Hiphop"
-            />
-            <label for="hiphop" class="filter__genres-item-label visible">
-              <li class="filter__genres-item" id="label-li-hiphop">
-                <img src="#" class="filter__genres-item-icon" />
-                Hiphop
-                <span class="filter__genres-item-zaehler">20</span>
-              </li>
-            </label>
-            <input
-              type="checkbox"
-              class="filter__genres-item-checkbox"
-              id="indie"
-              name="indie"
-              value="Indie"
-            />
-            <label for="indie" class="filter__genres-item-label visible">
-              <li class="filter__genres-item" id="label-li-indie">
-                <img src="#" class="filter__genres-item-icon" />
-                Indie
-                <span class="filter__genres-item-zaehler">20</span>
-              </li>
-            </label>
-            <input
-              type="checkbox"
-              class="filter__genres-item-checkbox"
-              id="pop-und-rock"
-              name="pop-und-rock"
-              value="Pop & Rock"
-            />
-            <label for="pop-und-rock" class="filter__genres-item-label visible">
-              <li class="filter__genres-item" id="label-li-pop-und-rock">
-                <img src="#" class="filter__genres-item-icon" />
-                Pop & Rock
-                <span class="filter__genres-item-zaehler">20</span>
-              </li>
-            </label>
-            <input
-              type="checkbox"
-              class="filter__genres-item-checkbox"
-              id="electronic"
-              name="electronic"
-              value="Electronic"
-            />
-            <label for="electronic" class="filter__genres-item-label visible">
-              <li class="filter__genres-item" id="label-li-electronic">
-                <img src="#" class="filter__genres-item-icon" />
-                Electronic
-                <span class="filter__genres-item-zaehler">20</span>
-              </li>
-            </label>
-            <input
-              type="checkbox"
-              class="filter__genres-item-checkbox"
-              id="musik1"
-              name="musik1"
-              value="Musik1"
-            />
-            <label for="musik1" class="filter__genres-item-label notvisible">
-              <li class="filter__genres-item" id="label-li-musik1">
-                <img src="#" class="filter__genres-item-icon" />
-                Musik 1
-                <span class="filter__genres-item-zaehler">20</span>
-              </li>
-            </label>
-            <input
-              type="checkbox"
-              class="filter__genres-item-checkbox"
-              id="musik2"
-              name="musik2"
-              value="Musik2"
-            />
-            <label for="musik2" class="filter__genres-item-label notvisible">
-              <li class="filter__genres-item" id="label-li-musik2">
-                <img src="#" class="filter__genres-item-icon" />
-                Musik 2
-                <span class="filter__genres-item-zaehler">20</span>
-              </li>
-            </label>
-            <input
-              type="checkbox"
-              class="filter__genres-item-checkbox"
-              id="musik3"
-              name="musik3"
-              value="Musik3"
-            />
-            <label for="musik3" class="filter__genres-item-label notvisible">
-              <li class="filter__genres-item" id="label-li-musik3">
-                <img src="#" class="filter__genres-item-icon" />
-                Musik 3
-                <span class="filter__genres-item-zaehler">20</span>
-              </li>
-            </label>
-            <input
-              type="checkbox"
-              class="filter__genres-item-checkbox"
-              id="musik4"
-              name="musik4"
-              value="Musik4"
-            />
-            <label for="musik4" class="filter__genres-item-label notvisible">
-              <li class="filter__genres-item" id="label-li-musik4">
-                <img src="#" class="filter__genres-item-icon" />
-                Musik 4
-                <span class="filter__genres-item-zaehler">20</span>
-              </li>
-            </label>
-            <input
-              type="checkbox"
-              class="filter__genres-item-checkbox"
-              id="musik5"
-              name="musik5"
-              value="Musik5"
-            />
-            <label for="musik5" class="filter__genres-item-label notvisible">
-              <li class="filter__genres-item" id="label-li-musik5">
-                <img src="#" class="filter__genres-item-icon" />
-                Musik 5
-                <span class="filter__genres-item-zaehler">20</span>
-              </li>
-            </label>
-            <li class="filter__genres-item filter__genres-more">
-              <a href="#">Mehr Genres</a>
-            </li>
-          </ul>
-        </div>
-        <div class="filter__action">
-          <button class="zuruecksetzen light">Filter zurücksetzen</button>
-          <a href="/festivals/"
-            ><button class="ergebnis">Ergebnis anzeigen</button></a>
+            </ul>
+          </div>
+          <div class="filter__action">
+            <button class="zuruecksetzen light">Filter zurücksetzen</button>
+            <a href="/festivals/"
+              ><button class="ergebnis">Ergebnis anzeigen</button></a>
+          </div>
         </div>
       </div>
 

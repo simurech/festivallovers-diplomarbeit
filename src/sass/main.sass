@@ -86,6 +86,8 @@ button, .btn, .tabs
 	font-size: $fontSizeZusatzinfos
 .bold
 	font-weight: bold
+.capitalize
+	text-transform: capitalize
 	
 @media only screen and ( min-width: $tablet ) // Tablet
 	h1
@@ -212,18 +214,19 @@ main
 		max-width: 1600px
 	@media only screen and ( min-width: $desktop ) // Desktop
 		max-width: 1600px
-.main__full
-	padding: 0px
 	min-height: calc(100vh - 176px) // 100% VH minus Header minus Footer
 	@media only screen and ( min-width: $tablet ) // Tablet
 		min-height: calc(100vh - 128px) // 100% VH minus Header minus Footer
 	@media only screen and ( min-width: $desktop ) // Desktop
 		min-height: calc(100vh - 128px )// 100% VH minus Header minus Footer
+.main__full
+	padding: 0px
 
 // Footer
 footer
 	flex-shrink: 0
 	background-color: $weiss
+	bottom: 0
 	// Weitere Styleeigenschaften finden sich unten im Bereich FOOTER
 
 //* _________________________VISIBLE / NOT VISIBLE_________________________
@@ -239,6 +242,14 @@ footer
 .notvisible
 	display: none
 	visibility: hidden
+.notvisible-bigscreen
+	@media only screen and ( min-width: $tablet ) // Tablet
+		display: none
+		visibility: hidden
+	@media only screen and ( min-width: $desktop ) // Desktop
+		display: none
+		visibility: hidden
+
 
 
 //* _________________________AKTIV / INAKTIV_________________________
@@ -619,19 +630,58 @@ input[type=number]
 		text-align: center
 	p
 		text-align: center
-	.filter__toggle
+.filter__toggle
+	@media only screen and ( min-width: $tablet ) // Tablet
 		button
-		@media only screen and ( min-width: $tablet ) // Tablet
-			button
-				display: none
-		@media only screen and ( min-width: $desktop ) // Desktop
-			button
-				display: none
-
-	.filter__genres-list
-		display: none
+			display: none
+	@media only screen and ( min-width: $desktop ) // Desktop
+		button
+			display: none
+// ! Mobile Off Canvas Filter
+.wrapper__mobile-canvas
+	display: flex
+	flex-direction: column
+	align-items: center
+	height: 100%
+	max-height: 100vh
+	width: 0
+	position: fixed
+	z-index: 0
+	top: 64px
+	left: 0
+	background-color: $weiss
+	overflow-x: hidden
+	padding-top: 24px
+	transition: 0.5s
+	.filter__action
+		box-sizing: border-box
+		padding-left: 16px
+		padding-right: 16px
+		padding-top: 24px
+		box-sizing: border-box
+		display: flex
+		flex-direction: column-reverse
 		justify-content: center
+		width: 100%
+		button
+			margin: 0px
+			margin-bottom: 16px
+		@media only screen and ( min-width: $tablet ) // Tablet
+			flex-direction: row
+			column-gap: 16px
+			-webkit-column-gap: 16px
+		@media only screen and ( min-width: $desktop ) // Desktop
+			flex-direction: row
+			column-gap: 16px
+			-webkit-column-gap: 16px
+	.filter__genres-list
+		justify-content: center
+		height: 408px
+		width: 100%
+		position: relative
+		overflow-x: scroll
 		ul
+			flex-wrap: nowrap
 			list-style: none
 			margin: 0
 			padding: 0
@@ -639,88 +689,136 @@ input[type=number]
 			flex-wrap: wrap
 			flex-direction: column
 			align-items: center
-		.filter__genres-item
-			width: auto
-			height: 24px
-			padding-left: 12px
-			padding-right: 16px
-			padding-top: 12px
-			padding-bottom: 12px
-			margin: 12px
-			background-color: $grauC2
-			color: $weiss
-			display: flex
-			align-items: center
-			.filter__genres-item-icon
-				height: 24px
-				width: 24px
-				background-color: red
-				margin-right: 24px
-			.filter__genres-item-zaehler
-				align-self: flex-start
-				margin-top: 0px
-				font-size: 8px
-		.filter__genres-more
-			background-color: transparent
-			text-decoration: underline
-		@media only screen and ( min-width: $tablet ) // Tablet
-			display: block
-			ul
-				flex-direction: row
-				justify-content: center
-		@media only screen and ( min-width: $desktop ) // Desktop
-			display: block
-			ul
-				flex-direction: row
-				justify-content: center
-
-	// Checkboxen ausblenden
-	.filter__genres-item-checkbox
-		display: none
-		visibility: hidden
-
-	// Genre-Filter färben
-	.filter__genres-item-checkbox:checked + .filter__genres-item-label #label-li-jazz // Jazz
-		background-color: $jazzGelb
-	.filter__genres-item-checkbox:checked + .filter__genres-item-label #label-li-hiphop // Hiphop
-		background-color: $hipHopPink
-	.filter__genres-item-checkbox:checked + .filter__genres-item-label #label-li-indie // Indie
-		background-color: $indieMint
-	.filter__genres-item-checkbox:checked + .filter__genres-item-label #label-li-pop-und-rock // Pop & Rock
-		background-color: $popRockBlau
-	.filter__genres-item-checkbox:checked + .filter__genres-item-label #label-li-electronic // Electronic
-		background-color: $electronicViolett
-	.filter__genres-item-checkbox:checked + .filter__genres-item-label #label-li-musik1 // Musik 1
-		background-color: red
-	.filter__genres-item-checkbox:checked + .filter__genres-item-label #label-li-musik2 // Musik 2
-		background-color: red
-	.filter__genres-item-checkbox:checked + .filter__genres-item-label #label-li-musik3 // Musik 3
-		background-color: red
-	.filter__genres-item-checkbox:checked + .filter__genres-item-label #label-li-musik4 // Musik 4
-		background-color: red
-	.filter__genres-item-checkbox:checked + .filter__genres-item-label #label-li-musik5 // Musik 5
-		background-color: red
-
-
-
-	.filter__action
-		display: none
-		flex-direction: column-reverse
-		justify-content: center
+	@media only screen and ( min-width: $tablet ) // Tablet
 		width: 100%
-		button
-			margin-bottom: 12px
-		@media only screen and ( min-width: $tablet ) // Tablet
-			display: flex
-			flex-direction: row
-			justify-content: center
-			column-gap: 16px
-		@media only screen and ( min-width: $desktop ) // Desktop
-			display: flex
-			flex-direction: row
-			justify-content: center
-			column-gap: 16px
+		position: inherit
+		left: 0
+		overflow-x: visible
+		.filter__genres-list
+			height: 100%
+			width: 100%
+			position: inherit
+			overflow-x: auto
+			ul
+				flex-wrap: wrap
+				flex-direction: row
+				justify-content: center
+	@media only screen and ( min-width: $desktop ) // Desktop
+		width: 100%
+		position: inherit
+		left: 0
+		overflow-x: visible
+		.filter__genres-list
+			height: 100%
+			width: 100%
+			position: inherit
+			overflow-x: auto
+			ul
+				flex-wrap: wrap
+				flex-direction: row
+				justify-content: center	
+.filter__genres-item
+	box-sizing: border-box
+	width: auto
+	height: 48px
+	border-radius: 10px
+	padding-left: 12px
+	padding-right: 16px
+	padding-top: auto
+	padding-bottom: auto
+	margin: 12px
+	background-color: $grauC2
+	color: $weiss
+	display: flex
+	align-items: center
+	justify-content: center
+	text-transform: uppercase
+.filter__genres-item:nth-child(n+6)
+	display: none
+.filter__genres-item-icon
+	height: 24px
+	width: 24px
+	margin-right: 24px
+.filter__genres-item-zaehler
+	align-self: flex-start
+	margin-top: 8px
+	margin-left: 8px
+	font-size: $fontSizeZusatzinfos
+#filter__genres-more
+	background-color: transparent
+	text-decoration: underline
+	@media only screen and ( min-width: $tablet ) // Tablet
+		display: flex
+	@media only screen and ( min-width: $desktop ) // Desktop
+		display: flex
 
+// Checkboxen ausblenden
+.filter__genres-item-checkbox
+	display: none
+	visibility: hidden
+
+// Genre-Filter färben
+.filter__genres-item-checkbox:checked + .filter__genres-item-label #label-li-jazz // Jazz
+	background-color: $jazzGelb
+.filter__genres-item-checkbox:checked + .filter__genres-item-label #label-li-hiphop // Hiphop
+	background-color: $hipHopPink
+.filter__genres-item-checkbox:checked + .filter__genres-item-label #label-li-indie // Indie
+	background-color: $indieMint
+.filter__genres-item-checkbox:checked + .filter__genres-item-label #label-li-pop-und-rock // Pop & Rock
+	background-color: $popRockBlau
+.filter__genres-item-checkbox:checked + .filter__genres-item-label #label-li-electronic // Electronic
+	background-color: $electronicViolett
+.filter__genres-item-checkbox:checked + .filter__genres-item-label #label-li-baroque-pop // baroque-pop
+	background-color: red
+.filter__genres-item-checkbox:checked + .filter__genres-item-label #label-li-bebop // bebop
+	background-color: red
+.filter__genres-item-checkbox:checked + .filter__genres-item-label #label-li-bhangra // bhangra
+	background-color: red
+.filter__genres-item-checkbox:checked + .filter__genres-item-label #label-li-big-band // big-band
+	background-color: red
+.filter__genres-item-checkbox:checked + .filter__genres-item-label #label-li-black-metal // black-metal
+	background-color: red
+.filter__genres-item-checkbox:checked + .filter__genres-item-label #label-li-blue-eyed-soul // blue-eyed-soul
+	background-color: red
+.filter__genres-item-checkbox:checked + .filter__genres-item-label #label-li-bluegrass // bluegrass
+	background-color: red
+.filter__genres-item-checkbox:checked + .filter__genres-item-label #label-li-c-pop // c-pop
+	background-color: red
+.filter__genres-item-checkbox:checked + .filter__genres-item-label #label-li-cajun // cajun
+	background-color: red
+.filter__genres-item-checkbox:checked + .filter__genres-item-label #label-li-calypso // calypso
+	background-color: red
+.filter__genres-item-checkbox:checked + .filter__genres-item-label #label-li-celtic // celtic
+	background-color: red
+.filter__genres-item-checkbox:checked + .filter__genres-item-label #label-li-alternative-rock // alternative-rock
+	background-color: red
+.filter__genres-item-checkbox:checked + .filter__genres-item-label #label-li-anarcho-punk // anarcho-punk
+	background-color: red
+.filter__genres-item-checkbox:checked + .filter__genres-item-label #label-li-arabic-pop // arabic-pop
+	background-color: red
+.filter__genres-item-checkbox:checked + .filter__genres-item-label #label-li-blues // blues
+	background-color: red
+.filter__genres-item-checkbox:checked + .filter__genres-item-label #label-li-blues-rock // blues-rock
+	background-color: red
+.filter__genres-item-checkbox:checked + .filter__genres-item-label #label-li-boogie-woogie // boogie-woogie
+	background-color: red
+.filter__genres-item-checkbox:checked + .filter__genres-item-label #label-li-british-blues // british-blues
+	background-color: red
+.filter__genres-item-checkbox:checked + .filter__genres-item-label #label-li-britpop // britpop
+	background-color: red
+.filter__genres-item-checkbox:checked + .filter__genres-item-label #label-li-country-blues // country-blues
+	background-color: red
+.filter__genres-item-checkbox:checked + .filter__genres-item-label #label-li-country // country
+	background-color: red
+.filter__genres-item-checkbox:checked + .filter__genres-item-label #label-li-country-rock // country-rock
+	background-color: red
+
+.filter__bigscreen
+	display: none
+	@media only screen and ( min-width: $tablet ) // Tablet
+		display: block
+	@media only screen and ( min-width: $desktop ) // Desktop
+		display: block
 
 //! Home: Image
 .wrapper__hero-img
@@ -1325,7 +1423,7 @@ input[type=number]
 		margin-bottom: 16px
 		background-color: $grauF0
 		border: 2px solid $transparent
-		border-radius: 4px
+		border-radius: 10px
 .paymentradio
 	display: none
 .form__infos
@@ -1378,3 +1476,17 @@ input[name=creditcard] // Bild der Zahlungsart wird später via JS eingefügt
 		margin-right: 16px
 #creditcard-label, #cvc-label, #name-label, #validuntil-label
 	visibility: hidden
+
+
+//! Festival-Übersicht
+#nofestivals
+	background-color: $indieMint
+	color: $weiss
+	padding: 16px
+	margin-left: auto
+	margin-right: auto
+	p
+		text-align: center
+		font-size: $fontSizeMobileH2
+
+.overlay-login
