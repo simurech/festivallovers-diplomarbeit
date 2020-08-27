@@ -153,22 +153,23 @@ function eventsFiltern(){
 
 // Prüfe ob keine Festivals gelistet und Seite deshalb leer. Wenn ja -> zeige Hinweis
 function checkIfNoFestivals () {
-	console.log('check Funktion ausgeführt');
 	// Selektiere Liste mit allen Events
 	let eventList = document.querySelector('#events');
-	let eventListArray = [];
-	for (i=0; i < eventList.childNodes.length; i++) {
-		let item = eventList.childNodes[i];
-		if (item.classList[2] == 'notvisible'){
-			eventListArray.push(item);
+	if (eventList) {
+		let eventListArray = [];
+		for (i=0; i < eventList.childNodes.length; i++) {
+			let item = eventList.childNodes[i];
+			if (item.classList[2] == 'notvisible'){
+				eventListArray.push(item);
+			};
 		};
-	};
-	if (eventListArray.length >= 20){
-		let keineFestivalsHinweis = document.querySelector('#nofestivals');
-		keineFestivalsHinweis.style.display = 'block';
-	};
-	if (eventListArray.length < 20){
-		let keineFestivalsHinweis = document.querySelector('#nofestivals');
-		keineFestivalsHinweis.style.display = 'none';
+		if (eventListArray.length >= 20){
+			let keineFestivalsHinweis = document.querySelector('#nofestivals');
+			keineFestivalsHinweis.style.display = 'block';
+		};
+		if (eventListArray.length < 20){
+			let keineFestivalsHinweis = document.querySelector('#nofestivals');
+			keineFestivalsHinweis.style.display = 'none';
+		};
 	};
 };
