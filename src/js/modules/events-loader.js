@@ -42,6 +42,7 @@ function eventsLaden() {
 					'<p class="festivals__item-location_id_as_text">location_id_as_text= '+eventLocationIdAsText+'</p>'+
 					'<p class="festivals__item-date_start">date_start= '+eventDateStart+'</p>'+
 					'<p class="festivals__item-date_end">date_end= '+eventDateEnd+'</p>'+
+					'<a href="/festivals/sur-le-lac/"><button>Zum Festival</button></a>'+
 					'</div>';
 				ul.appendChild(newLi);
 			})

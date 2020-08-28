@@ -43,10 +43,10 @@ function reloadBrowser(done) {
   done();
 }
 
-// JS bundeln, JS minifizieren
-function bundleJs() {
+// JS minifizieren
+function minifyJs() {
   return gulp
-    .src("src/js/main.js")
+    .src("src/js/**/*.js")
     .pipe(
       rollup(
         {
@@ -61,9 +61,6 @@ function bundleJs() {
         isProductionBuild,
         rename({
           suffix: ".min",
-        }),
-        rename({
-          suffix: "-bundle",
         })
       )
     )
@@ -78,8 +75,8 @@ function runWatch() {
   gulp.watch("src/sass/**/*.sass", runSass);
   gulp.watch("src/**/*.html", reloadBrowser);
   gulp.watch(
-    ["src/js/**/*.js", "!src/js/**/*-bundle.js"],
-    gulp.series(bundleJs, reloadBrowser)
+    ["src/js/**/*.js", "!src/js/**/*.js"],
+    gulp.series(minifyJs, reloadBrowser)
   );
 }
 
@@ -96,13 +93,13 @@ function startBrowserSync() {
 // Bilder kopieren
 function copyImages() {
   return gulp
-    .src("src/images/*.(gif|jpg|png|svg)")
+    .src("src/images/**/*.(gif|jpg|png|svg)")
     .pipe(gulp.dest("dist/images/"));
 }
 // Videos kopieren
 function copyVideos() {
   return gulp
-    .src("src/videos/*.(mp4|avi)")
+    .src("src/videos/**/*.(mp4|avi)")
     .pipe(gulp.dest("dist/videos/"));
 }
 
@@ -134,9 +131,9 @@ function startProductionBuild(done) {
 // Tasks
 gulp.task("sass", runSass);
 gulp.task("sass:build", gulp.series(startProductionBuild, runSass));
-gulp.task("bundle", bundleJs);
-gulp.task("bundle:build", gulp.series(startProductionBuild, bundleJs));
-gulp.task("watch", gulp.series(runSass, bundleJs, runWatch));
+gulp.task("bundle", minifyJs);
+gulp.task("bundle:build", gulp.series(startProductionBuild, minifyJs));
+gulp.task("watch", gulp.series(runSass, minifyJs, runWatch));
 
 
 // Builder Task
@@ -145,6 +142,6 @@ gulp.task(
   gulp.series(
     startProductionBuild,
     runClean,
-    gulp.parallel(copyHtml, copyImages, copyVideos, runSass, bundleJs)
+    gulp.parallel(copyHtml, copyImages, copyVideos, runSass, minifyJs)
   )
 );
