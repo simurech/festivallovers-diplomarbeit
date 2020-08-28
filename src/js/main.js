@@ -49,8 +49,13 @@ funktionBeiKlick('useless', functionNotDefined);
 // Funktion: Overlay-Menü einblenden
 function openNavi() {
 	let canvas = document.querySelector('#filter-canvas');
-	if (canvas.style.width == '100%') { // Wenn Filter sichtbar
-		return
+	if (canvas) {
+		if (canvas.style.width == '100%') { // Wenn Filter sichtbar
+			return
+		} else { // Wenn Filter nicht sichtbar
+			let overlay = document.querySelector('#navigation');
+			overlay.style.height = '100%';
+		}
 	} else { // Wenn Filter nicht sichtbar
 		let overlay = document.querySelector('#navigation');
 		overlay.style.height = '100%';

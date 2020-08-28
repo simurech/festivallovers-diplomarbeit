@@ -602,7 +602,94 @@ footer
 			flex-direction: row
 			justify-content: flex-end
 			align-items: center
-			
+
+
+//* ___________________________BREADCRUMBS___________________________
+.breadcrumbs
+	display: flex
+	flex-direction: row
+	justify-content: flex-start
+	flex-wrap: wrap
+	align-items: center
+	background-color: $weiss
+	a, p, span
+		font-size: $fontSizeZusatzinfos	
+		color: $grauC2	
+		text-decoration: none
+	a:hover
+		text-decoration: underline
+	padding: 16px
+	@media only screen and ( min-width: $tablet ) // Tablet
+		padding: 16px 96px 16px 96px
+	@media only screen and ( min-width: $desktop ) // Desktop
+		padding: 16px 120px 16px 120px
+.breadcrumbs__element
+	display: flex
+	justify-content: center
+	//margin-right: 12px
+.breadcrumbs__icon
+	//margin-right: 16px
+.breadcrumbs__trenner
+	margin-left: 16px
+	margin-right: 4px
+.breadcrumbs__dropdown
+	p
+		display: flex
+		height: 100%
+		margin-top: 0
+		margin-bottom: 0
+		padding-top: auto
+		align-items: center
+#breadcrumbs__dropdown1, #breadcrumbs__dropdown2, #breadcrumbs__dropdown3
+	background-image: url(/images/icons/color/steuerung_dropdown_down.svg)
+	background-repeat: no-repeat
+	background-position: center right 16px
+	background-size: 16px
+	height: 48px
+	width: auto
+	box-sizing: border-box
+	padding-left: 16px
+	padding-right: 64px
+	display: inline-block
+	border: 1px solid $weiss
+#breadcrumbs__dropdown-content1, #breadcrumbs__dropdown-content2, #breadcrumbs__dropdown-content3
+	padding-left: 16px
+	padding-right: 16px
+	margin-left: -16px
+	display: none
+	position: absolute
+	background-color: $weiss
+	flex-direction: column
+	border: 1px solid $grauC2
+	box-sizing: border-box
+	a
+		display: flex
+		align-items: center
+		height: 48px
+		justify-self: center
+// Blende Unterseiten bei Hover ein
+#breadcrumbs__dropdown1:hover
+	border: 1px solid $grauC2
+	background-image: url(/images/icons/color/steuerung_dropdown_up.svg)
+	#breadcrumbs__dropdown-content1
+		width: 136px
+		display: block
+#breadcrumbs__dropdown2:hover
+	border: 1px solid $grauC2
+	background-image: url(/images/icons/color/steuerung_dropdown_up.svg)
+	#breadcrumbs__dropdown-content2
+		width: 148px
+		display: block
+
+// - Remove Background von Dropdwon 3
+#breadcrumbs__dropdown3
+	background-image: none
+// - Style-Einstellungen auskommentiert, da nicht aktiv
+// #breadcrumbs__dropdown3:hover
+// 	border: 1px solid $grauC2
+// 	background-image: url(/images/icons/color/steuerung_dropdown_up.svg)
+// 	#breadcrumbs__dropdown-content3
+// 		display: block
 
 
 //* _________________________BROWSER-BUG-FIXES_________________________
@@ -1115,7 +1202,7 @@ input[type=number]
 	overflow: hidden
 	background-color: $weiss
 	hr
-		border: 1px solid $grauC2
+		border: 1px solid $grauE5
 		margin: 16px
 .news__post:nth-child(even)
 	display: none
