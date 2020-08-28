@@ -1,9 +1,7 @@
-'use strict';
-
-// In folgendem Code werden sämtliche grundlegenden Funktionen definiert.
 // Das Skript muss deshalb auf allen Seiten eingebunden werden!
 //! Tablet & Desktop: Klick auf "Mehr Genres" bleindet weitere Genres ein.
 // Funktion
+
 function zeigMehrGenres() {
   let genreLabels = document.querySelectorAll('.filter__genres-item-label');
 
@@ -53,8 +51,8 @@ function closeGenresCanvas() {
   menuLink.childNodes[1].src = '/images/icons/black/navigation_menu.svg'; // Ändere Text
 
   menuLink.childNodes[3].innerHTML = 'Menu';
-}
-// Funktion
+} // Funktion
+
 
 function setGenresFilter() {
   let genresStorage = JSON.parse(localStorage.getItem('genres'));
@@ -63,9 +61,10 @@ function setGenresFilter() {
     let activGenreCheckbox = document.querySelector('#' + genresStorage[i]);
     activGenreCheckbox.checked = true;
   }
+
   setTimeout(eventsFiltern, 1000);
-}
-// Funktion
+} // Funktion
+
 
 function genresFilterToStorage() {
   let genreCheckbox = document.querySelectorAll('.filter__genres-item-checkbox');
@@ -77,6 +76,7 @@ function genresFilterToStorage() {
       genresArray.push(genreId);
     }
   }
+
   let genresJson = JSON.stringify(genresArray);
   localStorage.setItem('genres', genresJson);
   eventsFiltern();
@@ -99,6 +99,7 @@ function filterZuruecksetzen() {
   for (var i = 0; i < genreCheckbox.length; i++) {
     genreCheckbox[i].checked = false;
   }
+
   localStorage.setItem('genres', [""]);
   eventsFiltern();
 }
@@ -110,6 +111,7 @@ function getLocalStorage() {
   if (localStorage.genres && localStorage.genres !== [""]) {
     setGenresFilter();
   }
+
   checkIfNoFestivals();
 }
 
@@ -147,6 +149,7 @@ function eventsFiltern() {
       events[i].classList.remove('notvisible');
     }
   }
+
   checkIfNoFestivals();
 }
 

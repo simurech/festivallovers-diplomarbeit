@@ -1,6 +1,3 @@
-'use strict';
-
-// In folgendem Code werden diverse Grundlegende Funktionen definiert.
 // Eventlistener für KLICK auf Array legen
 
 function funktionBeiKlick(selektorklasse, funktion) {
@@ -9,8 +6,8 @@ function funktionBeiKlick(selektorklasse, funktion) {
   for (var i = 0; i < selektorarray.length; i++) {
     selektorarray[i].addEventListener('click', funktion);
   }
-}
-// Funktion
+} // Funktion
+
 
 function functionNotDefined() {
   alert('Funktion in diesem Prototyp nicht umgesetzt');

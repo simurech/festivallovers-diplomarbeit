@@ -137,7 +137,7 @@ button
 	padding: 10px 32px 10px 32px
 	box-sizing: border-box
 	color: $weiss
-	height: 48px
+	min-height: 48px
 	width: 100%
 	@media only screen and ( min-width: $tablet ) // Tablet
 		width: auto
@@ -194,6 +194,7 @@ header
 	background-color: $weiss
 	width: 100%
 	position: sticky
+	z-index: 1
 	top: 0
 	// Weitere Styleeigenschaften finden sich unten im Bereich HEADER
 
@@ -259,24 +260,6 @@ footer
 .disabled-box
 	background-color: $grauC2!important
 	pointer-events: none
-
-
-//* _________________________VIDEO-CONTAINER_________________________
-.video-container
-    position: relative
-    padding-bottom: 56.25%
-    padding-top: 0
-    height: 0
-    overflow: hidden
-
-
-.video-container
-	iframe, object, embed
-		position: absolute
-		top: 0
-		left: 0
-		width: 100%
-		height: 100%
 
 	
 //* ___________________________HEADER___________________________
@@ -1629,74 +1612,277 @@ input[name=creditcard] // Bild der Zahlungsart wird später via JS eingefügt
 
 
 //! Festival-Detail
-// ELEMENT 1
 .wrapper__detail-entry
-	img
-	h1
-		.festival-titel
+	background-color: $indieMint
+	position: relative
+	z-index: 0
+.detail-entry__image
+	width: 100%
+	padding-bottom: 240px
+	@media only screen and ( min-width: $tablet ) // Tablet
+		padding-bottom: 240px
+	@media only screen and ( min-width: $desktop ) // Desktop
+		padding-bottom: 472px
+.festival-titel
+	color: $weiss
+	margin-top: -272px
+	padding: 0px 16px 24px 16px
+	@media only screen and ( min-width: $tablet ) // Tablet
+		margin-top: -336px
+		padding: 0px 96px 0px 96px 
+	@media only screen and ( min-width: $desktop ) // Desktop
+		margin-top: -592px
+		padding: 0px 120px 24px 120px 
+.detail-entry__icon
+	position: absolute
+	margin-left: auto
+	margin-right: auto
+	left: 0
+	right: 0
+	top: calc(16px + 64px )
+	width: 55px
+	z-index: 2
+	@media only screen and ( min-width: $tablet ) // Tablet
+		top: calc(66px + 64px )
+		width: 132px
+	@media only screen and ( min-width: $desktop ) // Desktop
+		top: calc(105px + 64px )
+		width: 210px
 
 // ELEMENT 2
 .wrapper__detail-entry-boxes
-	.detail-entry-boxes__item
-		.detail-entry-boxes__item-title
-		.detail-entry-boxes__item-value
-			#countdown-days
-		
+	margin-top: 0px
+	padding-top: 0px
+	display: flex
+	flex-wrap: wrap
+.detail-entry-boxes__item
+	background-color: $indieMintHell
+	color: $weiss
+	width: 100%
+	display: flex
+	flex-direction: column
+	justify-content: center
+	text-transform: uppercase
+	font-weight: bold
+	border-bottom: 1px solid $grauC2
+	box-sizing: border-box
+	min-height: 136px
+	span
+		font-size: $fontSizeMobileH1
+	@media only screen and ( min-width: $tablet ) // Tablet
+		width: 50%
+		min-height: 264px
+		border-bottom: 1px solid $grauC2
+		border-right: 1px solid $grauC2
+		span
+			font-size: $fontSizeTabletH1
+	@media only screen and ( min-width: $desktop ) // Desktop
+		width: 25%
+		min-height: 264px
+		border-bottom: none
+		border-right: 1px solid $grauC2
+		span
+			font-size: $fontSizeDesktopH1
+.detail-entry-boxes__item:nth-child(1) // Mobile Border unten entfernen bei letztem Element
+	@media only screen and ( min-width: $tablet ) // Tablet
+		border-bottom: 1px solid $grauC2
+		border-right: 1px solid $grauC2
+	@media only screen and ( min-width: $desktop ) // Desktop
+		border-bottom: none
+		border-right: 1px solid $grauC2
+.detail-entry-boxes__item:nth-child(2) // Mobile Border unten entfernen bei letztem Element
+	@media only screen and ( min-width: $tablet ) // Tablet
+		border-bottom: 1px solid $grauC2
+		border-right: none
+	@media only screen and ( min-width: $desktop ) // Desktop
+		border-bottom: none
+		border-right: 1px solid $grauC2
+.detail-entry-boxes__item:nth-child(3) // Mobile Border unten entfernen bei letztem Element
+	@media only screen and ( min-width: $tablet ) // Tablet
+		border-bottom: none
+		border-right: 1px solid $grauC2
+	@media only screen and ( min-width: $desktop ) // Desktop
+		border-bottom: none
+		border-right: 1px solid $grauC2
+.detail-entry-boxes__item:nth-child(4) // Mobile Border unten entfernen bei letztem Element
+	border-bottom: none
+	@media only screen and ( min-width: $tablet ) // Tablet
+		border-bottom: none
+		border-right: none
+	@media only screen and ( min-width: $desktop ) // Desktop
+		border-bottom: none
+		border-right: none
+.detail-entry-boxes__item-title
+	margin: 0
+	padding: 0
+	text-align: center
+	font-size: $fontSizeMobileH2
+	@media only screen and ( min-width: $tablet ) // Tablet
+		font-size: $fontSizeTabletH2
+	@media only screen and ( min-width: $desktop ) // Desktop
+		font-size: $fontSizeDesktopH2
+.detail-entry-boxes__item-value
+	margin: 0
+	padding: 0
+	text-align: center
+	font-size: $fontSizeMobileH1
+	@media only screen and ( min-width: $tablet ) // Tablet
+		font-size: $fontSizeTabletH1
+	@media only screen and ( min-width: $desktop ) // Desktop
+		font-size: $fontSizeDesktopH1
+.wrapper__detail-header
+	padding: 0px 16px 0px 16px
+	@media only screen and ( min-width: $tablet ) // Tablet
+		padding: 0px 192px 0px 192px
+	@media only screen and ( min-width: $desktop ) // Desktop
+		padding: 0px 240px 0px 240px
+.detail-content__info
+	display: flex
+	column-gap: 24px
+.detail-content__info-item
+	display: flex
+	align-items: center
+	img
+		margin-right: 8px
 .wrapper__detail-content
-	// ELEMENT 3
-	.detail-content__section
-		h2
-		.detail-content__info
-			.detail-content__info-item
-			img
-			p	
-        .lead
-		p
+	display: flex
+	flex-direction: column
+	padding: 16px
+	@media only screen and ( min-width: $tablet ) // Tablet
+		padding: 16px 192px 16px 192px
+		width: 66%
+		flex-direction: row
+		justify-content: space-between
+	@media only screen and ( min-width: $desktop ) // Desktop
+		padding: 24px 240px 36px 240px
+		flex-direction: row
+.detail-content__section
+	width: 100%
+	@media only screen and ( min-width: $tablet ) // Tablet
+		width: 60%
+	@media only screen and ( min-width: $desktop ) // Desktop
+		width: 60%
+#side-section
+	width: 100%
+	display: flex
+	flex-direction: column
+	flex-wrap: wrap
+	text-transform: uppercase
+	text-align: center
+	button
+		width: 100%
+		margin-bottom: 16px
+	@media only screen and ( min-width: $tablet ) // Tablet
+		text-align: left
+		width: 33%
+	@media only screen and ( min-width: $desktop ) // Desktop
+		text-align: left
+		width: 33%
 
-	// ELEMENT 4
-	.detail-content__section // ACHTUNG KLASSE UND FOLGENDE ID
-	#side-section
-		img
-		p
-		button
-	
-// ELEMENT 5
+
+//! SLIDER NOCH NICHT UMGESETZT
 .wrapper__detail-slider
-	.splide
-		.splide__track
-			.splide__list
-				.splide__slide
+	padding: 0px 16px 0px 16px
+	@media only screen and ( min-width: $tablet ) // Tablet
+		padding: 0px 192px 0px 192px
+	@media only screen and ( min-width: $desktop ) // Desktop
+		padding: 0px 240px 0px 240px
+// .splide
+// 	.splide__track
+// 		.splide__list
+// 			.splide__slide
 					
 
-// ELEMENT 6
 .wrapper__detail-lineup
-	h3
-	.lead // p
-	.detail-lineup__tag-menu
-	.detail-lineup__artists
-		.artists__time
-		.artists__box
-		.artists__jazz
-		.artists__hiphop
+	background-color: $grauF0
+	padding: 16px
+	@media only screen and ( min-width: $tablet ) // Tablet
+		padding: 48px 192px 48px 192px
+	@media only screen and ( min-width: $desktop ) // Desktop
+		padding: 96px 240px 96px 240px
+.detail-lineup__tag-menu
+	display: block
+	@media only screen and ( min-width: $tablet ) // Tablet
+		display: none
+	@media only screen and ( min-width: $desktop ) // Desktop
+		display: none
+	button
+		display: flex
+		justify-content: space-between
+		align-items: center
+		text-align: left
+		
+.detail-lineup__tag-btns
+	column-gap: 16px
+	display: none
+	@media only screen and ( min-width: $tablet ) // Tablet
+		display: flex
+	@media only screen and ( min-width: $desktop ) // Desktop
+		display: flex
+
+.wrapper__detail-lineup-grid
+	background-color: $grauF0
+	padding: 16px
+	@media only screen and ( min-width: $tablet ) // Tablet
+		padding: 48px 192px 48px 192px
+	@media only screen and ( min-width: $desktop ) // Desktop
+		padding: 96px 240px 96px 240px
 
 
-// ELEMENT 7
+.detail-lineup__artists
+	.artists__time
+	.artists__box
+	.artists__jazz
+	.artists__hiphop
+//! Oberhalb noch nicht fertig
+
 .wrapper__detail-video
-	.video-container
-		iframe
-
-
-// ELEMENT 8
+.video-container
+	background-color: yellow
+	width: 100%
+	height: 160px
+	@media only screen and ( min-width: $tablet ) // Tablet
+		height: 276px
+	@media only screen and ( min-width: $desktop ) // Desktop
+		height: 392px
+	position: relative
+	//padding-bottom: 56.25%
+    padding-top: 0
+    height: 0
+    overflow: hidden
+.video-container
+	iframe, object, embed
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
 .wrapper__detail-wissenswertes
-	h2
-	.lead // p
-	.detail-wissenswertes__akkordeon
-		.detail-wissenswertes__akkordeon-item
-			h3
-			p
-			hr
-			p
-			iframe
+	padding: 16px
+	@media only screen and ( min-width: $tablet ) // Tablet
+		padding: 48px 192px 48px 192px
+	@media only screen and ( min-width: $desktop ) // Desktop
+		padding: 96px 240px 96px 240px
+.map-container
+		width: 100%
+		height: 392px
+		position: relative
+		padding-top: 0
+		overflow: hidden
+.map-container
+	iframe, object, embed
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+
+//! WEITER
+.detail-wissenswertes__akkordeon
+	.detail-wissenswertes__akkordeon-item
+		h3
+		p
+		hr
 		
 
 // ELEMENT 9

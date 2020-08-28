@@ -1,5 +1,3 @@
-'use strict';
-
 /*!
  * Splide.js
  * Version  : 2.4.11
@@ -8,6 +6,7 @@
  */
 
 /******/
+
 (function (modules) {
   // webpackBootstrap
 
@@ -263,7 +262,6 @@
 
 /***/
 function (module, __webpack_exports__, __webpack_require__) {
-
   __webpack_require__.r(__webpack_exports__); // EXPORTS
 
 
@@ -2179,11 +2177,13 @@ function (module, __webpack_exports__, __webpack_require__) {
       }
     };
   }; // CONCATENATED MODULE: ./src/js/constants/directions.js
+
   /**
    * Enumerate slides from right to left.
    *
    * @type {string}
    */
+
 
   var RTL = 'rtl';
   /**

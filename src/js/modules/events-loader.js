@@ -1,9 +1,7 @@
-'use strict';
-
-// In folgendem Code werden sämtliche Events via Rest geladen.
 // Das Skript muss überall eingebunden sein, wo Festival-Inhalte geladen werden.
 // Aktuell betrifft dies nur die Festival-Übersichtseite.
 //! Übersicht: Lade alle Festivals
+
 const restUrl = '/rest'; //! URL ZU SERVER
 // Event-Daten laden
 
@@ -94,6 +92,7 @@ function rewriteLocationIdToText(id) {
 } // Funktion sofort ausführen
 // Location ID in Text umwandeln - statisch
 
+
 function rewriteGenreIdToText(id) {
   const requestId = id;
 
@@ -156,6 +155,7 @@ function rewriteGenreIdToText(id) {
   }
 } // Funktion sofort ausführen
 // Location ID in slug umwandeln - statisch
+
 
 function rewriteGenreIdToSlug(id) {
   const requestId = id;

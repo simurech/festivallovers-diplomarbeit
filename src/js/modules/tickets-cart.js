@@ -1,11 +1,9 @@
-'use strict';
-
-// In folgendem Code werden alle Funktionen für den Bestellprozess definiert.
 // Die Nutzerinteraktion manipuliert die Seite für den Nutzer und speichert Tickets im Local Storage.
 // Das Skript muss überall eingebunden sein, wo Ticket-Infos für die Bestellung gespeichert werden müssen.
 // Aktuell betrifft dies nnur die "Tickets kaufen"-Seite.
 //! Anzahl Tickets anhand Auswahl anpassen
 // Funktion
+
 function ticketVerfuegbarkeitText(event) {
   // Textstelle mit verfügbaren Tickets selektieren
   let verfuegbarTextSelektor = document.querySelector('#' + event.target.parentNode.previousElementSibling.childNodes[1].childNodes[3].firstChild.id); // Zahl aktuell verfügbare Tickets selektieren
