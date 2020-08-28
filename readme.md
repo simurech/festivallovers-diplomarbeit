@@ -105,7 +105,8 @@ Um die Seite zu veröffentlichen, kann der Befehl "gulp build" ausgeführt werde
 2. Die Bilder & Videos sind nicht im Repository enthalten und müssen noch manuell eingefügt werden. (Siehe nächster Punkt)
 
 ### __Dateien__
-Sämtliche Bilder & Videos sind nicht im Repository enthalten. Auch der Code für die REST-Schnittstelle sowie die komplette Datenbank als SQL File. Diese Dateien können unter folgendem Link manuell heruntergeladen werden: https://cloud.urech.io/index.php/s/gDsJr6SNpT9Kj22
+Sämtliche Bilder & Videos sind nicht im Repository enthalten. Auch der Code für die REST-Schnittstelle sowie die komplette Datenbank als SQL File. Ebenfalls fehlt die .htaccess Datei und das Favicon. Diese Dateien können unter folgendem Link manuell heruntergeladen werden: https://cloud.urech.io/index.php/s/gDsJr6SNpT9Kj22
+Nach dem Download müssen alle Dateien/Ordner in das Root-Verzeichnis der Webseite kopiert werden.
 
 ### __SQL Datenbank__
 Damit die Daten aus der Datenbank gelesen werden können, muss diese noch eingerichtet werden.
@@ -142,6 +143,7 @@ Auf der Seite wurden ein paar Dinge umgesetzt, welche nicht notwendig gewesen w�
 - Tickets-kaufen-Seite: Anzahl Tickets wird via JS unten in Button eingefügt
 - Zahlung-Seite: Der berechnete Preis entspricht der vom User getroffenen Ticket-Auswahl
 - Festival-Übersicht-Seite: Wenn ein Filter eines Genres mit 0 Festivals aktiviert wird und somit keine Festivals ersichtlich sind, wird unten ein Hinweis für den Nutzer eingeblendet.
+Leider gibt es auch negatives. So war es mir leider nicht möglich die minify-Versionen von CSS & JS zu verwenden. Die verwendeten Gulp-Tasks haben Fehler produziert, welche die Darstellung und Funktion einschränkten. Es wurde deshalb bei der veröffentlichten Version die unkomprimierte Version der Dateien genutzt unnd der Builder-Task angepasst.
 
 ### __Fazit__
 Die Projekt-Arbeit war spannend und eine Herausforderung. Die Übungen während des Lehrgangs haben zwar vieles beinhaltet, es gab jedoch sehr viele Anforderungen oder auch Elemente welche bisher noch nie gestellt wurden. Auch war es schwierig von jeweils ganz kleinen einzelnen Elemente/Funktionen nun plötzlich ein riesiges Konstrukt zu erstellen. Alleine der "Mobile First" Ansatz war etwas komplett neues und benötige viel Aufmerksamkeit, da dies bisher nur angeschnnitten wurde. Gerne hätte ich nun am Ende nochmals einige Dinge überarbeitet, dafür ging mir aufgrund der schlechten Planung jedoch die Zeit aus. Auch wenn es noch einige Optimierungsmöglichkeiten gibt, bin ich trotzdem mit dem Endergebnis zufrieden und stolz dies geschafft zu haben.
