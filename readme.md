@@ -7,7 +7,15 @@
 	3. [Zeitplan / Meilensteine](#zeitplan--meilensteine)
 	4. [Eidesstattliche Erklärung](#eidesstattliche-erkl%C3%A4rung)
 2. [Dokumentation](#dokumentation)
-	1. [Setup](#setup)
+	1. [Struktur-Erklärung](#struktur-erklärung)
+	2. [Entwicklung]#entwicklung)
+	3. [Setup](#setup)
+	4. [Dateien](#dateien)
+	5. [SQL Datenbank](#sql-datenbank)
+	6. [Öffentliche Seite](#öffentliche-seite)
+	7. [Persönliche Anmerkungen](#persönliche-anmerkungen)
+3. [Fazit](#fazit)
+4. [Quellenangaben](#quellenangaben)
 
 _____________________________________________________________
 ## __Basisdisposition__
