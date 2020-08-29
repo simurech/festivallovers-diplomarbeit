@@ -8,7 +8,7 @@
 	4. [Eidesstattliche Erklärung](#eidesstattliche-erkl%C3%A4rung)
 2. [Dokumentation](#dokumentation)
 	1. [Struktur-Erklärung](#struktur-erklärung)
-	2. [Entwicklung]#entwicklung)
+	2. [Entwicklung](#entwicklung)
 	3. [Setup](#setup)
 	4. [Dateien](#dateien)
 	5. [SQL Datenbank](#sql-datenbank)
