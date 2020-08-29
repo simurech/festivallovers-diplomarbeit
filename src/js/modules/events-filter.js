@@ -34,7 +34,7 @@ document.querySelector('#darstellung__liste-toggle').addEventListener('click', f
 //! Festivals nach Kanton filtern
 // Funktion
 function festivalKantonFilter (){
-	console.log('Festivals nach Kanton filtern');
+	console.log('Festivals nach Kanton filtern (wurde noch nicht umgesetzt.)');
 };
 // EventListener
 
@@ -43,7 +43,7 @@ function festivalKantonFilter (){
 //! Festivals nach Datum sortieren
 // Funktion
 function festivalDateSortierunng (){
-	console.log('Festivals nach Datum ordnen');
+	console.log('Festivals nach Datum ordnen (wurde noch nicht umgesetzt.)');
 };
 // EventListener
 

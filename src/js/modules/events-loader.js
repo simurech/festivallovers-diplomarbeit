@@ -26,7 +26,7 @@ function eventsLaden() {
       let eventGenreIdAsText = rewriteGenreIdToText(eventGenreId);
       let eventGenreIdAsSlug = rewriteGenreIdToSlug(eventGenreId);
       let eventLocationIdAsText = rewriteLocationIdToText(eventLocationId);
-      newDiv.setAttribute('class', 'festivals__item-' + eventGenreIdAsSlug + ' festivals__item' + ' KANTON' + ' DATUM');
+      newDiv.setAttribute('class', 'festivals__item-' + eventGenreIdAsSlug + ' festivals__item ' + eventLocationIdAsText + ' ' + eventDateStart + ' ' + eventGenreIdAsSlug);
       newDiv.innerHTML = '<a href="/festivals/sur-le-lac/" class="festivals__item-link">' +
               '<div class="item__image-box">' +
               '<img src="/images/festivals/' + imageName + '" alt="Festival-Bild" class="image-box__foto">' +
@@ -57,53 +57,45 @@ eventsLaden();
 function rewriteLocationIdToText(id) {
   const requestId = id;
   if (requestId === '1') {
-    return 'Bern';
+    return 'Bülach';
   } else if (requestId === '2') {
-    return 'TBD-TBD-TBD';
+    return 'Zürich';
   } else if (requestId === '3') {
-    return 'TBD-TBD-TBD';
+    return 'Bern';
   } else if (requestId === '4') {
-    return 'TBD-TBD-TBD';
+    return 'Lugano';
   } else if (requestId === '5') {
-    return 'TBD-TBD-TBD';
+    return 'London';
   } else if (requestId === '6') {
-    return 'TBD-TBD-TBD';
+    return 'Porto';
   } else if (requestId === '7') {
-    return 'TBD-TBD-TBD';
+    return 'Lissabon';
   } else if (requestId === '8') {
-    return 'TBD-TBD-TBD';
+    return 'New York';
   } else if (requestId === '9') {
-    return 'TBD-TBD-TBD';
+    return 'Gurten';
   } else if (requestId === '10') {
-    return 'TBD-TBD-TBD';
+    return 'Glastonnbury';
   } else if (requestId === '11') {
-    return 'TBD-TBD-TBD';
+    return 'Sittertobel SG';
   } else if (requestId === '12') {
-    return 'TBD-TBD-TBD';
+    return 'Kloten';
   } else if (requestId === '13') {
-    return 'TBD-TBD-TBD';
+    return 'Niederhasli';
   } else if (requestId === '14') {
-    return 'TBD-TBD-TBD';
+    return 'Niederglatt';
   } else if (requestId === '15') {
-    return 'TBD-TBD-TBD';
+    return 'Oberglatt';
   } else if (requestId === '16') {
-    return 'TBD-TBD-TBD';
+    return 'Zürich Oerlikon';
   } else if (requestId === '17') {
-    return 'TBD-TBD-TBD';
+    return 'Schlieren';
   } else if (requestId === '18') {
-    return 'TBD-TBD-TBD';
+    return 'Zürich Seebach';
   } else if (requestId === '19') {
-    return 'TBD-TBD-TBD';
+    return 'Eglisau';
   } else if (requestId === '20') {
-    return 'TBD-TBD-TBD';
-  } else if (requestId === '21') {
-    return 'TBD-TBD-TBD';
-  } else if (requestId === '22') {
-    return 'TBD-TBD-TBD';
-  } else if (requestId === '23') {
-    return 'TBD-TBD-TBD';
-  } else if (requestId === '24') {
-    return 'TBD-TBD-TBD';
+    return 'Zürich Altstetten';
   } else {
     return 'Standort wurde nicht gefunden';
   }
