@@ -138,7 +138,7 @@ function eventsFiltern() {
       events[i].classList.remove('notvisible');
     };
   };
-  checkIfNoFestivals();
+  setTimeout(checkIfNoFestivals(), 500);
 };
 
 
@@ -146,21 +146,22 @@ function checkIfNoFestivals() {
   // Selektiere Liste mit allen Events
   let eventList = document.querySelector('#events');
   let eventListArray = [];
-  for (var i = 0; i < eventList.childNodes.length; i++) {
-    if (eventList.childNodes[i].nodeName == 'DIV') {
-      let item = eventList.childNodes[i];
-      console.log('item = ', item);
-      if (item.classList[4] == 'notvisible') {
-          eventListArray.push(item);
+  if(eventList){
+    for (var i = 0; i < eventList.childNodes.length; i++) {
+      if (eventList.childNodes[i].nodeName == 'DIV') {
+        let item = eventList.childNodes[i];
+        if (item.classList.contains('notvisible')) {
+            eventListArray.push(item);
+        };
       };
-    };
-  }
-  if (eventListArray.length >= 20) {
-    let keineFestivalsHinweis = document.querySelector('#nofestivals');
-    keineFestivalsHinweis.style.display = 'block';
-  }
-  if (eventListArray.length < 20) {
-    let keineFestivalsHinweis = document.querySelector('#nofestivals');
-    keineFestivalsHinweis.style.display = 'none';
-  }
+    }
+    if (eventListArray.length >= 19) {
+      let keineFestivalsHinweis = document.querySelector('#nofestivals');
+      keineFestivalsHinweis.style.display = 'block';
+    }
+    if (eventListArray.length < 19) {
+      let keineFestivalsHinweis = document.querySelector('#nofestivals');
+      keineFestivalsHinweis.style.display = 'none';
+    }
+  };
 };
