@@ -6,7 +6,8 @@ function funktionBeiKlick(selektorklasse, funktion) {
   for (var i = 0; i < selektorarray.length; i++) {
     selektorarray[i].addEventListener('click', funktion);
   }
-}
+};
+
 function funktionBeiEingabe(selektorklasse, funktion) {
   let selektorarray = document.querySelectorAll('.' + selektorklasse);
   for (var i = 0; i < selektorarray.length; i++) {
