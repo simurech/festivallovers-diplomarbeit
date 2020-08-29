@@ -2133,36 +2133,42 @@ input[name=creditcard] // Bild der Zahlungsart wird später via JS eingefügt
 		grid-template-columns: 1fr
 	.festivals__item
 		max-width: 100%
+		max-height: 104px
 		display: flex
-		flex-direction: column
+		flex-direction: row
 		justify-content: space-between
+		align-items: center
 		padding: 0px
 		background-color: $weiss
 		text-decoration: none
 	.festivals__item-jazz
-		border-bottom: 4px solid $jazzGelb
+		border-right: 4px solid $jazzGelb
 	.festivals__item-hiphop
-		border-bottom: 4px solid $hipHopPink
+		border-right: 4px solid $hipHopPink
 	.festivals__item-electronic
-		border-bottom: 4px solid $electronicViolett
+		border-right: 4px solid $electronicViolett
 	.festivals__item-indie
-		border-bottom: 4px solid $indieMint
+		border-right: 4px solid $indieMint
 	.festivals__item-pop-und-rock
-		border-bottom: 4px solid $popRockBlau
+		border-right: 4px solid $popRockBlau
 	.festivals__item-link
 		text-decoration: none
+		display: flex
+		align-items: center
+		width: 100%
 	.item__image-box
-		// 
+		height: 104px
+		display: flex
 	.image-box__foto
-		max-width: 100%
+		max-width: 208px
+		max-height: 104px
 	.image-box__icon
-		position: relative
+		position: inline
 		z-index: 0
-		width: 48px
-		height: 48px
+		width: 104px
+		height: 104px
 		margin-left: auto
 		margin-right: auto
-		margin-top: -52px
 		background-repeat: no-repeat
 		background-size: 60% 60%
 		background-position: center center
@@ -2182,31 +2188,36 @@ input[name=creditcard] // Bild der Zahlungsart wird später via JS eingefügt
 		background-image: url('/images/icons/white/music_electronic.svg')
 		background-color: $electronicViolett
 	.item__text-box
+		display: flex
 		padding: 16px
+		align-items: center
+		width: 100%
+		justify-content: space-between
 		@media only screen and ( min-width: $tablet ) // Tablet
-			padding-bottom: 96px
+			padding: 16px
 		@media only screen and ( min-width: $desktop ) // Desktop
-			padding-bottom: 96px
+			padding: 16px
 	.text-box__title
-		//
+		order: 1
+		padding-left: 48px
 	.text-box__ort-zeit
+		order: 2
 		font-size: $fontSizeZusatzinfos
 	.text-box__description
 		display: none
-		@media only screen and ( min-width: $tablet ) // Tablet
-			display: inline
-		@media only screen and ( min-width: $desktop ) // Desktop
-			display: inline
 	.item__merken
+		width: 200px
+		text-align: right
+		margin-left: 32px
 		padding: 16px
 		img
 			padding-right: 8px
-		display: none
-		@media only screen and ( min-width: $tablet ) // Tablet
-			display: inline
-		@media only screen and ( min-width: $desktop ) // Desktop
-			display: inline
 		a
 			text-decoration: none
 		span
 			text-transform: uppercase
+			display: none
+			@media only screen and ( min-width: $tablet ) // Tablet
+				display: inline
+			@media only screen and ( min-width: $desktop ) // Desktop
+				display: inline
