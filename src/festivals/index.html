@@ -155,11 +155,10 @@
       </div>
 
       <!-- Start Site Content-->
-      <div class="wrapper__home-entry">
-        <h1>Auf welche Musik stehst du?</h1>
-        <p>
-          Egal auf was du stehst wir haben alles für deinen Musikgeschmack und
-          garantieren dir eine erlebnisreiche Festivalzeit.
+      <div class="wrapper__home-entry wrapper__festival-overview">
+        <h1>Alles für deinen Musikgeschmack</h1>
+        <p class="home-entry__subtitle">
+          Unsere FestivalLovers verdienen nur das Beste. Wir bringen euch alle Festivals, Starts & Bands sowie Infos für einen genialen und unvergesslichen Musiksommer.
         </p>
         <div class="filter__toggle">
           <button>Filter anzeigen</button>
@@ -585,8 +584,31 @@
         </div>
       </div>
 
+      <!-- START FILTER -->
       <div class="wrapper__festivals">
-        <ul id="events" class="festivals__list"></ul>
+        <div class="festivals__filter">
+          <div class="filter__datum useless">
+            <span>Datum</span>
+            <img src="/images/icons/black/steuerung_sortierung.svg" alt="Nach Datum sortieren">
+          </div>
+          <div class="filter__kanton useless">
+            <span>Kanton</span>
+            <img src="/images/icons/black/steuerung_dropdown.svg" alt="Kanton wählenn">
+          </div>
+          <div class="filter__darstellung">
+            <div id="darstellung__kacheln-toggle">
+              <img src="/images/icons/black/steuerung_kacheln.svg" alt="Darstellung ändern" class="darstellung__kacheln-toggle-icon">
+              <span>Kacheln</span>
+            </div>
+            <div id="darstellung__liste-toggle">
+              <img src="/images/icons/black/steuerung_liste.svg" alt="Darstellung ändern" class="darstellung__kacheln-toggle-icon">
+              <span>Liste</span>
+            </div>
+          </div>
+        </div>
+
+        <div id="events" class="festivals__list-kacheln"></div>
+
       </div>
       <div id="nofestivals">
         <p class="bold">Leider haben wir aktuell keine Festivals die deinen Filter-Einstellungen entsprechen. Sorry!</p>
@@ -634,6 +656,8 @@
     <script type="text/javascript" src="/js/main.js"></script>
     <script type="text/javascript" src="/js/modules/events-loader.js"></script>
     <script type="text/javascript" src="/js/modules/genre-filter.js"></script>
+    <script type="text/javascript" src="/js/modules/events-filter.js"></script>
+
 
   </body>
 </html>

@@ -16,7 +16,7 @@ function getTicketValue() {
   let ticket3Preis = 225;
   let ticket4Preis = 420;
   let ticket5Preis = 25;
-  let ticket6Preis = 375;
+  let ticket6Preis = 55;
   let ticket1Kosten = ticket1Anzahl * ticket1Preis;
   let ticket2Kosten = ticket2Anzahl * ticket2Preis;
   let ticket3Kosten = ticket3Anzahl * ticket3Preis;
@@ -124,7 +124,7 @@ function waitAndShowFormLabels() {
     let label = document.querySelector('#name-label');
     label.style.visibility = 'visible';
   }
-} // Event Listener auf Formular-Felder. Löst bei Eingabe eine Funktion aus.
+}
 
-
+// Event Listener auf Formular-Felder. Löst bei Eingabe eine Funktion aus.
 funktionBeiEingabe('transactionforminput', showFormLabels);

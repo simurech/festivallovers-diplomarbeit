@@ -157,4 +157,4 @@ Falls fremder Code kopiert oder importiert wurde, wird die Quelle unten gelistet
 - https://css-tricks.com/
 
 Fremder Code:
-- https://splidejs.com/ (Slider auf Festival-Detail-Seite)
+- Keiner

@@ -6,7 +6,13 @@ function funktionBeiKlick(selektorklasse, funktion) {
   for (var i = 0; i < selektorarray.length; i++) {
     selektorarray[i].addEventListener('click', funktion);
   }
-} // Funktion
+}
+function funktionBeiEingabe(selektorklasse, funktion) {
+  let selektorarray = document.querySelectorAll('.' + selektorklasse);
+  for (var i = 0; i < selektorarray.length; i++) {
+    selektorarray[i].addEventListener('keydown', funktion);
+  }
+};
 
 
 function functionNotDefined() {

@@ -1,17 +1,16 @@
 // Das Skript muss überall eingebunden sein, wo Festival-Inhalte geladen werden.
 // Aktuell betrifft dies nur die Festival-Übersichtseite.
+
 //! Übersicht: Lade alle Festivals
-
-const restUrl = '/rest'; //! URL ZU SERVER
+const restUrl = '/rest';
 // Event-Daten laden
-
 function eventsLaden() {
   fetch(restUrl + '/events/').then(response => {
     return response.json();
   }).then(events => {
-    const ul = document.querySelector('#events');
+    const festivalsWrapper = document.querySelector('#events');
     events.forEach(event => {
-      let newLi = document.createElement('li');
+      let newDiv = document.createElement('div');
       let eventId = event.id;
       let eventTitle = event.title;
       let eventSubtitle = event.subtitle;
@@ -22,22 +21,41 @@ function eventsLaden() {
       let eventLocationId = event.location_id;
       let eventDateStart = event.date_start;
       let eventDateEnd = event.date_end;
+      let iconName = event.icon_name;
+      let imageName = event.image_name;
       let eventGenreIdAsText = rewriteGenreIdToText(eventGenreId);
       let eventGenreIdAsSlug = rewriteGenreIdToSlug(eventGenreId);
       let eventLocationIdAsText = rewriteLocationIdToText(eventLocationId);
-      newLi.setAttribute('class', eventGenreIdAsSlug + ' festivals__item');
-      newLi.innerHTML = '<div>' + '<p class="festivals__item-id">ID= ' + eventId + '</p>' + '<h3 class="festivals__item-title">title= ' + eventTitle + '</h3>' + '<h4 class="festivals__item-subtitle">subtitle= ' + eventSubtitle + '</h4>' + '<p class="festivals__item-desc_title">desc_title= ' + eventDescTitle + '</p>' + '<p class="festivals__item-desc_lead">desc_lead= ' + eventDescLead + '</p>' + '<p class="festivals__item-desc_text">desc_text= ' + eventDescText + '</p>' + '<p class="festivals__item-genre_id">genre_id= ' + eventGenreId + '</p>' + '<p class="festivals__item-genre_id_as_text">genre_id_as_text= ' + eventGenreIdAsText + '</p>' + '<p class="festivals__item-location_id">location_id= ' + eventLocationId + '</p>' + '<p class="festivals__item-location_id_as_text">location_id_as_text= ' + eventLocationIdAsText + '</p>' + '<p class="festivals__item-date_start">date_start= ' + eventDateStart + '</p>' + '<p class="festivals__item-date_end">date_end= ' + eventDateEnd + '</p>' + '<a href="/festivals/sur-le-lac/"><button>Zum Festival</button></a>' + '</div>';
-      ul.appendChild(newLi);
+      newDiv.setAttribute('class', 'festivals__item-' + eventGenreIdAsSlug + ' festivals__item' + ' KANTON' + ' DATUM');
+      newDiv.innerHTML = '<a href="/festivals/sur-le-lac/" class="festivals__item-link">' +
+              '<div class="item__image-box">' +
+              '<img src="/images/festivals/' + imageName + '" alt="Festival-Bild" class="image-box__foto">' +
+              '<div class="image-box__icon item-icon-box__' + eventGenreIdAsSlug + '"></div>' +
+              '</div>' +
+              '<div class="item__text-box">' +
+              '<p class="text-box__ort-zeit">' + eventLocationIdAsText + ' / ' + eventDateStart + ' - ' + eventDateEnd + '</p>' +
+              '<h3 class="text-box__title">' + eventTitle + '</h3>' +
+              '<p class="text-box__description">' + eventDescTitle + '</p>' + 
+              '</div>' + 
+              '</a>' + 
+              '<div class="item__merken">' + 
+              '<a class="useless" href="#">' + 
+              '<img src="/images/icons/black/detail_merken.svg" class="merken__icon">' +
+              '<span class="bold">merken</span>' +
+              '</a>' +
+              '</div>' +
+              '</div>';
+      festivalsWrapper.appendChild(newDiv);
     });
   });
-}
+};
+// Funktion sofort ausführen
+eventsLaden();
 
-eventsLaden(); //! Location ID in Text umwandeln
+//! Location ID in Text umwandeln
 // Location ID in Text umwandeln - statisch
-
 function rewriteLocationIdToText(id) {
   const requestId = id;
-
   if (requestId === '1') {
     return 'Bern';
   } else if (requestId === '2') {
@@ -89,10 +107,9 @@ function rewriteLocationIdToText(id) {
   } else {
     return 'Standort wurde nicht gefunden';
   }
-} // Funktion sofort ausführen
+};
+
 // Location ID in Text umwandeln - statisch
-
-
 function rewriteGenreIdToText(id) {
   const requestId = id;
 
@@ -153,13 +170,11 @@ function rewriteGenreIdToText(id) {
   } else {
     return 'Genre wurde nicht gefunden';
   }
-} // Funktion sofort ausführen
+};
+
 // Location ID in slug umwandeln - statisch
-
-
 function rewriteGenreIdToSlug(id) {
   const requestId = id;
-
   if (requestId === '1') {
     return 'jazz';
   } else if (requestId === '2') {
@@ -217,8 +232,11 @@ function rewriteGenreIdToSlug(id) {
   } else {
     return 'unbekannt';
   }
-} // Funktion sofort ausführen
-// // Genre ID in Text umwandeln - abfrage aus DB mit spezifischer ID -> Namen zurückgeben
+};
+
+
+
+//! Genre ID in Text umwandeln - abfrage aus DB mit spezifischer ID -> Namen zurückgeben -- DEFEKT
 // function getGenreNameById(id){
 // 	console.log('getGenreNameById gestartet');
 // 	fetch(restUrl+'/genres/'+id)

@@ -241,7 +241,7 @@ footer
 	display: block
 	visibility: visible
 .notvisible
-	display: none
+	display: none!important
 	visibility: hidden
 .notvisible-bigscreen
 	@media only screen and ( min-width: $tablet ) // Tablet
@@ -645,19 +645,20 @@ footer
 	flex-direction: column
 	border: 1px solid $grauC2
 	box-sizing: border-box
+	z-index: 1
 	a
 		display: flex
 		align-items: center
 		height: 48px
 		justify-self: center
 // Blende Unterseiten bei Hover ein
-#breadcrumbs__dropdown1:hover
+#breadcrumbs__dropdown1:hover, #breadcrumbs__dropdown1:active
 	border: 1px solid $grauC2
 	background-image: url(/images/icons/color/steuerung_dropdown_up.svg)
 	#breadcrumbs__dropdown-content1
 		width: 136px
 		display: block
-#breadcrumbs__dropdown2:hover
+#breadcrumbs__dropdown2:hover ,#breadcrumbs__dropdown2:active
 	border: 1px solid $grauC2
 	background-image: url(/images/icons/color/steuerung_dropdown_up.svg)
 	#breadcrumbs__dropdown-content2
@@ -1597,20 +1598,6 @@ input[name=creditcard] // Bild der Zahlungsart wird später via JS eingefügt
 	visibility: hidden
 
 
-//! Festival-Übersicht
-#nofestivals // Hinweis wenn keine Festivals vorhanden
-	background-color: $indieMint
-	color: $weiss
-	padding: 16px
-	margin-left: auto
-	margin-right: auto
-	margin-top: -56px
-	margin-bottom: 96px
-	p
-		text-align: center
-		font-size: $fontSizeMobileH2
-
-
 //! Festival-Detail
 .wrapper__detail-entry
 	background-color: $indieMint
@@ -1648,8 +1635,6 @@ input[name=creditcard] // Bild der Zahlungsart wird später via JS eingefügt
 	@media only screen and ( min-width: $desktop ) // Desktop
 		top: calc(105px + 64px )
 		width: 210px
-
-// ELEMENT 2
 .wrapper__detail-entry-boxes
 	margin-top: 0px
 	padding-top: 0px
@@ -1779,8 +1764,7 @@ input[name=creditcard] // Bild der Zahlungsart wird später via JS eingefügt
 		text-align: left
 		width: 33%
 
-
-//! SLIDER NOCH NICHT UMGESETZT
+//! SLIDER START
 .wrapper__detail-slider
 	padding: 0px 16px 0px 16px
 	@media only screen and ( min-width: $tablet ) // Tablet
@@ -1793,13 +1777,8 @@ input[name=creditcard] // Bild der Zahlungsart wird später via JS eingefügt
 		width: 60%
 	@media only screen and ( min-width: $desktop ) // Desktop
 		width: 60%
-// .splide
-// 	.splide__track
-// 		.splide__list
-// 			.splide__slide
+//! SLIDER ENDE
 					
-
-
 .wrapper__detail-lineup
 	background-color: $grauF0
 	padding: 16px
@@ -2002,3 +1981,232 @@ input[name=creditcard] // Bild der Zahlungsart wird später via JS eingefügt
 		padding-right: 32px
 	@media only screen and ( min-width: $desktop ) // Desktop
 		padding-right: 48px
+
+
+//! Festival-Übersicht
+#nofestivals // Hinweis wenn keine Festivals vorhanden
+	background-color: $indieMint
+	color: $weiss
+	padding: 16px
+	margin-left: auto
+	margin-right: auto
+	margin-top: -56px
+	margin-bottom: 96px
+	p
+		text-align: center
+		font-size: $fontSizeMobileH2
+.wrapper__festival-overview
+	padding-bottom: 24px
+
+.wrapper__festivals
+	background-color: $grauF0
+	padding: 16px
+	@media only screen and ( min-width: $tablet ) // Tablet
+		padding: 48px
+	@media only screen and ( min-width: $desktop ) // Desktop
+		padding: 96px
+.festivals__filter
+	display: flex
+	justify-content: space-between
+	align-items: center
+	padding-bottom: 48px
+.filter__datum
+	span
+		padding-right: 16px
+.filter__kanton
+	span
+		padding-right: 16px
+.filter__darstellung
+	cursor: pointer
+	display: flex
+	span
+		display: none
+		@media only screen and ( min-width: $tablet ) // Tablet
+			display: inline
+		@media only screen and ( min-width: $desktop ) // Desktop
+			display: inline
+#darstellung__kacheln-toggle
+	opacity: 1
+#darstellung__liste-toggle
+	opacity: 0.5
+.darstellung__kacheln-toggle-icon
+	padding-left: 32px
+	padding-right: 8px
+.festivals__list-kacheln
+	display: grid
+	column-gap: 16px
+	grid-row-gap: 16px
+	grid-template-columns: 1fr
+	@media only screen and ( min-width: $tablet ) // Tablet
+		grid-template-columns: 1fr 1fr
+	@media only screen and ( min-width: $desktop ) // Desktop
+		grid-template-columns: 1fr 1fr 1fr
+	.festivals__item
+		max-width: 100%
+		display: flex
+		flex-direction: column
+		justify-content: space-between
+		padding: 0px
+		background-color: $weiss
+		text-decoration: none
+	.festivals__item-jazz
+		border-bottom: 4px solid $jazzGelb
+	.festivals__item-hiphop
+		border-bottom: 4px solid $hipHopPink
+	.festivals__item-electronic
+		border-bottom: 4px solid $electronicViolett
+	.festivals__item-indie
+		border-bottom: 4px solid $indieMint
+	.festivals__item-pop-und-rock
+		border-bottom: 4px solid $popRockBlau
+	.festivals__item-link
+		text-decoration: none
+	.item__image-box
+		// 
+	.image-box__foto
+		max-width: 100%
+	.image-box__icon
+		position: relative
+		z-index: 1
+		width: 48px
+		height: 48px
+		margin-left: auto
+		margin-right: auto
+		margin-top: -52px
+		background-repeat: no-repeat
+		background-size: 60% 60%
+		background-position: center center
+	.item-icon-box__jazz
+		background-image: url('/images/icons/white/music_jazz.svg')
+		background-color: $jazzGelb
+	.item-icon-box__hiphop
+		background-image: url('/images/icons/white/music_hiphop.svg')
+		background-color: $hipHopPink
+	.item-icon-box__indie
+		background-image: url('/images/icons/white/music_indie.svg')
+		background-color: $indieMint
+	.item-icon-box__pop-und-rock
+		background-image: url('/images/icons/white/music_poprock.svg')
+		background-color: $popRockBlau
+	.item-icon-box__electronic
+		background-image: url('/images/icons/white/music_electronic.svg')
+		background-color: $electronicViolett
+	.item__text-box
+		padding: 16px
+		@media only screen and ( min-width: $tablet ) // Tablet
+			padding-bottom: 96px
+		@media only screen and ( min-width: $desktop ) // Desktop
+			padding-bottom: 96px
+	.text-box__title
+		//
+	.text-box__ort-zeit
+		font-size: $fontSizeZusatzinfos
+	.text-box__description
+		display: none
+		@media only screen and ( min-width: $tablet ) // Tablet
+			display: inline
+		@media only screen and ( min-width: $desktop ) // Desktop
+			display: inline
+	.item__merken
+		padding: 16px
+		img
+			padding-right: 8px
+		display: none
+		@media only screen and ( min-width: $tablet ) // Tablet
+			display: inline
+		@media only screen and ( min-width: $desktop ) // Desktop
+			display: inline
+		a
+			text-decoration: none
+		span
+			text-transform: uppercase
+
+//! Listen-Ansicht
+.festivals__list-liste
+	display: grid
+	column-gap: 16px
+	grid-row-gap: 16px
+	grid-template-columns: 1fr
+	@media only screen and ( min-width: $tablet ) // Tablet
+		grid-template-columns: 1fr 1fr
+	@media only screen and ( min-width: $desktop ) // Desktop
+		grid-template-columns: 1fr 1fr 1fr
+	.festivals__item
+		max-width: 100%
+		display: flex
+		flex-direction: column
+		justify-content: space-between
+		padding: 0px
+		background-color: $weiss
+		text-decoration: none
+	.festivals__item-jazz
+		border-bottom: 4px solid $jazzGelb
+	.festivals__item-hiphop
+		border-bottom: 4px solid $hipHopPink
+	.festivals__item-electronic
+		border-bottom: 4px solid $electronicViolett
+	.festivals__item-indie
+		border-bottom: 4px solid $indieMint
+	.festivals__item-pop-und-rock
+		border-bottom: 4px solid $popRockBlau
+	.festivals__item-link
+		text-decoration: none
+	.item__image-box
+		// 
+	.image-box__foto
+		max-width: 100%
+	.image-box__icon
+		position: relative
+		z-index: 1
+		width: 48px
+		height: 48px
+		margin-left: auto
+		margin-right: auto
+		margin-top: -52px
+		background-repeat: no-repeat
+		background-size: 60% 60%
+		background-position: center center
+	.item-icon-box__jazz
+		background-image: url('/images/icons/white/music_jazz.svg')
+		background-color: $jazzGelb
+	.item-icon-box__hiphop
+		background-image: url('/images/icons/white/music_hiphop.svg')
+		background-color: $hipHopPink
+	.item-icon-box__indie
+		background-image: url('/images/icons/white/music_indie.svg')
+		background-color: $indieMint
+	.item-icon-box__pop-und-rock
+		background-image: url('/images/icons/white/music_poprock.svg')
+		background-color: $popRockBlau
+	.item-icon-box__electronic
+		background-image: url('/images/icons/white/music_electronic.svg')
+		background-color: $electronicViolett
+	.item__text-box
+		padding: 16px
+		@media only screen and ( min-width: $tablet ) // Tablet
+			padding-bottom: 96px
+		@media only screen and ( min-width: $desktop ) // Desktop
+			padding-bottom: 96px
+	.text-box__title
+		//
+	.text-box__ort-zeit
+		font-size: $fontSizeZusatzinfos
+	.text-box__description
+		display: none
+		@media only screen and ( min-width: $tablet ) // Tablet
+			display: inline
+		@media only screen and ( min-width: $desktop ) // Desktop
+			display: inline
+	.item__merken
+		padding: 16px
+		img
+			padding-right: 8px
+		display: none
+		@media only screen and ( min-width: $tablet ) // Tablet
+			display: inline
+		@media only screen and ( min-width: $desktop ) // Desktop
+			display: inline
+		a
+			text-decoration: none
+		span
+			text-transform: uppercase
