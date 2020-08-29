@@ -1,9 +1,9 @@
 // Der Preis der gewünschten Tickets wird aus dem Local Storage ausgelesen und ausgerechnet.
 // Das Skript muss überall eingebunden sein, wo Ticket-Preise für die Bestellung geladen werden müssen.
 // Aktuell betrifft dies nur die Zahlung-Seite.
+
 //! Anzahl Tickets aus LocalStorage lesen, Kosten berechnen und in Kaufen-Button abfüllen
 // Funktion
-
 function getTicketValue() {
   let ticket1Anzahl = localStorage.getItem('ticket1');
   let ticket2Anzahl = localStorage.getItem('ticket2');

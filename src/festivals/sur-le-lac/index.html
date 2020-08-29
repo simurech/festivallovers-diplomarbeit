@@ -219,23 +219,27 @@
           <p class="bold"><img width="24px" height="24px" src="/images/icons/black/detail_merken.svg" alt="Festival merken" class="svg-schwarz"/> merken</p>
           <a href="/festivals/sur-le-lac/tickets-kaufen/"><button class=>Tickets kaufen</button></a>
           <button class="light useless">Festival Teilen</button>
+          <img src="/images/other/ad-rectangle.png" alt="Werbung" width="100%">
           <img>
         </div>
       </div>
 
       <!-- SLIDER -->
       <div class="wrapper__detail-slider">
-        <div class="splide">
-          <div class="splide__track">
-            <ul class="splide__list">
-              <li class="splide__slide"><img src="#" width="100%" height="200px"></li>
-              <li class="splide__slide">Slide 02</li>
-              <li class="splide__slide">Slide 03</li>
-            </ul>
+        <div class="detail-slider__inner">
+          <div class="splide">
+            <div class="splide__track">
+              <ul class="splide__list">
+                <li class="splide__slide"><img src="#" width="100%" height="200px"></li>
+                <li class="splide__slide">Slide 02</li>
+                <li class="splide__slide">Slide 03</li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
 
+      <!-- LINEUP -->
       <div class="wrapper__detail-lineup">
         <h2>Line up</h2>
         <p class="lead">
@@ -253,56 +257,55 @@
       <div class="wrapper__detail-lineup-grid">
         <div class="detail-lineup__artists">
           <div class="artists__time">17.00</div>
-          <div class="artists__box artists__jazz">Kero Kero Bonnito</div>
-          <div class="artists__box artists__hiphop">Girls Names</div>
+          <div class="artists__box artists__jazz"><span class="artist-name bold">Kero Kero Bonnito</span></div>
+          <div class="artists__box artists__hiphop"><span class="artist-name bold">Girls Names</span></div>
         </div>
         <div class="detail-lineup__artists">
           <div class="artists__time">18.00</div>
-          <div class="artists__box artists__jazz">Red Hot Chili Peppers</div>
-          <div class="artists__box artists__hiphop">Wo-Tang Clan</div>
+          <div class="artists__box artists__jazz"><span class="artist-name bold">Red Hot Chili Peppers</span></div>
+          <div class="artists__box artists__hiphop"><span class="artist-name bold">Wo-Tang Clan</span></div>
         </div>
         <div class="detail-lineup__artists">
           <div class="artists__time">19.00</div>
-          <div class="artists__box artists__jazz">Tompaul</div>
-          <div class="artists__box artists__hiphop">3 Doors Down</div>
+          <div class="artists__box artists__electronic"><span class="artist-name bold">Tompaul</span></div>
+          <div class="artists__box artists__poprock"><span class="artist-name bold">3 Doors Down</span></div>
         </div>
         <div class="detail-lineup__artists">
           <div class="artists__time">20.00</div>
-          <div class="artists__box artists__jazz">Lauryn Hill</div>
-          <div class="artists__box artists__hiphop">Muse</div>
+          <div class="artists__box artists__electronic"><span class="artist-name bold">Lauryn Hill</span></div>
+          <div class="artists__box artists__poprock"><span class="artist-name bold">Muse</span></div>
         </div>
         <div class="detail-lineup__artists">
           <div class="artists__time">21.00</div>
-          <div class="artists__box artists__jazz">The Horrors</div>
+          <div class="artists__box artists__jazz"><span class="artist-name bold">The Horrors</span></div>
         </div>
         <div class="detail-lineup__artists">
           <div class="artists__time">22.00</div>
-          <div class="artists__box artists__jazz">Darkstar</div>
+          <div class="artists__box artists__hiphop"><span class="artist-name bold">Darkstar</span></div>
         </div>
         <div class="detail-lineup__artists">
           <div class="artists__time">23.00</div>
-          <div class="artists__box artists__jazz">A=f/m</div>
+          <div class="artists__box artists__poprock"><span class="artist-name bold">A=f/m</span></div>
         </div>
       </div>
 
-      <!-- ELEMENT 7 -->
+      
       <div class="wrapper__detail-video">
         <div class="video-container">
           <iframe src="https://www.youtube.com/embed/Oy3DZu6BCrE"  frameborder="0" allowfullscreen></iframe>
         </div>
       </div>
-
-      <!-- ELEMENT 8 -->
       <div class="wrapper__detail-wissenswertes">
         <h2>Wissenswertes</h2>
         <p class="lead">
           Damit euer Festivalerlebnis glatt verläuft und ihr es in vollen Zügen geniesse könnt, gibt es hier nochmals eine Übersicht mit allem was ihr wissen und beachten müsst.
         </p>
         <div class="detail-wissenswertes__akkordeon">
-          <div class="detail-wissenswertes__akkordeon-item">
+          <div class="detail-wissenswertes__akkordeon-title" id="akkordeon1">
             <h3>Anreise & Rückreise</h3>
-            <p>Weniger</p>
-            <hr>
+            <p class="bold" id="akkordeon1-content-toggle">Mehr</p>
+          </div>
+          <div class="detail-wissenwertes__akkordeon-content akkordeon-hide" id="akkordeon1-content">
             <p>
               Die Anreise ans Sur le Lac gestaltet sich wie folgt und ganz unkompliziert. Wir empfehlen die öffentlichen Verkehrsmittel zu benützen. Ab Eggersriet Post bringen euch Shuttlebusse direkt aufs Gelände. Naturverbundenen Besuchern legen wir den 15-minütigen Spaziergang vorbei an Blüten und Blatt gen Festgelände sehr ans Herz. In der Nacht bringen euch dann stündlich Spezialbusse sicher und behütet zurück nach St. Gallen. Die Spezialbusse sind im Eintrittspreis inbegriffen. Besuchern, welche mit Privatautos anreisen, stehen in begrenzter Anzahl Parkplätze unweit des Festgeländes zur Verfügung.
             </p>
@@ -310,53 +313,51 @@
               <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2694.5383098642883!2d8.53069781531607!3d47.51838190206162!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4790742c483fe2c1%3A0xa76988eb23ca5c8a!2sIm%20Nippel%201%2C%208180%20B%C3%BClach!5e0!3m2!1sde!2sch!4v1598616274847!5m2!1sde!2sch" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
             </div>
           </div>
-          <div class="detail-wissenswertes__akkordeon-item">
+          <div class="detail-wissenswertes__akkordeon-title" id="akkordeon2">
             <h3>Einlassregeln</h3>
-            <p>Mehr</p>
-            <hr>
+            <p class="bold" id="akkordeon2-content-toggle">Mehr</p>
+          </div>
+          <div class="detail-wissenwertes__akkordeon-content akkordeon-hide" id="akkordeon2-content">
             <p>
               Hier würde weiterer Content stehen. Die Inhalte wurden jedoch nicht geliefert, weshalb dieser Text hier als Platzhalter dient. :)
             </p>
           </div>
-          <div class="detail-wissenswertes__akkordeon-item">
+          <div class="detail-wissenswertes__akkordeon-title" id="akkordeon3">
             <h3>Zelten & Naturschutz</h3>
-            <p>Mehr</p>
-            <hr>
+            <p class="bold" id="akkordeon3-content-toggle">Mehr</p>
+          </div>
+          <div class="detail-wissenwertes__akkordeon-content akkordeon-hide" id="akkordeon3-content">
             <p>
               Hier würde weiterer Content stehen. Die Inhalte wurden jedoch nicht geliefert, weshalb dieser Text hier als Platzhalter dient. :)
             </p>
           </div>
-          <div class="detail-wissenswertes__akkordeon-item">
+          <div class="detail-wissenswertes__akkordeon-title" id="akkordeon4">
             <h3>Fragen & Antworten</h3>
-            <p>Mehr</p>
-            <hr>
+            <p class="bold" id="akkordeon4-content-toggle">Mehr</p>
+          </div>
+          <div class="detail-wissenwertes__akkordeon-content akkordeon-hide" id="akkordeon4-content">
             <p>
               Hier würde weiterer Content stehen. Die Inhalte wurden jedoch nicht geliefert, weshalb dieser Text hier als Platzhalter dient. :)
             </p>
           </div>
         </div>
       </div>
-
-      <!-- ELEMENT 9 -->
       <div class="wrapper__detail-banner">
-        <h3>Seit ein Teil von Sur Le Lac</h3>
-        <button class="light">Tickets kaufen</button>
+        <h2>Seit ein Teil von Sur Le Lac</h2>
+        <button class="lightreversed">Tickets kaufen</button>
       </div>
-
-      <!-- ELEMENT 10 -->
       <div class="wrapper__detail-prefooter">
-        <div class="detail-prefooter__box">
-          ICON
-          <p>Musikfestwochen</p>
-          <img>
-        </div>
-        <div class="detail-prefooter__box">
-          <img>
-          <p>Openair Zürich</p>
-          ICON
-        </div>
+        <a class="detail-prefooter__box useless" href="#">
+          <img src="/images/icons/white/navigation_zurueck.svg" alt="zu Festival" class="box__navigation">
+          <p class="bold">Musikfestwochen</p>
+          <div class="box__image-wrapper" id="box__image-wrapper1"></div>
+        </a>
+        <a class="detail-prefooter__box useless" href="#">
+          <div class="box__image-wrapper" id="box__image-wrapper2"></div>
+          <p class="bold">Openair Zürich</p>
+          <img src="/images/icons/white/navigation_weiter.svg" alt="zu Festival" class="box__navigation">
+        </a>
       </div>
-
     </main>
     
     <!-- Footer -->
@@ -399,6 +400,7 @@
     <!-- Javascript einbinden -->
     <script type="text/javascript" src="/js/main.js"></script>
     <script type="text/javascript" src="/js/modules/countdown.js"></script>
+    <script type="text/javascript" src="/js/modules/akkordeon.js"></script>
     <script type="text/javascript" src="/js/splide.js"></script>
 
 

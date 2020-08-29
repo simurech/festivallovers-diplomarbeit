@@ -1787,11 +1787,18 @@ input[name=creditcard] // Bild der Zahlungsart wird später via JS eingefügt
 		padding: 0px 192px 0px 192px
 	@media only screen and ( min-width: $desktop ) // Desktop
 		padding: 0px 240px 0px 240px
+.detail-slider__inner
+	width: 100%
+	@media only screen and ( min-width: $tablet ) // Tablet
+		width: 60%
+	@media only screen and ( min-width: $desktop ) // Desktop
+		width: 60%
 // .splide
 // 	.splide__track
 // 		.splide__list
 // 			.splide__slide
 					
+
 
 .wrapper__detail-lineup
 	background-color: $grauF0
@@ -1810,8 +1817,7 @@ input[name=creditcard] // Bild der Zahlungsart wird später via JS eingefügt
 		display: flex
 		justify-content: space-between
 		align-items: center
-		text-align: left
-		
+		text-align: left	
 .detail-lineup__tag-btns
 	column-gap: 16px
 	display: none
@@ -1819,26 +1825,54 @@ input[name=creditcard] // Bild der Zahlungsart wird später via JS eingefügt
 		display: flex
 	@media only screen and ( min-width: $desktop ) // Desktop
 		display: flex
-
 .wrapper__detail-lineup-grid
 	background-color: $grauF0
 	padding: 16px
 	@media only screen and ( min-width: $tablet ) // Tablet
-		padding: 48px 192px 48px 192px
+		padding: 0px 192px 48px 112px
 	@media only screen and ( min-width: $desktop ) // Desktop
-		padding: 96px 240px 96px 240px
-
-
+		padding: 0px 240px 96px 160px
 .detail-lineup__artists
-	.artists__time
-	.artists__box
-	.artists__jazz
-	.artists__hiphop
-//! Oberhalb noch nicht fertig
-
+	display: grid
+	grid-template-columns: 80px 1fr
+	grid-template-rows: auto
+	grid-template-areas: "time artist1" " . artist2"
+	@media only screen and ( min-width: $tablet ) // Tablet
+		grid-template-columns: 80px 1fr 1fr
+		grid-template-areas: "time artist1 artist2"
+	@media only screen and ( min-width: $desktop ) // Desktop
+		grid-template-columns: 80px 1fr 1fr
+		grid-template-areas: "time artist1 artist2"
+	margin-bottom: 16px
+.artists__time
+	grid-area: time
+	font-family: $fontFamilySansSerif
+	font-weight: bold
+	align-self: center
+.artists__box:nth-child(2)
+	grid-area: artist1
+.artists__box
+	grid-area: artist2
+	background-color: $weiss
+	margin-top: 8px
+	margin-bottom: 8px
+	margin-right: 16px
+	height: 64px
+	display: flex
+	padding-left: 16px
+	align-items: center
+.artist-name
+	font-family: $fontFamilySerif
+.artists__jazz
+	border-right: 4px solid $jazzGelb
+.artists__hiphop
+	border-right: 4px solid $hipHopPink
+.artists__electronic
+	border-right: 4px solid $electronicViolett
+.artists__poprock
+	border-right: 4px solid $popRockBlau
 .wrapper__detail-video
 .video-container
-	background-color: yellow
 	width: 100%
 	height: 160px
 	@media only screen and ( min-width: $tablet ) // Tablet
@@ -1863,6 +1897,21 @@ input[name=creditcard] // Bild der Zahlungsart wird später via JS eingefügt
 		padding: 48px 192px 48px 192px
 	@media only screen and ( min-width: $desktop ) // Desktop
 		padding: 96px 240px 96px 240px
+.detail-wissenswertes__akkordeon-title
+	display: flex
+	justify-content: space-between
+	align-items: baseline
+	border-bottom: 4px solid $schwarz100
+	padding-bottom: 24px
+	box-sizing: border-box
+	cursor: pointer
+	h3, p
+		padding-bottom: 0px
+		margin-bottom: 0px
+.akkordeon-hide
+	display: none
+.akkordeon-show
+	display: block
 .map-container
 		width: 100%
 		height: 392px
@@ -1876,22 +1925,80 @@ input[name=creditcard] // Bild der Zahlungsart wird später via JS eingefügt
 		left: 0
 		width: 100%
 		height: 100%
-
-//! WEITER
-.detail-wissenswertes__akkordeon
-	.detail-wissenswertes__akkordeon-item
-		h3
-		p
-		hr
-		
-
-// ELEMENT 9
 .wrapper__detail-banner
-	h3
-	button
-
-// ELEMENT 10
+	background-color: $indieMint
+	width: 100%
+	padding: 16px
+	height: 440px
+	@media only screen and ( min-width: $tablet ) // Tablet
+		padding: 16px
+		height: 432px
+	@media only screen and ( min-width: $desktop ) // Desktop
+		padding: 16px
+		height: 376px
+	color: $weiss
+	display: flex
+	flex-direction: column
+	justify-content: center
+	align-items: center
+	box-sizing: border-box
+	background-image: url('/images/icons/color/music_indie-transparent.svg')
+	background-repeat: no-repeat
+	background-size: 80% 80%
+	background-position: center center
 .wrapper__detail-prefooter
-	.detail-prefooter__box
-		p
-		img
+	background-color: $indieMintHell
+	display: flex
+	flex-direction: column
+	@media only screen and ( min-width: $tablet ) // Tablet
+		flex-direction: row
+	@media only screen and ( min-width: $desktop ) // Desktop
+		flex-direction: row
+.detail-prefooter__box
+	text-decoration: none
+	display: flex
+	align-items: center
+	justify-content: space-between
+	width: 100%
+	border-bottom: 1px solid $weiss
+	@media only screen and ( min-width: $tablet ) // Tablet
+		width: 50%
+		border: none
+	@media only screen and ( min-width: $desktop ) // Desktop
+		width: 50%
+		border: none
+	color: $weiss
+.detail-prefooter__box:last-child
+	border: none
+.detail-prefooter__box:hover
+	color: $weiss
+	text-decoration: underline
+.box__image-wrapper
+	align-self: flex-end
+	height: 128px
+	width: 128px
+	background-repeat: no-repeat
+	background-position: center center
+	background-size: cover
+	@media only screen and ( min-width: $tablet ) // Tablet
+		width: 50%
+	@media only screen and ( min-width: $desktop ) // Desktop
+		width: 50%
+#box__image-wrapper1
+	background-image: url('/images/photos/NexFestival.png')
+#box__image-wrapper2
+	background-image: url('/images/photos/Reload2015-3691.jpg')
+.box__navigation:first-child
+	padding-left: 16px
+	width: 32px
+	@media only screen and ( min-width: $tablet ) // Tablet
+		padding-left: 16px
+	@media only screen and ( min-width: $desktop ) // Desktop
+		padding-left: 32px
+.box__navigation:last-child
+	padding-right: 16px
+	width: 32px
+	@media only screen and ( min-width: $tablet ) // Tablet
+		padding-right: 32px
+	@media only screen and ( min-width: $desktop ) // Desktop
+		padding-right: 48px
