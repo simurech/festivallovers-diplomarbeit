@@ -76,14 +76,14 @@ function addTicketToCart() {
   let warenkorbbutton = document.querySelector('#warenkorb-zaehler');
   warenkorbbutton.innerHTML = summe; // Anzahl der gewünnschten Tickets in Variablen speichern
 
-  let ticket1 = ticketCounterArray[0]; //let ticket2 = ticketCounterArray[1]; // deaktiviert, da bereits ausverkauft!
-
+  let ticket1 = ticketCounterArray[0];
+  //let ticket2 = ticketCounterArray[1]; // deaktiviert, da bereits ausverkauft!
   let ticket3 = ticketCounterArray[1];
   let ticket4 = ticketCounterArray[2];
   let ticket5 = ticketCounterArray[3];
   let ticket6 = ticketCounterArray[4];
-  localStorage.setItem('ticket1', ticket1); //localStorage.setItem('ticket2', ticket2); // deaktiviert, da bereits ausverkauft!
-
+  localStorage.setItem('ticket1', ticket1);
+  //localStorage.setItem('ticket2', ticket2); // deaktiviert, da bereits ausverkauft!
   localStorage.setItem('ticket3', ticket3);
   localStorage.setItem('ticket4', ticket4);
   localStorage.setItem('ticket5', ticket5);
